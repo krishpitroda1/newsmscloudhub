@@ -1,0 +1,167 @@
+<title>Cloud Circuit Animation</title>
+<style>
+  :root{
+    --bg:#0A1220;
+    --line:rgba(255,255,255,0.14);
+    --cyan:#22D3EE;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    background:var(--bg);
+    display:flex;align-items:center;justify-content:center;
+    min-height:100vh;
+  }
+  /* ===== the reusable widget ===== */
+  .cloud-anim{
+    position:relative;
+    width:100%;
+    max-width:460px;
+    aspect-ratio:1/1;
+  }
+  .cloud-anim canvas{
+    width:100%;
+    height:100%;
+    display:block;
+  }
+</style>
+
+<!-- ============================================================
+     CLOUD CIRCUIT ANIMATION — standalone, drop-in component
+     Draws a cloud silhouette made of orthogonal "PCB trace" lines
+     (echoing the SMSCloud Hub logo icon), with pulses travelling
+     the traces and dripping down three hanging lines beneath it.
+     No dependencies. Respects prefers-reduced-motion.
+     ============================================================ -->
+<div class="cloud-anim">
+  <canvas id="cloudCanvas" width="460" height="460" aria-hidden="true"></canvas>
+</div>
+
+<script>
+(function(){
+  var canvas = document.getElementById('cloudCanvas');
+  var ctx = canvas.getContext('2d');
+  var DPR = Math.min(window.devicePixelRatio || 1, 2);
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---- colors: edit these three to re-theme the animation ----
+  var LINE_COLOR = 'rgba(255,255,255,0.14)'; // idle trace lines
+  var PULSE_COLOR = '#22D3EE';                // traveling pulse / hub / drips
+  var NODE_COLOR  = 'rgba(255,255,255,0.55)'; // static junction squares
+
+  var dims = {w:0,h:0};
+  function applySize(w,h){
+    if(w<=0||h<=0) return;
+    dims = {w:w,h:h};
+    canvas.width = Math.round(w*DPR);
+    canvas.height = Math.round(h*DPR);
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  // ResizeObserver instead of a plain window 'resize' listener — this also
+  // catches the container changing size from flex/grid reflow, not just
+  // the browser viewport resizing.
+  if(window.ResizeObserver){
+    new ResizeObserver(function(entries){
+      var r = entries[0].contentRect;
+      applySize(r.width, r.height);
+    }).observe(canvas);
+  } else {
+    window.addEventListener('resize', function(){ var r=canvas.getBoundingClientRect(); applySize(r.width,r.height); });
+  }
+  var r0 = canvas.getBoundingClientRect();
+  applySize(r0.width, r0.height);
+
+  // Cloud silhouette as a closed polygon, normalized 0-1 coordinates.
+  var cloud = [
+    [0.18,0.62],[0.14,0.5],[0.20,0.38],[0.30,0.34],[0.34,0.24],
+    [0.48,0.18],[0.62,0.22],[0.70,0.32],[0.82,0.34],[0.90,0.46],
+    [0.86,0.58],[0.88,0.62],[0.18,0.62]
+  ];
+
+  // Internal circuit traces — each is a polyline of right-angle jogs.
+  var traces = [
+    [[0.30,0.62],[0.30,0.50],[0.38,0.50],[0.38,0.40]],
+    [[0.42,0.62],[0.42,0.46]],
+    [[0.50,0.62],[0.50,0.44],[0.58,0.44],[0.58,0.36]],
+    [[0.62,0.62],[0.62,0.48],[0.70,0.48],[0.70,0.40]],
+    [[0.74,0.62],[0.74,0.52]]
+  ];
+  // Static junction markers drawn at each trace's far endpoint.
+  var traceNodes = [[0.38,0.40],[0.42,0.46],[0.58,0.36],[0.70,0.40],[0.74,0.52]];
+
+  // Three "hanging cable" drips beneath the cloud, x positions (0-1).
+  var drips = [0.34, 0.5, 0.66];
+
+  var t0 = performance.now();
+  function draw(now){
+    var w = dims.w, h = dims.h;
+    if(w<=0||h<=0){ requestAnimationFrame(draw); return; }
+    ctx.clearRect(0,0,w,h);
+    // Clamp to 0: the timestamp rAF hands the very first frame can be
+    // earlier than performance.now() captured at script start, which made
+    // this go negative — and JS's % keeps a negative sign, so every index
+    // below was landing on array[-1] (undefined) and throwing.
+    var elapsed = reduceMotion ? 0 : Math.max(0, (now - t0)/1000);
+    function P(pt){ return {x: pt[0]*w, y: pt[1]*h}; }
+
+    // cloud outline
+    ctx.strokeStyle = LINE_COLOR;
+    ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    cloud.forEach(function(pt,i){ var p=P(pt); if(i===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y); });
+    ctx.stroke();
+
+    // internal traces + traveling pulse dot along each
+    traces.forEach(function(path, idx){
+      ctx.strokeStyle = LINE_COLOR;
+      ctx.lineWidth = 1.3;
+      ctx.beginPath();
+      path.forEach(function(pt,i){ var p=P(pt); if(i===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y); });
+      ctx.stroke();
+
+      var total = path.length - 1;
+      var tp = (((elapsed*0.35) + idx*0.22) % 1 + 1) % 1;  // 0..1 progress along whole path, never negative
+      var seg = Math.max(0, Math.min(total-1, Math.floor(tp*total))); // which segment
+      var segT = (tp*total) - seg;                         // progress within segment
+      var a = P(path[seg]), b = P(path[seg+1] || path[seg]);
+      var px = a.x + (b.x-a.x)*segT, py = a.y + (b.y-a.y)*segT;
+      ctx.fillStyle = PULSE_COLOR;
+      ctx.beginPath(); ctx.arc(px,py,2.6,0,Math.PI*2); ctx.fill();
+    });
+
+    // static junction squares
+    traceNodes.forEach(function(pt){
+      var p = P(pt);
+      ctx.fillStyle = NODE_COLOR;
+      ctx.fillRect(p.x-2.5,p.y-2.5,5,5);
+    });
+
+    // hub node (top of the cloud, antenna base) with a soft halo ring
+    var hub = P([0.48,0.18]);
+    ctx.fillStyle = PULSE_COLOR;
+    ctx.beginPath(); ctx.arc(hub.x,hub.y,4,0,Math.PI*2); ctx.fill();
+    ctx.strokeStyle = 'rgba(34,211,238,0.35)';
+    ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.arc(hub.x,hub.y,4,0,Math.PI*2); ctx.stroke();
+
+    // three hanging drip lines with a falling pulse each
+    drips.forEach(function(x, idx){
+      var top = P([x,0.62]);
+      var bottom = P([x,0.62+0.24]);
+      ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 1.3;
+      ctx.beginPath(); ctx.moveTo(top.x,top.y); ctx.lineTo(bottom.x,bottom.y); ctx.stroke();
+
+      var dp = (((elapsed*0.5) + idx*0.33) % 1 + 1) % 1;
+      var dy = top.y + (bottom.y-top.y)*dp;
+      ctx.fillStyle = PULSE_COLOR;
+      ctx.beginPath(); ctx.arc(top.x, dy, 2.2, 0, Math.PI*2); ctx.fill();
+
+      ctx.fillStyle = LINE_COLOR;
+      ctx.beginPath(); ctx.arc(bottom.x, bottom.y, 2.4, 0, Math.PI*2); ctx.fill();
+    });
+
+    if(!reduceMotion) requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+</script>

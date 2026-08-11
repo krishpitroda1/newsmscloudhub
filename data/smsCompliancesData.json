@@ -1,0 +1,952 @@
+[
+  {
+    "country": "Afghanistan",
+    "mcc": "412",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">For MTN network Sender ID preregistration required.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Roshan network – fully dynamic Sender ID.</p>\n                                    <p class=\"text-main-regular-14\">Rest networks – alpha dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Albania",
+    "mcc": "276",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Fully dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Algeria",
+    "mcc": "603",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Full dynamic Sender ID</p>"
+  },
+  {
+    "country": "Andorra",
+    "mcc": "213",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with Numeric sender.</p>"
+  },
+  {
+    "country": "Angola",
+    "mcc": "631",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender.</p>"
+  },
+  {
+    "country": "Anguilla",
+    "mcc": "365",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Fully dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "mcc": "344",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Fully dynamic Sender ID</p>"
+  },
+  {
+    "country": "Argentina",
+    "mcc": "722",
+    "featuresHtml": "<p class=\"text-main-regular-14\">All senders are overwritten with Short Code.</p>"
+  },
+  {
+    "country": "Armenia",
+    "mcc": "283",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is devided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Alphanumeric registration required. Could use a Generic SID.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a Domestic Sender ID, a company must be a resident of Armenia.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Aruba",
+    "mcc": "363",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Fully dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Australia",
+    "mcc": "505",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Fully dynamic Sender ID for all networks, except Lycamobile.</p>\n                                    <p class=\"text-main-regular-14\">Lycamobile – alpha-numeric dynamic SID (minimum 8 digits for numeric SID required).</p>"
+  },
+  {
+    "country": "Austria",
+    "mcc": "232",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric and Short Code are dynamic. National Numeric sender is dynamic but International Numeric sender will be overwritten with National Numeric sender.</p>"
+  },
+  {
+    "country": "Azerbaijan",
+    "mcc": "400",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric is dynamic. Short Code and Numeric sender are not supported.</p>"
+  },
+  {
+    "country": "Bahamas",
+    "mcc": "364",
+    "featuresHtml": "All senders are overwritten with Numeric."
+  },
+  {
+    "country": "Bahrain",
+    "mcc": "426",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "Bangladesh",
+    "mcc": "470",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric SID registration required (Masking SID) or SID will be Local Long Code (Non-Masking SID).</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a Domestic Sender ID a company must be a resident of Bangladesh.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Grameenphone and Teletalk networks have full dynamic Sender ID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Rest networks – alpha dynamic Sender ID.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Barbados",
+    "mcc": "342",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Belarus",
+    "mcc": "257",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required. Short Code and Numeric sender are not supported;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a local traffic Sender ID, a company must be a resident of Belarus.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required. Short Code and Numeric sender are not supported.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Belgium",
+    "mcc": "206",
+    "featuresHtml": "All senders are overwritten with Short Code."
+  },
+  {
+    "country": "Belize",
+    "mcc": "702",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">702-67 DigiCell – Full Dynamic SID.</p>\n                                    <p class=\"text-main-regular-14\">702-69 Smart – SC.</p>"
+  },
+  {
+    "country": "Benin",
+    "mcc": "616",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "Bermuda",
+    "mcc": "350",
+    "featuresHtml": "Alphanumeric is dynamic"
+  },
+  {
+    "country": "Bhutan",
+    "mcc": "402",
+    "featuresHtml": "Full dynamic Sender ID for all networks."
+  },
+  {
+    "country": "Bolivia",
+    "mcc": "736",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic</p>\n                                    <p class=\"text-main-regular-14\">For operator Entel 736-02 All senders are overwritten with SC</p>"
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "mcc": "218",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Full dynamic</p>\n                                    <p class=\"text-main-regular-14\">for National traffic need preregistration</p>"
+  },
+  {
+    "country": "Botswana",
+    "mcc": "652",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alpha and numeric senders allowed.</p>\n                                    <p class=\"text-main-regular-14\">Sender registration is required for both local and international traffic origin.</p>"
+  },
+  {
+    "country": "Brazil",
+    "mcc": "724",
+    "featuresHtml": "All senders are overwritten with Short Code."
+  },
+  {
+    "country": "British Virgin Islands",
+    "mcc": "348",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "Brunei",
+    "mcc": "528",
+    "featuresHtml": "Full dynamic Sender ID for all networks."
+  },
+  {
+    "country": "Bulgaria",
+    "mcc": "284",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">All senders are overwritten with Short Code.</p>\n                                    <p class=\"text-main-regular-14\">For M-Tel operator Alphanumeric registration required. All unregistered senders are overwritten with generic Alpha sender.</p>"
+  },
+  {
+    "country": "Burkina Faso",
+    "mcc": "613",
+    "featuresHtml": "Dynamic Alpha or numeric senders allowed."
+  },
+  {
+    "country": "Burundi",
+    "mcc": "642",
+    "featuresHtml": "Dynamic Alpha sender allowed, Numeric senders might get blocked on some networks."
+  },
+  {
+    "country": "Cambodia",
+    "mcc": "456",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a Domestic Sender ID a company must be a resident of Cambodia.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Mobitel network – full dynamic Sender ID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Smart network – alpha-numeric dynamic Sender ID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Metfone network – alpha dynamic Sender ID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">SeaTel network – long code Sender ID.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Cameroon",
+    "mcc": "642",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alpha sender allowed.</p>\n                                    <p class=\"text-main-regular-14\">Numeric senders are blocked. Registration is required for local traffic. For Orange, registration is needed for all traffic.</p>"
+  },
+  {
+    "country": "Canada",
+    "mcc": "302",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">All senders are overwritten with LC.</p>\n                                    <p class=\"text-main-regular-14\">Dedicated Toll-Free number or SC can be registered.</p>"
+  },
+  {
+    "country": "Cape Verde",
+    "mcc": "625",
+    "featuresHtml": "Alphanumeric is dynamic."
+  },
+  {
+    "country": "Cayman Islands",
+    "mcc": "346",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Central African Republic",
+    "mcc": "623",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender.</p>"
+  },
+  {
+    "country": "Chad",
+    "mcc": "622",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">For Millicom 622-03 Alphanumeric registration is required.</p>\n                                    <p class=\"text-main-regular-14\">No numeric or generic alpha senders allowed.</p>"
+  },
+  {
+    "country": "Chile",
+    "mcc": "730",
+    "featuresHtml": "All senders are overwritten with Numeric sender."
+  },
+  {
+    "country": "China",
+    "mcc": "460",
+    "featuresHtml": "<p class=\"text-main-regular-14\">All senders are overwritten with Numeric sender. Content whitelisting is required.</p>"
+  },
+  {
+    "country": "Colombia",
+    "mcc": "732",
+    "featuresHtml": "All senders are overwritten with Short Code."
+  },
+  {
+    "country": "Comoros",
+    "mcc": "654",
+    "featuresHtml": "Alphanumeric is dynamic."
+  },
+  {
+    "country": "Costa Rica",
+    "mcc": "712",
+    "featuresHtml": "All senders are overwritten with Numeric sender."
+  },
+  {
+    "country": "Croatia",
+    "mcc": "219",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Sender registration is covering HT and Telemach (setup fee 80€ and 70€ monthly fee totally for both nets), otherwise used fix SID “SMSinfo”.</p>\n                                    <p class=\"text-main-regular-14\">A1 – sender is dynamic.</p>"
+  },
+  {
+    "country": "Cuba",
+    "mcc": "368",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric registration required. Short Code and Numeric sender are not supported.</p>"
+  },
+  {
+    "country": "Cyprus",
+    "mcc": "280",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Czech Republic",
+    "mcc": "230",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric registration required.</p>\n                                    <p class=\"text-main-regular-14\">1 Sender ID for all 3 Czech Networks = 10€ per month.</p>"
+  },
+  {
+    "country": "Democratic Republic of the Congo",
+    "mcc": "630",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14\">For Airtel 630-02 Alphanumeric registration is required. Generic Alpha sender is available.</p>"
+  },
+  {
+    "country": "Denmark",
+    "mcc": "238",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "Djibouti",
+    "mcc": "638",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Dominica",
+    "mcc": "366",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "Dominican Republic",
+    "mcc": "370",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">All senders are overwritten with Short Code.</p>\n                                    <p class=\"text-main-regular-14\">For operator Altice 370-01 Fully dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Ecuador",
+    "mcc": "740",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">All senders are overwritten with Short Code.</p>\n                                    <p class=\"text-main-regular-14\">For operator CNT 740-02 – alphanumeric dynamic</p>"
+  },
+  {
+    "country": "Egypt",
+    "mcc": "602",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">For Etisalat 602-03 operator Alphanumeric registration is required. Short Code and Numeric sender are overwritten with generic Alpha sender.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">All unregistered senders are overwritten with generic Alpha sender.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "El Salvador",
+    "mcc": "706",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">706-01 Claro – SC</p>\n                                    <p class=\"text-main-regular-14 mb-16\">706-02 Digicel – full dynamic</p>\n                                    <p class=\"text-main-regular-14 mb-16\">706-03 Tigo – LC</p>\n                                    <p class=\"text-main-regular-14\">706-02 Movistar – SC</p>"
+  },
+  {
+    "country": "Equatorial Guinea",
+    "mcc": "627",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Dynamic Alpha or numeric senders allowed.</p>"
+  },
+  {
+    "country": "Estonia",
+    "mcc": "248",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "Ethiopia",
+    "mcc": "636",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric is dynamic. Short Code and Numeric sender are not supported.</p>"
+  },
+  {
+    "country": "Fiji",
+    "mcc": "542",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">For Vodafone is alpha-numeric dynamic Sender ID (+679 is added for numeric SIDs shorter than 10 digits).</p>\n                                    <p class=\"text-main-regular-14\">Digicel – full dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Finland",
+    "mcc": "244",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "France",
+    "mcc": "208",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender or Short Code.</p>"
+  },
+  {
+    "country": "French Polynesia",
+    "mcc": "547",
+    "featuresHtml": "Full dynamic Sender ID for all networks."
+  },
+  {
+    "country": "Gabon",
+    "mcc": "628",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Dynamic Alpha sender allowed.</p>\n                                    <p class=\"text-main-regular-14\">Numeric senders might get blocked on some networks.</p>"
+  },
+  {
+    "country": "Gambia",
+    "mcc": "607",
+    "featuresHtml": "Alphanumeric is dynamic"
+  },
+  {
+    "country": "Georgia",
+    "mcc": "282",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is devided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Short Code and Numeric sender are not supported;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a Domestic traffic Sender ID, a company must be a resident of Georgia.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">Internatioanal traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric is dynamic;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Short Code and Numeric sender are not supported.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Germany",
+    "mcc": "262",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Czech Republic",
+    "mcc": "620",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric registration required. Only registered Text IDs will be whitelisted on the SMS account, It will be necessary to provide basic information for each.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Text ID registration:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">end customer name;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">type of traffic;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">link to the website;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">or other;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">clear;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">customer identification.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-16\">In case of Text ID misuse for unsolicited SMS traffic, the ID will be removed from the SMS account, Generic sender id supported over special circumstances</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Rates for registration: 1 Sender ID for all 3 Czech Networks = 10€ per month.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">In order to pre-register sender ID below details will be required:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender name;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Sample content;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Website;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Traffic type (transactional, marketing etc.).</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-16\">Operators may ask for an authorization letter for banking, finance, government or ecommerce brands to confirm authenticity of brand.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Promotional/marketing traffic should have opt-out option. In order to pre-register sender ID below details will be required:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender name;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Sample content;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Website;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Traffic type (transactional, marketing etc.).</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-16\">Operators may ask for an authorization letter for banking, finance, government or ecommerce brands to confirm authenticity of brand. Promotional/marketing traffic should have opt-out option.</p>\n                                    <p class=\"text-main-regular-14\">All unregistered senders ID are overwritten with Numeric sender.</p>"
+  },
+  {
+    "country": "Gibraltar",
+    "mcc": "266",
+    "featuresHtml": "Alphanumeric is dynamic."
+  },
+  {
+    "country": "Greece",
+    "mcc": "202",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Grenada",
+    "mcc": "352",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Guadeloupe",
+    "mcc": "340",
+    "featuresHtml": "All senders are overwritten with Numeric sender."
+  },
+  {
+    "country": "Guatemala",
+    "mcc": "704",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">All senders are overwritten with Short Code.</p>\n                                    <p class=\"text-main-regular-14\">Tigo (704-02) is full dynamic.</p>"
+  },
+  {
+    "country": "Guinea",
+    "mcc": "611",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Dynamic Alpha sender allowed. Numeric senders might get blocked on some networks.</p>"
+  },
+  {
+    "country": "Guinea-Bissau",
+    "mcc": "632",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Dynamic Alpha or numeric senders allowed.</p>"
+  },
+  {
+    "country": "Haiti",
+    "mcc": "372",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender.</p>\n                                    <p class=\"text-main-regular-14\">For Natcom 372-03 operator all senders are overwritten with generic Alpha sender.</p>"
+  },
+  {
+    "country": "Honduras",
+    "mcc": "708",
+    "featuresHtml": "All senders are overwritten with Numeric sender."
+  },
+  {
+    "country": "Hong Kong",
+    "mcc": "454",
+    "featuresHtml": "Full dynamic Sender ID for all networks."
+  },
+  {
+    "country": "Hungary",
+    "mcc": "216",
+    "featuresHtml": "All senders ID are overwritten with Numeric sender."
+  },
+  {
+    "country": "Iceland",
+    "mcc": "274",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "India",
+    "mcc": "404, 405",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">All local SIDs should be registered on DLT platform due to Indian regulations.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a Domestic Sender ID a company must be a resident of India.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">All networks – short code Sender ID.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Indonesia",
+    "mcc": "510",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is devided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required. Short Code and Numeric sender are not supported;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a Domestic Sender ID a company must be a resident of Indonesia.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Telkomsel, XL networks – alpha-numeric registration required. Short Code and Numeric sender are not supported.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">3 network – Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Indosat, Smartfen and 3 networks – alpha dynamic SID.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Iran",
+    "mcc": "432",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Sender IDs:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Irancell 432-35 – All senders are overwritten with Numeric sender;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">MCI 432-11 – Alphanumeric dynamic. Numeric sender is overwritten with generic Alpha sender;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">RighTel 432-20 – Alphanumeric and Short Code are dynamic. Numeric sender is overwritten with generic Alpha sender;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Taliya 432-32 – All senders are overwritten with Numeric sender;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For other operators fully dynamic Sender ID.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Iraq",
+    "mcc": "418",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Short Code and Numeric sender are overwritten with generic Alpha sender.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">For operator Omnnea 418-62, 418-70, 418-92 Alphanumeric registration is required.</p>\n                                    <p class=\"text-main-regular-14\">All unregistered senders are overwritten with generic Alpha sender.</p>"
+  },
+  {
+    "country": "Ireland",
+    "mcc": "272",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Israel",
+    "mcc": "425",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Domestic traffic: Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Short Code and Numeric sender are not supported.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">All international Senders IDs is forbidden for Domestic traffic</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Internatioanal traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric is dynamic. Short Code and Numeric sender are not supported. Traffic is divided into Domestic and International.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Italy",
+    "mcc": "222",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Ivory Coast",
+    "mcc": "612",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic can be delivered with Alphanumeric senders and Short Codes (the latter is available under certain conditions).</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Atlantique Cellulaire (MOOV) 612-02 Sender Content Registration, Numeric Generic not allowed.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">MTN Cote d’Ivoire 612-05 Sender Content Registration, Numeric Generic not allowed.</p>\n                                    <p class=\"text-main-regular-14\">Orange Cote d’Ivoire 612- 03 Dynamic.</p>"
+  },
+  {
+    "country": "Jamaica",
+    "mcc": "338",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Japan",
+    "mcc": "440",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">NTT DoCoMo – full dynamic Sender ID (Sender ID less than 5 digits replaced to fixed alpha SID).</p>\n                                    <p class=\"text-main-regular-14 mb-16\">KDDI – full dynamic Sender ID (digits “010” added in front of numeric Sender ID).</p>\n                                    <p class=\"text-main-regular-14\">SoftBank and Rakuten – full dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Jordan",
+    "mcc": "416",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic. Short Code and Numeric sender are not supported.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">For operator Zain 416-01 Alphanumeric registration is required. Short Code and Numeric sender are not supported.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.”</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Kazakhstan",
+    "mcc": "401",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is devided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required. Short Code and Numeric sender are not supported;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a local traffic Sender ID, a company must be a resident of Kazakhstan;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration costs 10000 tenge or 25 EUR for all operators except Kcell 401-02.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required. Short Code and Numeric sender are not supported;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration costs 10000 tenge or 25 EUR for operators Tele2 401-77 and Altel 401-07.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Kenya",
+    "mcc": "639",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Fully dynamic Sender ID.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Local traffic registration is required on all networks. Sender ID is a maximum length of 11 characters including special characters, numbers are not allowed. You need an authorization letter. The sender name needs to match the name of the company/person (initials allowed). Otherwise, you need a brand/trademark certificate.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">For international traffic, you need a sender ID registration. The authorization letter might be required as well. Operator’s registration fees apply (estimated at 50 USD per SID).</p>\n                                    <p class=\"text-main-regular-14\">If you send both promotional and transactional content, you cannot use the same sender.</p>"
+  },
+  {
+    "country": "Kosovo",
+    "mcc": "221",
+    "featuresHtml": "Alphanumeric is dynamic."
+  },
+  {
+    "country": "Kuwait",
+    "mcc": "419",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Kuwait mnc 02 Zain – Full dyn, local SMSC.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Kuwait mnc 03 Ooredoo – preregistration require, local SMSC.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Kuwait mnc 04 VIVA – preregistration, require Sweden SMSC.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Kuwait mnc 09 Virgin Mobile – preregistration require.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">All unregistered senders could be overwritten with generic Alpha sender.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Short Code and Numeric sender are not supported. Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Kyrgyzstan",
+    "mcc": "437",
+    "featuresHtml": "Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender."
+  },
+  {
+    "country": "Laos",
+    "mcc": "457",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Sender ID preregistration required for Unitel network.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">TPLUS network – full dynamic Sender ID.</p>\n                                    <p class=\"text-main-regular-14\">Rest networks – alpha-numeric dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Latvia",
+    "mcc": "247",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "Lebanon",
+    "mcc": "415",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alpha dynamic, for numeric SID will be fix “INFO – Alfa mcc=415 mnc=01, mcc=415 mnc=03” – doesn’t work Numeric SID.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Traffic is divided into Domestic and International. Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Liberia",
+    "mcc": "618",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Libya",
+    "mcc": "606",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric is dynamic. Short Code and Numeric sender are not supported.</p>"
+  },
+  {
+    "country": "Liechtenstein",
+    "mcc": "295",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric is dynamic. Short Code and Numeric sender are not supported.</p>"
+  },
+  {
+    "country": "Lithuania",
+    "mcc": "246",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Luxembourg",
+    "mcc": "270",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Macau",
+    "mcc": "455",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">CTM – alpha dynamic Sender ID.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">China Telecom network – full dynamic Sender ID.</p>\n                                    <p class=\"text-main-regular-14\">3 network – alpha-numeric dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Macedonia",
+    "mcc": "294",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender.</p>"
+  },
+  {
+    "country": "Madagascar",
+    "mcc": "646",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Dynamic Alpha sender allowed. Numeric senders might get blocked on some networks.</p>"
+  },
+  {
+    "country": "Malawi",
+    "mcc": "650",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Dynamic Alpha sender allowed. Numeric senders might get blocked on some networks.</p>"
+  },
+  {
+    "country": "Malaysia",
+    "mcc": "502",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Webe network – full dynamic (except short code) Sender ID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Rest networks – short code SID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To use Domestic SC, Sender ID should not be listed by operators as International.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Webe network – full dynamic (except short code) Sender ID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Rest networks – short code SID.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-16\">Additional text “RM0.00”, “RM0.0” , or “RM0” is adding by operators in the beginning of the SMS content.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">This is done to inform end users that they were not charged to receive these messages.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">If you have not added this to your message body, the operator will automatically add it and this may compromise the maximum length of your SMS.</p>\n                                    <p class=\"text-main-regular-14\">This signature must be taken into consideration when sending a message. Since in this case the operator may charge a fee for sending a concatenated message.</p>"
+  },
+  {
+    "country": "Maldives",
+    "mcc": "472",
+    "featuresHtml": "Alpha-numeric dynamic Sender ID for all networks."
+  },
+  {
+    "country": "Mali",
+    "mcc": "610",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alpha sender allowed. Numeric and generic senders will be blocked.</p>"
+  },
+  {
+    "country": "Malta",
+    "mcc": "278",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Mauritania",
+    "mcc": "609",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Dynamic Alpha sender allowed.</p>\n                                    <p class=\"text-main-regular-14\">Numeric senders might get blocked on some networks.</p>"
+  },
+  {
+    "country": "Mauritius",
+    "mcc": "617",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alpha Dynamic, Numeric &amp; Generic not allowed.</p>\n                                    <p class=\"text-main-regular-14\">For Emtel 617-10 pre-registration is required.</p>"
+  },
+  {
+    "country": "Mexico",
+    "mcc": "334",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">All senders are overwritten with numeric sender.</p>\n                                    <p class=\"text-main-regular-14\">Alpha SID registration is possible.</p>"
+  },
+  {
+    "country": "Moldova",
+    "mcc": "259",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Monaco",
+    "mcc": "212",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Mongolia",
+    "mcc": "428",
+    "featuresHtml": "Alpha-numeric dynamic Sender ID for all networks."
+  },
+  {
+    "country": "Montenegro",
+    "mcc": "297",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Morocco",
+    "mcc": "604",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">For INWI 604-02 and 604-05 operator Alphanumeric registration is required. Short Code and Numeric sender are overwritten with generic Alpha sender.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">All unregistered senders are overwritten with generic Alpha sender.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14\">Domestic: Sender ID registration required.</p>"
+  },
+  {
+    "country": "Mozambique",
+    "mcc": "643",
+    "featuresHtml": "Alpha Dynamic, Numeric masked to Generic"
+  },
+  {
+    "country": "Myanmar",
+    "mcc": "414",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">MPT and Telenor – full dynamic Sender ID.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">For Ooredoo network Sender ID preregistration required.</p>\n                                    <p class=\"text-main-regular-14\">Mytel – full dynamic SID, but for numeric SID minimum 8 digits should be used.</p>"
+  },
+  {
+    "country": "Namibia",
+    "mcc": "649",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alpha and numeric senders are allowed. Maximum length 10 characters, no spaces allowed.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Sender registration is required and proper documentation for sending local and international traffic.</p>\n                                    <p class=\"text-main-regular-14\">Delegation letter is required with information about traffic type.</p>"
+  },
+  {
+    "country": "Nauru",
+    "mcc": "536",
+    "featuresHtml": "Fully dynamic Sender ID for all networks."
+  },
+  {
+    "country": "Nepal",
+    "mcc": "429",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a local traffic Sender ID, a company must be a resident of Nepal.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric SID registration required. Local license should be shared and confirmed.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Nepal Telecom and Smarttel – full dynamic SID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For Ncell network SID preregistration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Netherlands",
+    "mcc": "204",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "New Zealand",
+    "mcc": "530",
+    "featuresHtml": "All senders are overwritten with Short Code."
+  },
+  {
+    "country": "Nicaragua",
+    "mcc": "710",
+    "featuresHtml": "All senders are overwritten with Short Code."
+  },
+  {
+    "country": "Niger",
+    "mcc": "614",
+    "featuresHtml": "Alphanumeric is dynamic."
+  },
+  {
+    "country": "Nigeria",
+    "mcc": "621",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is devided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required. Short Code and Numeric sender are not supported;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a local traffic Sender ID, a company must be a resident of Nigeria.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">For the MNOs, Airtel 621-20 and Globacom 621-50, Alpha Dynamic, Numeric &amp; Generic not allowed;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">While MTN 621-30 and 9Mobile 621-60, Sender and Content Registration, Alpha Dynamic, Numeric Generic not allowed.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Norway",
+    "mcc": "242",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "Oman",
+    "mcc": "422",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Short Code and Numeric sender are not supported.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a local traffic Sender ID, a company must be a resident of Oman.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">Registration for Domestic route:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Customer Account ID</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Website URL</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Company Name</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Sample Message, NOC Letter from end client.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric is dynamic.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For Ooredoo 422-03 operator Alphanumeric registration is required.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Short Code and Numeric sender are overwritten with generic Alpha sender.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">All unregistered senders are overwritten with generic Alpha sender.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Pakistan",
+    "mcc": "410",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Short Code and Numeric sender are not supported.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a local traffic Sender ID, a company must be a resident of Pakistan.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-16\">After the recent regime changes as per local regulatory, domestic A2P traffic for Pakistan need to be handled locally.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">International traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">For Jazz network Sender ID preregistration required.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Ufone and Telenor – short code Sender ID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For Zong and SCO networks full dynamic Sender ID available.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Palau",
+    "mcc": "552",
+    "featuresHtml": "All networks – full dynamic SID."
+  },
+  {
+    "country": "Panama",
+    "mcc": "714",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Papua New Guinea",
+    "mcc": "537",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">For Telikom network full dynamic Sender ID available.</p>\n                                    <p class=\"text-main-regular-14\">Rest networks – alpha-numeric dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Paraguay",
+    "mcc": "744",
+    "featuresHtml": "All senders are overwritten with nemeric sender"
+  },
+  {
+    "country": "Peru",
+    "mcc": "716",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">All senders are overwritten with Short Code.</p>\n                                    <p class=\"text-main-regular-14\">Entel 716-17 – Alphadynamic. Numeric senders are overwritten with SC.</p>"
+  },
+  {
+    "country": "Philippines",
+    "mcc": "515",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is devided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric Sender ID registration required;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To use Domestic option, Sender ID should not be listed by operators as International (Premium).</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">There is list of International (Premium) SIDs exist. It updated by Operators once in month;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For Smart network alpha-dynamic Sender ID available;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Rest networks – Sender ID preregistration.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Poland",
+    "mcc": "260",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14\">On some operators all senders are overwritten with Fixed Alpha sender.</p>"
+  },
+  {
+    "country": "Portugal",
+    "mcc": "268",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Puerto Rico",
+    "mcc": "330",
+    "featuresHtml": "All senders are overwritten with Short Code."
+  },
+  {
+    "country": "Qatar",
+    "mcc": "427",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric registration required. Short Code and Numeric sender are not supported.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Republic of the Congo",
+    "mcc": "629",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14\">For operator Libertis Congo 629-10 Alphanumeric registration is required. All unregistered senders are overwritten with Short Code.</p>"
+  },
+  {
+    "country": "Romania",
+    "mcc": "226",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Preregistration. In other case all senders are overwritten with Short Code.</p>\n                                    <p class=\"text-main-regular-14\">For operator Lycamobile 226-16 Fully dynamic Sender ID.</p>"
+  },
+  {
+    "country": "Rwanda",
+    "mcc": "635",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "mcc": "356",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Saint Lucia",
+    "mcc": "358",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "mcc": "360",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "San Marino",
+    "mcc": "292",
+    "featuresHtml": "Alphanumeric is dynamic."
+  },
+  {
+    "country": "Saudi Arabia",
+    "mcc": "420",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric registration required.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Short Code and Numeric sender are not supported.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Senegal",
+    "mcc": "608",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alpha sender allowed. Numeric and generic senders will be blocked on some networks.</p>"
+  },
+  {
+    "country": "Serbia",
+    "mcc": "220",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric registration required. All unregistered senders are overwritten with generic Alpha sender.</p>"
+  },
+  {
+    "country": "Seychelles",
+    "mcc": "633",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alpha senders allowed, but have to be pre-registered. Numeric senders might not be available on some networks.</p>"
+  },
+  {
+    "country": "Sierra Leone",
+    "mcc": "619",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">No specific restrictions apply to sending traffic to Sierra Leone.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Africell (Sierra Leone) Ltd 619 – 5, AlphaNumeric dynamic, Generic not allowed.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Orange 619-1, Dynamic.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">QCell (SL) Ltd 619-7, Alpha Dynamic, Numeric masked to Long Code.</p>\n                                    <p class=\"text-main-regular-14\">Sierratel 619- 6, Dynamic.</p>"
+  },
+  {
+    "country": "Singapore",
+    "mcc": "525",
+    "featuresHtml": "Full dynamic Sender ID for all networks."
+  },
+  {
+    "country": "Slovakia",
+    "mcc": "231",
+    "featuresHtml": "Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender."
+  },
+  {
+    "country": "Slovenia",
+    "mcc": "293",
+    "featuresHtml": "Sender ID registration is required."
+  },
+  {
+    "country": "Somalia",
+    "mcc": "637",
+    "featuresHtml": "Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender."
+  },
+  {
+    "country": "South Africa",
+    "mcc": "655",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Virtual Long Numbers are used to deliver SMS to all networks in South Africa.</p>\n                                    <p class=\"text-main-regular-14\">Alpha senders available on demand (subject to registration) only to MTN.</p>"
+  },
+  {
+    "country": "South Korea",
+    "mcc": "450",
+    "featuresHtml": "All senders are overwritten with Numeric sender."
+  },
+  {
+    "country": "South Sudan",
+    "mcc": "659",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Digitel 659-05, Long Code.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">MTN 659-02, Sender Content Registration, Numeric and Generic not allowed.</p>\n                                    <p class=\"text-main-regular-14\">Zain 659-06, Alpha Dynamic, Numeric and Generic not allowed.</p>"
+  },
+  {
+    "country": "Spain",
+    "mcc": "214",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Sri Lanka",
+    "mcc": "413",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is devided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">SID registration required;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a local traffic Sender ID a company must be a resident of Sri Lanka;</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">SLT-Mobitel – alpha dynamic Sender ID;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For Dialog network Sender ID preregistration required.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Hutch network – full dynamic Sender ID.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Airtel – alpha-numeric dynamic Sender ID.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "State of Palestine",
+    "mcc": "425",
+    "featuresHtml": "<p class=\"text-main-regular-14\">Alphanumeric registration required. Short Code and Numeric sender are not supported, numeric sender will be fix SID “infosms”.</p>"
+  },
+  {
+    "country": "Sudan",
+    "mcc": "634",
+    "featuresHtml": "Zain mcc=634 mnc=01/mcc=634 mnc=06 Alphanumeric dynamic, don’t work with SC and LC(numeric sender), MTN mcc=634 mnc=02 preregistration required, for not registered SID fix “”Verify-Code”” , rest networks Alphanumeric dynamic."
+  },
+  {
+    "country": "Suriname",
+    "mcc": "746",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Sweden",
+    "mcc": "240",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Switzerland",
+    "mcc": "228",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Syria",
+    "mcc": "417",
+    "featuresHtml": "All senders are overwritten with Numeric sender."
+  },
+  {
+    "country": "Taiwan",
+    "mcc": "466",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">For Gt Smart (APT) and T Star networks alpha-numeric dynamic Sender ID available.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Taiwan Mobile – full dynamic Sender ID.</p>\n                                    <p class=\"text-main-regular-14\">Rest networks – numeric Sender ID.</p>"
+  },
+  {
+    "country": "Tajikistan",
+    "mcc": "436",
+    "featuresHtml": "Alphanumeric is dynamic. Short Code and Numeric sender are overwritten with generic Alpha sender."
+  },
+  {
+    "country": "Tanzania",
+    "mcc": "640",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric registration required.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Tanzania, SID registration is free of charge. Registration and supply of proper documentation are required for both sending traffic with local or international origin.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">To register a sender, you have to provide an authorization letter appointing a preferred service provider to register the sender. The letter must be signed and stamped.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">All numeric senders are forbidden (except Short Code).</p>\n                                    <p class=\"text-main-regular-14\">Generic alpha senders are strictly forbidden and will not be registered. The sender name must be connected with the company or product name.</p>"
+  },
+  {
+    "country": "Thailand",
+    "mcc": "520",
+    "featuresHtml": "For all networks Sender ID preregistration required."
+  },
+  {
+    "country": "Togo",
+    "mcc": "615",
+    "featuresHtml": "Dynamic Alpha or numeric senders allowed."
+  },
+  {
+    "country": "Tunisia",
+    "mcc": "605",
+    "featuresHtml": "Fully dynamic Sender ID."
+  },
+  {
+    "country": "Turkey",
+    "mcc": "286",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">All unregistered senders are overwritten with Numeric sender.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Customers sending promotional messages need to make sure that the mobile numbers are registered in this database (IYS). This permission database is managed by an organization assigned by the Ministry of Trade of Turkey.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">We need an IYS database code along with a sender ID to register a promotional sender ID.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Please note that non-compliance to this regulation may attract penalty and the same will be passed to you.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">More information can be found at the link <a href=\"https://iys.org.tr/iys/sss\" target=\"_blank\" rel=\"nofollow\">https://iys.org.tr/iys/sss.</a></p>\n                                    <p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Alphanumeric registration required:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">client’s company name;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">sender (if need; Long Code Sender ID for default);</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">content;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">URL (if have);</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Turkmenistan",
+    "mcc": "438",
+    "featuresHtml": "All senders are overwritten with Numeric sender."
+  },
+  {
+    "country": "Uganda",
+    "mcc": "641",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Fully dynamic Sender ID</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Local traffic registration is required on all networks. Sender ID is a maximum length of 11 characters including special characters, numbers are not allowed. You need an authorization letter.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">The sender name needs to match the name of the company/person (initials allowed). Otherwise, you need a brand/trademark certificate.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">For international traffic, you need a sender ID registration. The authorization letter might be required as well. Operator’s registration fees apply (estimated at 50 USD per SID).</p>\n                                    <p class=\"text-main-regular-14\">If you send both promotional and transactional content, you cannot use the same sender.</p>"
+  },
+  {
+    "country": "Ukraine",
+    "mcc": "255",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is devided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required. Short Code and Numeric sender are not supported;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">To register a local traffic Sender ID, a company must be a resident of Ukraine.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-16\">Alphanumeric registration required:</p>\n                                    <p class=\"text-main-regular-14 mb-16\">1) client’s company name; 2) sender ID; 3) Company USREOU – Unified State Register of Enterprises and Organizations of Ukraine, Entity address, Field of activity; 4) samples of content. Registartion is free.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">International traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric is dynamic;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Short Code and Numeric sender are overwritten with generic Alpha sender;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For operator Life 255-06 Alphanumeric registration required. Registartion is free. All unregistered senders for Life 255-06 are overwritten with generic Alpha sender;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For operator Intertelecom 255-04 All senders are overwritten with Short Code.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "United Arab Emirates",
+    "mcc": "424",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric registration required.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Short Code and Numeric sender are not supported.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Sender ID registration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "United Kingdom",
+    "mcc": "234, 235",
+    "featuresHtml": "Fully dynamic Sender ID"
+  },
+  {
+    "country": "United States of America",
+    "mcc": "310, 311, 312, 316",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">All senders are overwritten with Numeric sender.</p>\n                                    <p class=\"text-main-regular-14\">Pre-registration of all campaigns is required. Dedicated 10DLC (long code), tall-free number or SC need to be registered for each campaign.</p>"
+  },
+  {
+    "country": "Uruguay",
+    "mcc": "748",
+    "featuresHtml": "All senders are overwritten with numeric sender."
+  },
+  {
+    "country": "Uzbekistan",
+    "mcc": "434",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is divided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric registration required.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Short Code and Numeric sender are not supported.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">The preregistration costs 20 EUR for all operators and it takes about 60 days.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">Alphanumeric is dynamic.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For operators Beeline 434-04 and Ucell 434-05 Alphanumeric registration required.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Registration is free and it takes about 14 days.</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">All unregistered senders are overwritten with generic Alpha sender.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Venezuela",
+    "mcc": "734",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-8\">Different SID features on different networks:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">734-02 Digitel – Alpha pre-registration required. Unregistered, alpha numeric, numeric will be overwritten with Generic SID;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">734-04 Telefonica – SC;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">734-06 Movilnet – full Dynamic.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Vietnam",
+    "mcc": "452",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Traffic is devided into Domestic and International.</p>\n                                    <p class=\"text-main-regular-14 mb-8\">Domestic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary mb-16\">\n                                        <li class=\"el__item\"><div class=\"el__text\">SID registration towards Vietnam for Vietnamese companies which are operating in Vietnam or international companies which has headquarters in Vietnam;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Preregistration required;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Price of message depends on which features of business of the Company : finance, stock, social app, education or e-commerce etc.</div></li>\n                                    </ul>\n                                    <p class=\"text-main-regular-14 mb-8\">International traffic:</p>\n                                    <ul class=\"el--typo-list-v3 el--typo-list-v3--type-disc clr-character-light-secondary\">\n                                        <li class=\"el__item\"><div class=\"el__text\">SID registration towards Vietnam for international companies which are operating in other country or international company which doesn’t have headquarter in Vietnam;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">For Vietnamobile alpha dynamic Sender ID available;</div></li>\n                                        <li class=\"el__item\"><div class=\"el__text\">Rest networks – Sender ID preregistration required.</div></li>\n                                    </ul>"
+  },
+  {
+    "country": "Yemen",
+    "mcc": "421",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Alphanumeric is dynamic.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">On the operator Yemen Mobile 421-03 all senders ID are overwritten with generic Alpha sender.</p>\n                                    <p class=\"text-main-regular-14\">Short Code and Numeric sender are overwritten with generic Alpha sender.</p>"
+  },
+  {
+    "country": "Zambia",
+    "mcc": "645",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Only transactional traffic allowed.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">SID Features: Airtel 645 – 01, Alpha Dynamic.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">MTN 645 – 02, Sender Content Registration, Numeric Generic not allowed.</p>\n                                    <p class=\"text-main-regular-14\">Zamtel MTS 645 – 03, Sender Content Registration, Numeric Generic not allowed.</p>"
+  },
+  {
+    "country": "Zimbabwe",
+    "mcc": "648",
+    "featuresHtml": "<p class=\"text-main-regular-14 mb-16\">Fully dynamic Sender ID.</p>\n                                    <p class=\"text-main-regular-14 mb-16\">Local traffic registration is required on all networks, maximum length of 11 characters with special characters.</p>\n                                    <p class=\"text-main-regular-14\">For International traffic, registration is not required, but do not use generic and numeric senders.</p>"
+  }
+]
