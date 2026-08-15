@@ -6,40 +6,40 @@ export default function RoleSolutions() {
       eyebrow: "Enterprise",
       title: "Reach & Engage Customers",
       items: [
-        { label: "WhatsApp for Business API", href: "#services" },
-        { label: "High-Volume A2P SMS & OTP", href: "#services" },
-        { label: "Voice Verification & IVR", href: "#services" },
-        { label: "Programmable CPaaS APIs", href: "#services" },
-      ],
-    },
-    {
-      eyebrow: "Operator & MNO",
-      title: "Monetize & Protect Networks",
-      items: [
-        { label: "0Hop Direct SMS Connectivity", href: "#route" },
-        { label: "Managed Messaging Services", href: "#reliability" },
-        { label: "Real-Time SMSC Firewall", href: "#reliability" },
-        { label: "Operator VAS Monetization", href: "#services" },
+        { label: "WhatsApp for Business API", href: "/services/whatsapp-business" },
+        { label: "High-Volume A2P SMS & OTP", href: "/services/a2p-sms" },
+        { label: "Digital Marketing & Transformation", href: "/services/digital-marketing" },
+        { label: "Programmable CPaaS APIs", href: "/services/cpaas-api" },
       ],
     },
     {
       eyebrow: "Carrier",
       title: "Wholesale Interconnect",
       items: [
-        { label: "Global A2P SMS Hubbing", href: "#services" },
-        { label: "Tier-1 Voice Termination", href: "#services" },
-        { label: "International Virtual DIDs", href: "#services" },
-        { label: "0Hop Carrier Peering", href: "#route" },
+        { label: "Global A2P SMS Hubbing", href: "/services/a2p-hubbing" },
+        { label: "Tier-1 Voice Termination", href: "/services/sip-trunk-voice" },
+        { label: "International Virtual DIDs", href: "/services/virtual-did" },
+        { label: "0Hop Carrier Peering", href: "/services/0hop-connectivity" },
+      ],
+    },
+    {
+      eyebrow: "MNO & MVNO",
+      title: "Monetize & Protect Networks",
+      items: [
+        { label: "0Hop Direct SMS Connectivity", href: "/services/0hop-connectivity" },
+        { label: "Managed Messaging Services", href: "/services/managed-services" },
+        { label: "Real-Time SMSC Firewall", href: "/services/smsc-firewall" },
+        { label: "Operator VAS Monetization", href: "/services/vas-solutions" },
       ],
     },
     {
       eyebrow: "Technology",
       title: "Build & Integrate Easily",
       items: [
-        { label: "CloudSkool++ Platform", href: "#top" },
-        { label: "Developer CPaaS SDKs", href: "#services" },
-        { label: "CloudContactCenter (CCC)", href: "#services" },
-        { label: "Custom SMPP & HTTP Gateways", href: "#services" },
+        { label: "CloudSkool++ Platform", href: "/services/cloudskool" },
+        { label: "Developer CPaaS SDKs", href: "/services/cpaas-api" },
+        { label: "CloudContactCenter (CCC)", href: "/services/cloud-contact-center" },
+        { label: "Custom SMPP & HTTP Gateways", href: "/services/cpaas-platform" },
       ],
     },
   ];
@@ -63,9 +63,9 @@ export default function RoleSolutions() {
           <span className="tr-line" />
         </div>
 
-        <div className="max-w-[680px] mb-14">
+        <div className="max-w-[760px] mb-14">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            Whichever side of the route you sit on, there’s a tailored stack for it.
+            Connecting Operators, Carriers and Enterprises through the right technology, routes and solutions.
           </h2>
         </div>
 

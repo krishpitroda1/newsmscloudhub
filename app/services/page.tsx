@@ -14,9 +14,9 @@ const services = [
     icon: "💬",
     category: "Enterprise",
     title: "A2P SMS & OTP Delivery",
-    desc: "Transactional and promotional SMS delivered over direct SS7 interconnects to 193+ countries. Sub-2-second latency SLA on Tier-1 routes. Supports long codes, short codes, and alphanumeric sender IDs. DLR receipts in real time via webhook or SMPP.",
+    desc: "Transactional and promotional SMS delivered over direct SS7 interconnects to 185+ countries. Sub-2-second latency SLA on Tier-1 routes. Supports long codes, short codes, and alphanumeric sender IDs. DLR receipts in real time via webhook or SMPP.",
     specs: ["SMPP v3.4 & HTTP REST API", "TLS 1.3 encrypted transport", "98.87% average DLR accuracy", "Throughput: up to 10,000 TPS per account"],
-    href: "/contact",
+    href: "/services/a2p-sms",
   },
   {
     icon: "💚",
@@ -24,7 +24,15 @@ const services = [
     title: "WhatsApp Business API",
     desc: "Verified official BSP (Business Solution Provider) access to the WhatsApp Business Platform. Send rich media, interactive buttons, and template messages at scale. Manage agent conversations, chatbots, and notifications from a single API.",
     specs: ["Official Meta BSP access", "Rich media: image, video, document", "Interactive list & reply buttons", "Green tick verification support"],
-    href: "/contact",
+    href: "/services/whatsapp-business",
+  },
+  {
+    icon: "📈",
+    category: "Enterprise",
+    title: "Digital Marketing & Transformation",
+    desc: "Targeted digital marketing campaigns, customer engagement automation, brand transformation strategies, and analytics to elevate multi-channel reach and conversions.",
+    specs: ["Omnichannel campaign automation", "Audience segmentation & targeting", "Conversion tracking & ROI reporting", "Enterprise digital growth strategy"],
+    href: "/services/digital-marketing",
   },
   {
     icon: "📞",
@@ -32,7 +40,7 @@ const services = [
     title: "Voice Termination & Cloud OTP",
     desc: "Carrier-grade voice termination for A2Z global calling and Voice OTP delivery. Automated TTS calls with customisable voice, language, and retry logic. Ideal when SMS delivery is blocked or the end-user is in a Wi-Fi-only environment.",
     specs: ["SIP & H.323 termination", "50+ language TTS engine", "Configurable retry & timeout", "Real-time CDR reporting"],
-    href: "/contact",
+    href: "/services/voice-otp",
   },
   {
     icon: "⚙️",
@@ -40,7 +48,7 @@ const services = [
     title: "CPaaS REST APIs",
     desc: "A unified communications-platform-as-a-service layer exposing SMS, WhatsApp, Voice, and Verification through a single REST API. SDKs for Python, Node.js, PHP, Java, and .NET. Sandbox environment included for zero-risk integration testing.",
     specs: ["REST + Webhook architecture", "SDKs: Node, Python, PHP, Java, .NET", "Sandbox & production environments", "OpenAPI 3.0 documentation"],
-    href: "/contact",
+    href: "/services/cpaas-api",
   },
   {
     icon: "🛡️",
@@ -48,7 +56,7 @@ const services = [
     title: "SMSC Firewall & Grey Route Protection",
     desc: "Protect your subscribers from spam, phishing, and fraudulent A2P traffic. Our SMSC firewall inspects every message at the SS7 layer using ML-based anomaly detection, keyword filtering, and sender reputation scoring. Stop revenue leakage from grey routes.",
     specs: ["Real-time SS7 traffic inspection", "ML-based anomaly & fraud detection", "Configurable keyword & sender rules", "Revenue leakage reporting dashboard"],
-    href: "/contact",
+    href: "/services/smsc-firewall",
   },
   {
     icon: "🔗",
@@ -56,7 +64,7 @@ const services = [
     title: "0Hop Direct Connect",
     desc: "Bypass every intermediary aggregator. SMSCloudHub establishes direct SS7 and SMPP interconnects with your SMSC, eliminating latency from multi-hop routing and giving you unmatched delivery speed, grey-route immunity, and transparent billing.",
     specs: ["Direct SS7 & SMPP peering", "Zero intermediary hops", "Dedicated throughput allocation", "Real-time bilateral DLR exchange"],
-    href: "/contact",
+    href: "/services/0hop-connectivity",
   },
 ];
 

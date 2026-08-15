@@ -14,6 +14,7 @@ export default function ServicesChannels() {
         </svg>
       ),
       title: "A2P SMS & OTP",
+      href: "/services/a2p-sms",
       description:
         "Direct-connect messaging for OTPs, transactional alerts, and global campaigns, routed over 0Hop and 1Hop paths with sub-second latency.",
       statValue: "98%",
@@ -32,6 +33,7 @@ export default function ServicesChannels() {
         </svg>
       ),
       title: "WhatsApp for Business",
+      href: "/services/whatsapp-business",
       description:
         "Automated, conversational engagement on the world's leading messaging app. Drive support automation, recovery flows, and verified notifications.",
       statValue: "2.5x",
@@ -50,9 +52,10 @@ export default function ServicesChannels() {
         </svg>
       ),
       title: "Voice & Voice OTP",
+      href: "/services/voice-otp",
       description:
         "Tier-1 VoIP termination, SIP trunking, and voice pin generation backed by our full CloudContactCenter platform for agent operations.",
-      statValue: "195+",
+      statValue: "185+",
       statLabel: "Countries voice terminated",
       tag: "Tier-1 VoIP",
     },
@@ -98,6 +101,7 @@ export default function ServicesChannels() {
         </svg>
       ),
       title: "Programmable CPaaS",
+      href: "/services/cpaas-api",
       description:
         "One unified developer API across SMS, Voice, WhatsApp, and Email. Built to scale with high-throughput multi-channel logic.",
       statValue: "6+",
@@ -139,8 +143,9 @@ export default function ServicesChannels() {
         {/* Services Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {channels.map((card, idx) => (
-            <div
+            <Link
               key={idx}
+              href={card.href}
               className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-[#22D3EE] hover:-translate-y-1 transition-all group shadow-lg"
             >
               <div className="space-y-4">
@@ -162,15 +167,21 @@ export default function ServicesChannels() {
                 </p>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-white/10 flex items-baseline gap-2 font-mono">
-                <span className="text-2xl font-extrabold text-[#22D3EE]">
-                  {card.statValue}
-                </span>
-                <span className="text-xs text-[#8DA0C0] leading-snug">
-                  {card.statLabel}
-                </span>
+              <div className="pt-6 mt-6 border-t border-white/10 space-y-3">
+                <div className="flex items-baseline gap-2 font-mono">
+                  <span className="text-2xl font-extrabold text-[#22D3EE]">
+                    {card.statValue}
+                  </span>
+                  <span className="text-xs text-[#8DA0C0] leading-snug">
+                    {card.statLabel}
+                  </span>
+                </div>
+
+                <div className="text-xs font-semibold text-[#22D3EE] group-hover:underline flex items-center gap-1">
+                  Explore Channel →
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

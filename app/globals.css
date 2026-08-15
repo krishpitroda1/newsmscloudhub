@@ -103,6 +103,7 @@
   transition: transform 0.15s ease, opacity 0.15s ease, border-color 0.15s ease, background 0.15s ease;
   white-space: nowrap;
 }
+.btn.hidden, .btn[hidden] { display: none !important; }
 .btn:hover { transform: translateY(-1px); }
 .btn-primary { background: var(--cyan); color: #04141A; }
 .btn-primary:hover { background: #48DEF3; box-shadow: 0 0 24px rgba(34, 211, 238, 0.4); }

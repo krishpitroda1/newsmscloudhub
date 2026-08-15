@@ -36,7 +36,7 @@ const milestones = [
   { year: "2019", label: "Expanded to 40+ countries. Launched SMPP & HTTP APIs for enterprise customers in BFSI and OTT." },
   { year: "2021", label: "Crossed 1 billion messages delivered. Launched AI-powered route optimiser, cutting failed delivery rate by 34%." },
   { year: "2023", label: "Achieved 495+ direct telco connections. Launched WhatsApp Business API aggregator tier and SMSC Firewall." },
-  { year: "2025", label: "193+ countries, 98.87% DLR accuracy. Opened operations in the Middle East, SEA, and Latin America." },
+  { year: "2025", label: "185+ countries, 98.87% DLR accuracy. Opened operations in the Middle East, SEA, and Latin America." },
 ];
 
 export default function AboutPage() {
@@ -75,7 +75,7 @@ export default function AboutPage() {
             <div className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-8 space-y-6">
               {[
                 { label: "Direct telco connections", value: "495+" },
-                { label: "Countries covered", value: "193+" },
+                { label: "Countries covered", value: "185+" },
                 { label: "DLR accuracy", value: "98.87%" },
                 { label: "Uptime SLA", value: "99.95%" },
               ].map((s) => (

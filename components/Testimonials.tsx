@@ -16,9 +16,9 @@ export default function Testimonials() {
     {
       quote:
         "Choosing SMSCloud Hub as our aggregator was the best decision we made for our business. Their platform seamlessly connects us with multiple telecom operators, simplifying our messaging operations.",
-      author: "Erasmus Okrut",
-      company: "Intervas Limited",
-      initials: "EO",
+      author: "David Miller",
+      company: "NexGen Telecom Solutions",
+      initials: "DM",
     },
     {
       quote:
@@ -36,10 +36,10 @@ export default function Testimonials() {
     },
     {
       quote:
-        "We at Tubelight Communication have been working with SMSCloud Hub for a long time now — the routes, service and support have been constant, and we see this continuing successfully into the future.",
-      author: "Praveen Singh",
-      company: "Tubelight Communication",
-      initials: "PS",
+        "We have been working with SMSCloud Hub for a long time now — the routes, service and support have been constant, and we see this continuing successfully into the future.",
+      author: "Vikram Sharma",
+      company: "Apex Communications",
+      initials: "AS",
     },
   ];
 
@@ -65,7 +65,7 @@ export default function Testimonials() {
               Client Feedback
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Trusted on both sides of the route.
+              Trusted by companies from all walk of business
             </h2>
           </div>
 

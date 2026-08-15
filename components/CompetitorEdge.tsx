@@ -4,7 +4,7 @@ export default function CompetitorEdge() {
       competitor: "Monty Mobile Benchmark",
       focus: "Intelligent Routing & Fraud Protection",
       advantage:
-        "Like top MNO monetization leaders, SMSCloudHub integrates dynamic least-cost routing with an active SMSC Firewall, eliminating SIM-box abuse and grey routes in real-time.",
+        "Like top MNO monetization leaders, SMSCloudHub integrates dynamic routing with an active SMSC Firewall, eliminating SIM-box abuse and grey routes in real-time.",
     },
     {
       competitor: "GMS (Global Message Services) Benchmark",

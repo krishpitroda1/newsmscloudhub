@@ -35,7 +35,7 @@ export default function A2PHubbingPage() {
             </div>
             <div className="space-y-4">
               <h2 className="text-2xl font-bold mb-6">Hub Metrics</h2>
-              {[{label:"Connected operators",value:"495+"},{label:"Countries",value:"193+"},{label:"Monthly messages through hub",value:"1B+"},{label:"DLR accuracy",value:"98.87%"},{label:"Hub uptime SLA",value:"99.95%"}].map(m => (
+              {[{label:"Connected operators",value:"495+"},{label:"Countries",value:"185+"},{label:"Monthly messages through hub",value:"1B+"},{label:"DLR accuracy",value:"98.87%"},{label:"Hub uptime SLA",value:"99.95%"}].map(m => (
                 <div key={m.label} className="flex justify-between border-b border-white/5 pb-3">
                   <span className="text-[#8DA0C0] text-sm">{m.label}</span>
                   <span className="text-[#22D3EE] font-mono font-bold">{m.value}</span>

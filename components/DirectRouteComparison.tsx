@@ -20,7 +20,7 @@ export default function DirectRouteComparison() {
 
         <div className="max-w-[680px] mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            Most aggregators resell hops. We connect direct.
+            Less Hops. Clean Routes. Faster Delivery
           </h2>
           <p className="text-[#8DA0C0] text-lg mt-4 leading-relaxed">
             Every intermediary a message passes through creates latency, delivery risk, and margin inflation.
@@ -115,7 +115,7 @@ export default function DirectRouteComparison() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#22D3EE] font-bold">✓</span>
-                    <span>Integrated SMSC Firewall to filter grey routes & fraud</span>
+                    <span>Integrated AI based filter to eliminate traffic from grey routes & fraud</span>
                   </li>
                 </ul>
               </div>

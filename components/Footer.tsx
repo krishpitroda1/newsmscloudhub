@@ -94,19 +94,22 @@ export default function Footer() {
             </h5>
             <ul className="space-y-2.5 text-sm text-gray-600">
               <li>
-                <Link href="#services" className="hover:text-black transition-colors">Enterprise Messaging</Link>
+                <Link href="/services/a2p-sms" className="hover:text-black transition-colors">Enterprise Messaging</Link>
               </li>
               <li>
-                <Link href="#route" className="hover:text-black transition-colors">Operator 0Hop</Link>
+                <Link href="/services/0hop-connectivity" className="hover:text-black transition-colors">Operator 0Hop</Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-black transition-colors">Carrier Interconnect</Link>
+                <Link href="/services/a2p-hubbing" className="hover:text-black transition-colors">Carrier Interconnect</Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-black transition-colors">CPaaS & Voice APIs</Link>
+                <Link href="/services/cpaas-api" className="hover:text-black transition-colors">CPaaS & Voice APIs</Link>
               </li>
               <li>
-                <Link href="#reliability" className="hover:text-black transition-colors">SMSC Firewall</Link>
+                <Link href="/services/smsc-firewall" className="hover:text-black transition-colors">SMSC Firewall</Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-black transition-colors font-semibold text-[#22D3EE]">All Services Hub →</Link>
               </li>
             </ul>
           </div>
@@ -118,7 +121,7 @@ export default function Footer() {
             </h5>
             <ul className="space-y-2.5 text-sm text-gray-600">
               <li>
-                <Link href="#top" className="hover:text-black transition-colors">Home</Link>
+                <Link href="/" className="hover:text-black transition-colors">Home</Link>
               </li>
               <li>
                 <Link href="/about" className="hover:text-black transition-colors">About Us</Link>
@@ -130,7 +133,10 @@ export default function Footer() {
                 <Link href="/testimonials" className="hover:text-black transition-colors">Testimonials</Link>
               </li>
               <li>
-                <Link href="#contact" className="hover:text-black transition-colors">Contact Sales</Link>
+                <Link href="/why-us" className="hover:text-black transition-colors">Why Us</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-black transition-colors">Contact Sales</Link>
               </li>
             </ul>
           </div>
@@ -169,7 +175,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
           <div>© {new Date().getFullYear()} SMSCloud Hub. All Rights Reserved.</div>
           <div className="font-mono">
-            193+ countries · 495+ telcos & enterprises · 98.87% DLR accuracy
+            185+ countries · 495+ telcos & enterprises · 98.87% DLR accuracy
           </div>
         </div>
       </div>
