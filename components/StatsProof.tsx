@@ -16,7 +16,7 @@ export default function StatsProof() {
       label: "Verified Client Satisfaction",
     },
     {
-      value: "193",
+      value: "185",
       unit: "+",
       label: "Countries Live Direct Termination",
     },
