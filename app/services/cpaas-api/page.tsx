@@ -30,7 +30,7 @@ export default function CPaaSPage() {
               <h2 className="text-2xl font-bold mb-6">Platform Capabilities</h2>
               <ul className="space-y-4">
                 {[
-                  "Use of Email, SMS, Voice, Video, Chatbot & Analytics",
+                  " Use of Email, SMS, Voice, RCS, & WhatsApp, with Analytics on a single platform",
                   "Single platform & single vendor approach",
                   "Can be integrated with existing CRM",
                   "Expert Consulting to the companies building the CPaaS Platform"
@@ -42,7 +42,7 @@ export default function CPaaSPage() {
             <div className="bg-[#0F1B2E] border border-white/10 rounded-xl p-8 flex flex-col justify-center text-center">
                <div className="text-4xl mb-4">⚙️</div>
                <h3 className="text-xl font-bold mb-2">Omnichannel Integration</h3>
-               <p className="text-[#8DA0C0] text-sm">Deploy SMS, Voice, and Video via APIs instantly. Consolidate your fragmented communication tools into one unified cloud-based stack.</p>
+               <p className="text-[#8DA0C0] text-sm">Deploy SMS, Voice, RCS, and WhatsApp via APIs instantly. Consolidate your fragmented communication tools into one unified cloud-based stack.</p>
             </div>
           </div>
         </section>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Journey — SMSCloud Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2F4F8;
+    --paper-2:#E9ECF3;
+    --ink:#0F1830;
+    --ink-soft:#4A5470;
+    --line:#C7CEDD;
+    --gold:#DE9A34;
+    --gold-soft:#F6E3C2;
+    --teal:#158F87;
+    --teal-soft:#CFEDE9;
+    --navy:#2C3A66;
+    --navy-soft:#DCE1EF;
+    --coral:#E15B44;
+    --white:#FFFFFF;
+    --shadow: 0 10px 30px rgba(15,24,48,0.08);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  /* ---------- background texture ---------- */
+  .grid-bg{
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      linear-gradient(var(--paper-2) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-2) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 40%, transparent 90%);
+    opacity:0.7;
+  }
+
+  .wrap{position:relative; z-index:1;}
+
+  /* ---------- header ---------- */
+  header{
+    max-width:980px;
+    margin:0 auto;
+    padding:96px 24px 64px;
+    text-align:center;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before, .eyebrow::after{
+    content:"";
+    width:26px; height:1px;
+    background:var(--teal);
+    opacity:0.6;
+  }
+  h1{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(34px, 5.4vw, 60px);
+    line-height:1.05;
+    margin:0 0 22px;
+    letter-spacing:-0.01em;
+  }
+  h1 em{
+    font-style:normal;
+    color:var(--teal);
+  }
+  header p.sub{
+    font-size:17px;
+    line-height:1.65;
+    color:var(--ink-soft);
+    max-width:620px;
+    margin:0 auto;
+  }
+
+  /* stat readout */
+  .stats{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:0;
+    margin:52px auto 0;
+    max-width:840px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .stat{
+    flex:1 1 160px;
+    padding:22px 18px;
+    text-align:center;
+    border-right:1px solid var(--line);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:28px;
+    color:var(--ink);
+  }
+  .stat .lbl{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:6px;
+  }
+
+  /* legend */
+  .legend{
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    flex-wrap:wrap;
+    margin:38px auto 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .legend span{display:inline-flex; align-items:center; gap:8px;}
+  .dot{width:9px; height:9px; border-radius:50%; display:inline-block;}
+  .dot.foundation{background:var(--navy);}
+  .dot.award{background:var(--gold);}
+  .dot.event{background:var(--teal);}
+
+  /* ---------- timeline ---------- */
+  .timeline{
+    max-width:1080px;
+    margin:70px auto 0;
+    padding:0 24px 140px;
+    position:relative;
+  }
+
+  .spine{
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:var(--line);
+    transform:translateX(-50%);
+  }
+  .spine-fill{
+    position:absolute;
+    left:0; top:0;
+    width:100%;
+    height:0%;
+    background:linear-gradient(180deg, var(--teal), var(--navy) 55%, var(--gold));
+    transition:height 0.15s linear;
+  }
+
+  .node-row{
+    position:relative;
+    display:flex;
+    width:100%;
+    margin-bottom:8px;
+    min-height:150px;
+  }
+  .node-row .side{
+    width:50%;
+    padding:0 52px;
+    display:flex;
+    align-items:center;
+  }
+  .node-row.left .side.card-side{justify-content:flex-end;}
+  .node-row.right{flex-direction:row-reverse;}
+  .node-row.right .side.card-side{justify-content:flex-start;}
+  .node-row .side.empty{}
+
+  .node-dot{
+    position:absolute;
+    left:50%;
+    top:26px;
+    transform:translate(-50%,-50%);
+    width:16px; height:16px;
+    border-radius:50%;
+    background:var(--paper);
+    border:3px solid var(--navy);
+    z-index:3;
+    transition:transform 0.35s cubic-bezier(.34,1.56,.64,1), box-shadow 0.35s;
+  }
+  .node-dot.award{border-color:var(--gold);}
+  .node-dot.event{border-color:var(--teal);}
+  .node-row.visible .node-dot{
+    transform:translate(-50%,-50%) scale(1.25);
+    box-shadow:0 0 0 6px rgba(21,143,135,0.12);
+  }
+  .node-row.visible .node-dot.award{box-shadow:0 0 0 6px rgba(222,154,52,0.16);}
+  .node-row.visible .node-dot.event{box-shadow:0 0 0 6px rgba(21,143,135,0.16);}
+
+  .connector{
+    position:absolute;
+    top:26px;
+    width:36px;
+    height:2px;
+    background:var(--line);
+    z-index:2;
+  }
+  .node-row.left .connector{left:calc(50% - 36px);}
+  .node-row.right .connector{left:50%;}
+
+  .card{
+    background:var(--white);
+    border-radius:14px;
+    padding:26px 28px;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(15,24,48,0.05);
+    max-width:420px;
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity 0.6s ease, transform 0.6s ease;
+  }
+  .node-row.visible .card{opacity:1; transform:translateY(0);}
+
+  .card .date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+  }
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:3px 9px;
+    border-radius:20px;
+    font-weight:600;
+  }
+  .tag.foundation{background:var(--navy-soft); color:var(--navy);}
+  .tag.award{background:var(--gold-soft); color:#8A5B12;}
+  .tag.event{background:var(--teal-soft); color:var(--teal);}
+
+  .card h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:19px;
+    font-weight:600;
+    margin:0 0 8px;
+    line-height:1.25;
+  }
+  .card p{
+    font-size:14.5px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .card p strong{color:var(--ink); font-weight:600;}
+
+  /* finale node */
+  .node-row.finale .card{
+    background:var(--ink);
+    color:var(--white);
+    border:1px solid var(--ink);
+  }
+  .node-row.finale .card .date{color:#9FB0C9;}
+  .node-row.finale .card h3{color:var(--white);}
+  .node-row.finale .card p{color:#C4CCDD;}
+  .node-row.finale .node-dot{
+    width:22px; height:22px;
+    border-color:var(--coral);
+    background:var(--paper);
+  }
+  .node-row.finale.visible .node-dot{
+    box-shadow:0 0 0 9px rgba(225,91,68,0.16);
+    animation:pulse 2.2s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 9px rgba(225,91,68,0.16);}
+    50%{box-shadow:0 0 0 16px rgba(225,91,68,0.06);}
+    100%{box-shadow:0 0 0 9px rgba(225,91,68,0.16);}
+  }
+
+  /* year markers */
+  .year-marker{
+    text-align:center;
+    margin:56px 0 34px;
+    position:relative;
+  }
+  .year-marker span{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:0.1em;
+    background:var(--paper);
+    padding:6px 20px;
+    border:1px solid var(--line);
+    border-radius:30px;
+    color:var(--ink);
+    position:relative;
+    z-index:3;
+  }
+
+  /* footer */
+  footer{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 24px 110px;
+    text-align:center;
+  }
+  footer .rule{
+    width:60px; height:2px; background:var(--coral); margin:0 auto 30px;
+  }
+  footer h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:clamp(22px,3.4vw,32px);
+    line-height:1.35;
+    margin:0 0 18px;
+  }
+  footer p.tag-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+  }
+
+  /* mobile */
+  @media (max-width: 760px){
+    .timeline{padding:0 16px 100px;}
+    .spine{left:20px;}
+    .node-row, .node-row.right{flex-direction:row;}
+    .node-row .side.empty{display:none;}
+    .node-row .side.card-side{width:100%; padding:0 0 0 52px; justify-content:flex-start !important;}
+    .node-dot{left:20px;}
+    .node-row.visible .node-dot{transform:translate(-50%,-50%) scale(1.15);}
+    .connector{left:20px !important; width:24px;}
+    .card{max-width:100%;}
+    header{padding:64px 20px 44px;}
+    .stats{margin-top:36px;}
+    .stat{flex:1 1 45%;}
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Our Journey · 2022 — 2026</div>
+    <h1>From a vision in Ahmedabad<br>to a <em>global messaging</em> ecosystem</h1>
+    <p class="sub">Four years of building trusted messaging infrastructure — one route, one carrier relationship, one recognition at a time. From SMSCloud Hub's first day to Wholesale World Congress 2026 in Madrid.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">4+</div><div class="lbl">Years of Growth</div></div>
+      <div class="stat"><div class="num">185+</div><div class="lbl">Countries Connected</div></div>
+      <div class="stat"><div class="num">1,000+</div><div class="lbl">Enterprises &amp; Carriers</div></div>
+      <div class="stat"><div class="num">10+</div><div class="lbl">Industry Recognitions</div></div>
+    </div>
+
+    <div class="legend">
+      <span><i class="dot foundation"></i>Company Milestone</span>
+      <span><i class="dot award"></i>Award &amp; Recognition</span>
+      <span><i class="dot event"></i>Global Event Participation</span>
+    </div>
+  </header>
+
+  <div class="timeline" id="timeline">
+    <div class="spine"><div class="spine-fill" id="spineFill"></div></div>
+
+    <!-- 2022 -->
+    <div class="year-marker"><span>2022</span></div>
+
+    <div class="node-row left" data-cat="foundation">
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">May 2022 <span class="tag foundation">Foundation</span></div>
+          <h3>Where it all began</h3>
+          <p>SMSCloud Hub is born in Ahmedabad with one goal: make business messaging more <strong>reliable, accessible and globally connected</strong>. The journey starts in A2P SMS, built on quality and long-term relationships.</p>
+        </div>
+      </div>
+      <div class="side empty"></div>
+      <div class="node-dot foundation"></div>
+    </div>
+
+    <div class="node-row right" data-cat="foundation">
+      <div class="side empty"></div>
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2022 <span class="tag foundation">Foundation</span></div>
+          <h3>Building the foundation</h3>
+          <p>We begin developing dependable carrier routes and strengthening technical capabilities — laying the groundwork for a global wholesale messaging business.</p>
+        </div>
+      </div>
+      <div class="node-dot foundation"></div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="year-marker"><span>2023</span></div>
+
+    <div class="node-row left" data-cat="award">
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2023 <span class="tag award">Award</span></div>
+          <h3>Entering the global telecom arena</h3>
+          <p>SMSCloud Hub steps onto the international stage, nominated and shortlisted at the <strong>Antonio Meucci Global Telco Awards</strong> among established names in messaging.</p>
+        </div>
+      </div>
+      <div class="side empty"></div>
+      <div class="node-dot award"></div>
+    </div>
+
+    <div class="node-row right" data-cat="award">
+      <div class="side empty"></div>
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2023 <span class="tag award">Award</span></div>
+          <h3>Three high-distinction recognitions</h3>
+          <p>A defining early moment — <strong>Best Enterprise SMS Provider</strong>, <strong>Unstoppable Warriors / Best Cloud Solution</strong>, and <strong>Leading Male Telco Professional</strong> for Ashish Bavishi. Proof that a young Ahmedabad company could compete globally.</p>
+        </div>
+      </div>
+      <div class="node-dot award"></div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="year-marker"><span>2024</span></div>
+
+    <div class="node-row left" data-cat="foundation">
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2024 <span class="tag foundation">Growth</span></div>
+          <h3>From provider to solution partner</h3>
+          <p>Our capabilities expand across <strong>Enterprise Messaging, A2P SMS, CPaaS, SMSC Firewall</strong> and managed messaging services — positioning SMSCloud Hub as a broader communication technology partner.</p>
+        </div>
+      </div>
+      <div class="side empty"></div>
+      <div class="node-dot foundation"></div>
+    </div>
+
+    <div class="node-row right" data-cat="award">
+      <div class="side empty"></div>
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2024 <span class="tag award">Award</span></div>
+          <h3>Recognition for excellence &amp; responsibility</h3>
+          <p><strong>Most Valuable Telecom Solution Provider</strong> (Corporate Connect) and <strong>Best CSR Company in Telecom</strong> — growth measured in innovation and responsibility, not just business.</p>
+        </div>
+      </div>
+      <div class="node-dot award"></div>
+    </div>
+
+    <div class="node-row left" data-cat="event">
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">Sept 2024 · Madrid <span class="tag event">Event</span></div>
+          <h3>Connecting with the global telecom community</h3>
+          <p>SMSCloud Hub joins the ecosystem around the <strong>Antonio Meucci Global Telco Awards</strong> at Hotel Meliá Castilla — meeting carriers, aggregators and industry leaders.</p>
+        </div>
+      </div>
+      <div class="side empty"></div>
+      <div class="node-dot event"></div>
+    </div>
+
+    <div class="node-row right" data-cat="foundation">
+      <div class="side empty"></div>
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">Oct 2024 <span class="tag foundation">Initiative</span></div>
+          <h3>Exploring the future with AI — Ai1K</h3>
+          <p>Launch of <strong>Ai1K</strong>, exploring AI's impact on enterprise communication — engaging <strong>1,000+ students across 100+ colleges</strong> in India.</p>
+        </div>
+      </div>
+      <div class="node-dot foundation"></div>
+    </div>
+
+    <!-- 2025 -->
+    <div class="year-marker"><span>2025</span></div>
+
+    <div class="node-row left" data-cat="event">
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2025 · Madrid <span class="tag event">Event</span></div>
+          <h3>Going global at WWC25</h3>
+          <p>At <strong>Wholesale World Congress 2025</strong>, we showcase Enterprise Messaging &amp; CPaaS capabilities, meeting international carriers and technology partners.</p>
+        </div>
+      </div>
+      <div class="side empty"></div>
+      <div class="node-dot event"></div>
+    </div>
+
+    <div class="node-row right" data-cat="award">
+      <div class="side empty"></div>
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2025 <span class="tag award">Award</span></div>
+          <h3>A year of recognition</h3>
+          <p>The <strong>Excellence Award for Best Enterprise SMS Provider</strong> at the Antonio Meucci Global Telco Awards 2025, plus additional recognitions across multiple categories.</p>
+        </div>
+      </div>
+      <div class="node-dot award"></div>
+    </div>
+
+    <div class="node-row left" data-cat="award">
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2025 <span class="tag award">Award</span></div>
+          <h3>Visionary of the Year</h3>
+          <p>Ashish Bavishi is honoured as <strong>Visionary of the Year 2025</strong> at the Forttuna Global Excellence Awards — recognising the leadership behind the journey.</p>
+        </div>
+      </div>
+      <div class="side empty"></div>
+      <div class="node-dot award"></div>
+    </div>
+
+    <div class="node-row right" data-cat="foundation">
+      <div class="side empty"></div>
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2025 <span class="tag foundation">Milestone</span></div>
+          <h3>A global messaging ecosystem</h3>
+          <p>From a young messaging venture to a global technology company — connectivity across <strong>185+ countries</strong>, with <strong>1,000+ enterprises and carriers</strong> onboard.</p>
+        </div>
+      </div>
+      <div class="node-dot foundation"></div>
+    </div>
+
+    <!-- 2026 -->
+    <div class="year-marker"><span>2026</span></div>
+
+    <div class="node-row left" data-cat="foundation">
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2026 <span class="tag foundation">Growth</span></div>
+          <h3>Beyond SMS. Beyond borders.</h3>
+          <p>The vision evolves — from A2P SMS and wholesale messaging to <strong>CPaaS, WhatsApp, RCS, Voice, Email, SMSC Firewall</strong> and AI-powered security infrastructure.</p>
+        </div>
+      </div>
+      <div class="side empty"></div>
+      <div class="node-dot foundation"></div>
+    </div>
+
+    <div class="node-row right" data-cat="award">
+      <div class="side empty"></div>
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">2026 <span class="tag award">Award</span></div>
+          <h3>International recognition continues</h3>
+          <p>Nominations at the Antonio Meucci Global Telco Awards for <strong>Best Enterprise Messaging Platform, Best CPaaS &amp; OTT Implementation, Best Asian Provider</strong> and <strong>Exemplary Corporate Responsibility</strong>.</p>
+        </div>
+      </div>
+      <div class="node-dot award"></div>
+    </div>
+
+    <div class="node-row left finale" data-cat="event">
+      <div class="side card-side">
+        <div class="connector"></div>
+        <div class="card">
+          <div class="date">16–18 Sept 2026 · Madrid <span class="tag event">WWC26</span></div>
+          <h3>We return to Madrid</h3>
+          <p>SMSCloud Hub participates in <strong>Wholesale World Congress 2026</strong> — continuing a journey that began in Ahmedabad in May 2022. This time, as a growing global communication technology partner.</p>
+        </div>
+      </div>
+      <div class="side empty"></div>
+      <div class="node-dot"></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="rule"></div>
+    <h2>Four years. One vision.<br>A global journey.</h2>
+    <p class="tag-line">From Ahmedabad to Madrid — from SMS to CPaaS — from a startup to a global messaging ecosystem. And the journey has only just begun.</p>
+  </footer>
+
+</div>
+
+<script>
+  const rows = document.querySelectorAll('.node-row');
+  const spineFill = document.getElementById('spineFill');
+  const timeline = document.getElementById('timeline');
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+      }
+    });
+  }, {threshold:0.35});
+  rows.forEach(r=>io.observe(r));
+
+  function updateSpine(){
+    const rect = timeline.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const total = rect.height;
+    const scrolled = Math.min(Math.max(vh*0.5 - rect.top, 0), total);
+    const pct = (scrolled/total)*100;
+    spineFill.style.height = pct + '%';
+  }
+  window.addEventListener('scroll', updateSpine, {passive:true});
+  window.addEventListener('resize', updateSpine);
+  updateSpine();
+</script>
+
+</body>
+</html>

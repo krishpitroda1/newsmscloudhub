@@ -42,14 +42,6 @@ const serviceCategories = [
       { name: "VAS Solutions", href: "/services/vas-solutions", desc: "Value-added telecom tech" },
     ],
   },
-  {
-    title: "Technology",
-    badge: "Technology",
-    items: [
-      { name: "CloudSkool++", href: "/services/cloudskool", desc: "Educational tech & SMS" },
-      { name: "CloudContactCenter", href: "/services/cloud-contact-center", desc: "Omnichannel contact platform" },
-    ],
-  },
 ];
 
 export default function Header() {
@@ -162,7 +154,7 @@ export default function Header() {
                     </Link>
                   </div>
                   
-                  <div className="grid grid-cols-4 gap-5">
+                  <div className="grid grid-cols-3 gap-5">
                     {serviceCategories.map((cat) => (
                       <div key={cat.title} className="space-y-2.5">
                         <h5 className="font-mono text-[11px] tracking-widest text-[#22D3EE] uppercase font-bold">
@@ -297,7 +289,7 @@ export default function Header() {
                 <div className="flex items-center gap-2">
                   <span>Services & Products</span>
                   <span className="text-[10px] font-mono font-bold bg-[#22D3EE]/20 text-[#22D3EE] px-2 py-0.5 rounded-full border border-[#22D3EE]/30">
-                    19 Services
+                    17 Services
                   </span>
                 </div>
                 <svg

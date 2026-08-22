@@ -54,7 +54,7 @@ export default function ServicesChannels() {
       title: "Voice & Voice OTP",
       href: "/services/voice-otp",
       description:
-        "Tier-1 VoIP termination, SIP trunking, and voice pin generation backed by our full CloudContactCenter platform for agent operations.",
+        "Tier-1 VoIP termination, SIP trunking, and voice pin generation backed by our high-capacity carrier network for agent operations.",
       statValue: "185+",
       statLabel: "Countries voice terminated",
       tag: "Tier-1 VoIP",

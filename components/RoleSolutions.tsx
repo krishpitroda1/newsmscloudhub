@@ -36,9 +36,9 @@ export default function RoleSolutions() {
       eyebrow: "Technology",
       title: "Build & Integrate Easily",
       items: [
-        { label: "CloudSkool++ Platform", href: "/services/cloudskool" },
+        { label: "Unified REST & SMPP APIs", href: "/services/cpaas-api" },
         { label: "Developer CPaaS SDKs", href: "/services/cpaas-api" },
-        { label: "CloudContactCenter (CCC)", href: "/services/cloud-contact-center" },
+        { label: "Carrier CPaaS Platform", href: "/services/cpaas-platform" },
         { label: "Custom SMPP & HTTP Gateways", href: "/services/cpaas-platform" },
       ],
     },

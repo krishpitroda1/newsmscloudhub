@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+import JourneyTimeline from "@/components/JourneyTimeline";
+
 export const metadata: Metadata = {
   title: "About SMSCloudHub — Direct-Route Messaging Infrastructure",
   description:
@@ -29,14 +31,6 @@ const values = [
     title: "Scale Without Limits",
     body: "From 10,000 to 10 billion messages. Our distributed SMSC cluster auto-scales horizontally, so your peak-season campaigns never hit a ceiling.",
   },
-];
-
-const milestones = [
-  { year: "2018", label: "Founded in Ahmedabad, India. First direct SS7 link established with an Indian national operator." },
-  { year: "2019", label: "Expanded to 40+ countries. Launched SMPP & HTTP APIs for enterprise customers in BFSI and OTT." },
-  { year: "2021", label: "Crossed 1 billion messages delivered. Launched AI-powered route optimiser, cutting failed delivery rate by 34%." },
-  { year: "2023", label: "Achieved 495+ direct telco connections. Launched WhatsApp Business API aggregator tier and SMSC Firewall." },
-  { year: "2025", label: "185+ countries, 98.87% DLR accuracy. Opened operations in the Middle East, SEA, and Latin America." },
 ];
 
 export default function AboutPage() {
@@ -88,21 +82,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── Timeline ─── */}
-        <section className="py-20 px-6 border-t border-white/5 bg-[#0F1B2E]">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-14">A Decade of Direct Routes</h2>
-            <div className="relative pl-8 border-l-2 border-[#22D3EE]/30 space-y-10">
-              {milestones.map((m) => (
-                <div key={m.year} className="relative">
-                  <div className="absolute -left-[41px] w-5 h-5 rounded-full bg-[#22D3EE] border-4 border-[#0F1B2E]" />
-                  <p className="font-mono text-[#22D3EE] text-sm font-bold mb-1">{m.year}</p>
-                  <p className="text-[#8DA0C0] leading-relaxed">{m.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* ─── Interactive Journey Timeline ─── */}
+        <div className="border-t border-white/5">
+          <JourneyTimeline />
+        </div>
 
         {/* ─── Core Values ─── */}
         <section className="py-20 px-6 border-t border-white/5">

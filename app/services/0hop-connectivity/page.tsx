@@ -29,7 +29,7 @@ export default function ZeroHopPage() {
             <div>
               <h2 className="text-2xl font-bold mb-6">What 0Hop Means</h2>
               <ul className="space-y-4">
-                {["Direct SS7 MAP peering with your SMSC","Direct SMPP v3.4 bind — no relay node in between","Bilateral DLR exchange in real time","Dedicated throughput allocation (no shared capacity)","Grey-route immunity — traffic never touches uncontrolled nodes","Transparent per-route pricing, no margin stacking","Latency measured in milliseconds, not seconds","Separate test & production SMPP environments"].map(f => (
+                {["Direct SS7 MAP peering with your SMSC", "Direct SMPP v3.4 bind — no relay node in between", "Bilateral DLR exchange in real time", "Dedicated throughput allocation (no shared capacity)", "Grey-route immunity — traffic never touches uncontrolled nodes", "Transparent per-route pricing, no margin stacking", "Latency measured in milliseconds, not seconds", "Separate test & production SMPP environments"].map(f => (
                   <li key={f} className="flex items-start gap-3 text-[#8DA0C0] text-sm"><span className="text-[#22D3EE] mt-0.5 font-bold">✓</span>{f}</li>
                 ))}
               </ul>
@@ -37,11 +37,11 @@ export default function ZeroHopPage() {
             <div>
               <h2 className="text-2xl font-bold mb-6">0Hop vs Multi-Hop</h2>
               <div className="space-y-3">
-                {[{label:"Delivery hops",zhop:"1 (direct)",multi:"2 – 4 intermediaries"},
-                  {label:"Avg latency",zhop:"< 2 seconds",multi:"5 – 15 seconds"},
-                  {label:"Grey route risk",zhop:"None",multi:"High (uncontrolled nodes)"},
-                  {label:"DLR accuracy",zhop:"98.87%",multi:"85 – 94%"},
-                  {label:"Pricing clarity",zhop:"Per-route itemised",multi:"Blended, opaque"}].map(r => (
+                {[{ label: "Delivery hops", zhop: "1 (direct)", multi: "2 – 4 intermediaries" },
+                { label: "Avg latency", zhop: "<5 seconds", multi: "5 – 15 seconds" },
+                { label: "Grey route risk", zhop: "None", multi: "High (uncontrolled nodes)" },
+                { label: "DLR accuracy", zhop: "98.87%", multi: "85 – 94% or less" },
+                { label: "Pricing clarity", zhop: "Per-route itemised", multi: "Blended, opaque" }].map(r => (
                   <div key={r.label} className="grid grid-cols-3 gap-2 border-b border-white/5 pb-3 text-sm">
                     <span className="text-[#8DA0C0]">{r.label}</span>
                     <span className="text-[#22D3EE] font-semibold">{r.zhop}</span>
