@@ -12,6 +12,7 @@ const serviceCategories = [
     items: [
       { name: "WhatsApp Business", href: "/services/whatsapp-business", desc: "Verified BSP API & Chatbots" },
       { name: "A2P SMS & OTP", href: "/services/a2p-sms", desc: "Sub-2s latency global routes" },
+      { name: "WordPress Plugin", href: "/services/wordpress-plugin", desc: "Automated WordPress SMS & OTP" },
       { name: "Digital Marketing", href: "/services/digital-marketing", desc: "Digital Transformation & campaigns" },
       { name: "Voice & Voice OTP", href: "/services/voice-otp", desc: "TTS & SIP termination" },
       { name: "CPaaS REST APIs", href: "/services/cpaas-api", desc: "Unified developer REST API" },

@@ -56,8 +56,7 @@ const services = [
     title: "SMSC Firewall & Grey Route Protection",
     desc: "Protect your subscribers from spam, phishing, and fraudulent A2P traffic. Our SMSC firewall inspects every message at the SS7 layer using ML-based anomaly detection, keyword filtering, and sender reputation scoring. Stop revenue leakage from grey routes.",
     specs: ["Real-time SS7 traffic inspection", "ML-based anomaly & fraud detection", "Configurable keyword & sender rules", "Revenue leakage reporting dashboard"],
-    href: "/services/smsc-firewall",
-  },
+    href: "/services/smsc-firewall"},
   {
     icon: "🔗",
     category: "Operator / Carrier",
@@ -66,6 +65,14 @@ const services = [
     specs: ["Direct SS7 & SMPP peering", "Zero intermediary hops", "Dedicated throughput allocation", "Real-time bilateral DLR exchange"],
     href: "/services/0hop-connectivity",
   },
+  {
+    icon: "🔌",
+    category: "WordPress Integration",
+    title: "WordPress SMS Plugin",
+    desc: "Easily integrate your WordPress & WooCommerce site with SMS Cloud Hub using our dedicated plugin. Send automated order notifications, registrations, OTP verification, and customer updates directly from your dashboard.",
+    specs: ["5 Min Setup Time", "99.9% Delivery Rate", "0 Coding Required", "WooCommerce & OTP Ready"],
+    href: "/services/wordpress-plugin",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -73,6 +80,7 @@ const categoryColors: Record<string, string> = {
   Developer: "text-purple-400 border-purple-400/30 bg-purple-400/5",
   Operator: "text-amber-400 border-amber-400/30 bg-amber-400/5",
   "Operator / Carrier": "text-amber-400 border-amber-400/30 bg-amber-400/5",
+  "WordPress Integration": "text-blue-400 border-blue-400/30 bg-blue-400/5",
 };
 
 export default function ServicesPage() {
