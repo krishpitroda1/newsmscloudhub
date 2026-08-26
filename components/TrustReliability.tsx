@@ -28,30 +28,7 @@ export default function TrustReliability() {
       ),
       title: "SLA-Backed Uptime & Scale",
       description:
-        "99.95% platform availability with burstable capacity up to 1,000 TPS, engineered for carrier-grade duty cycles and mission-critical OTPs.",
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5" viewBox="0 0 16 16" fill="none">
-          <rect
-            x="3"
-            y="7"
-            width="10"
-            height="7"
-            rx="1.4"
-            stroke="currentColor"
-            strokeWidth="1.4"
-          />
-          <path
-            d="M5.5 7V5a2.5 2.5 0 015 0v2"
-            stroke="currentColor"
-            strokeWidth="1.4"
-          />
-        </svg>
-      ),
-      title: "Encrypted By Default",
-      description:
-        "Authenticated REST & SMPP APIs backed by TLS 1.3 encryption protect every message, payload, and credential in transit.",
+        "99.95% platform availability with burstable capacity up to 1,000 TPS, engineered for carrier grade duty cycles and mission critical OTPs.",
     },
   ];
 
@@ -76,11 +53,11 @@ export default function TrustReliability() {
 
         <div className="max-w-[680px] mb-14">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            Carrier-grade, by design — not by exception.
+            Carrier grade by design, not by exception.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {pillars.map((item, idx) => (
             <div
               key={idx}

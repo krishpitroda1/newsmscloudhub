@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SMSCloudHub — The Direct Route for Global Messaging",
     description:
-      "Carrier-grade messaging network connecting 495+ telcos across 185+ countries with 98.87% DLR accuracy.",
+      "Carrier-grade messaging network connecting 300+ telcos across 150+ countries with 98.87% DLR accuracy.",
     url: "https://www.smscloudhub.com",
     siteName: "SMSCloudHub",
     locale: "en_US",

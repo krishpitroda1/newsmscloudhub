@@ -66,15 +66,21 @@ export default function Header() {
     setMobileServicesOpen(false);
   };
 
+  const handleHomeClick = (e: React.MouseEvent) => {
+    closeMobileMenu();
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const isServicePage = pathname.startsWith("/services");
 
   return (
-    <header className={`sticky top-0 z-[100] border-b border-white/10 transition-colors ${
-      mobileNavOpen ? "bg-[#070E1B]" : "bg-[#0A1220]/95 backdrop-blur-md"
-    }`}>
+    <header className={`sticky top-0 z-[100] border-b border-slate-200 transition-colors bg-white/95 backdrop-blur-md shadow-sm`}>
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 h-[72px] sm:h-[78px] flex items-center justify-between gap-3 sm:gap-6">
         {/* Brand Logo Header */}
-        <Link href="/" onClick={closeMobileMenu} className="flex items-center group shrink-0">
+        <Link href="/" onClick={handleHomeClick} className="flex items-center group shrink-0 cursor-pointer">
           <Image
             src="/logo.png"
             alt="SMSCloudHub"
@@ -89,8 +95,9 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
           <Link
             href="/"
+            onClick={handleHomeClick}
             className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
-              pathname === "/" ? "text-[#22D3EE] bg-white/5" : "text-[#8DA0C0] hover:text-white"
+              pathname === "/" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
             }`}
           >
             Home
@@ -98,7 +105,7 @@ export default function Header() {
           <Link
             href="/about"
             className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
-              pathname === "/about" ? "text-[#22D3EE] bg-white/5" : "text-[#8DA0C0] hover:text-white"
+              pathname === "/about" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
             }`}
           >
             About Us
@@ -106,7 +113,7 @@ export default function Header() {
           <Link
             href="/awards"
             className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
-              pathname === "/awards" ? "text-[#22D3EE] bg-white/5" : "text-[#8DA0C0] hover:text-white"
+              pathname === "/awards" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
             }`}
           >
             Awards
@@ -121,13 +128,13 @@ export default function Header() {
             <Link
               href="/services"
               className={`px-3 py-2 rounded-full text-sm font-semibold flex items-center gap-1.5 transition-colors ${
-                isServicePage ? "text-[#22D3EE] bg-white/5" : "text-[#8DA0C0] hover:text-white"
+                isServicePage ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
               }`}
             >
               Services
               <svg
                 className={`w-2.5 h-2.5 transition-transform duration-200 ${
-                  activeDropdown === "services" ? "rotate-180 text-[#22D3EE]" : ""
+                  activeDropdown === "services" ? "rotate-180 text-[#0891B2]" : ""
                 }`}
                 viewBox="0 0 10 6"
                 fill="none"
@@ -140,15 +147,15 @@ export default function Header() {
               <>
                 {/* Hover bridge */}
                 <div className="absolute top-full left-0 w-full h-3" />
-                <div className="absolute top-[calc(100%+8px)] -left-20 w-[840px] max-w-[calc(100vw-32px)] bg-[#0F1B2E] border border-white/10 rounded-2xl p-6 shadow-2xl backdrop-blur-xl z-50 space-y-4">
-                  <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                    <span className="font-mono text-xs text-[#22D3EE] uppercase tracking-widest font-bold">
+                <div className="absolute top-[calc(100%+8px)] -left-20 w-[840px] max-w-[calc(100vw-32px)] bg-white border border-slate-200 rounded-2xl p-6 shadow-2xl z-50 space-y-4">
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                    <span className="font-mono text-xs text-[#0891B2] uppercase tracking-widest font-bold">
                       Full Product & Service Suite
                     </span>
                     <Link
                       href="/services"
                       onClick={() => setActiveDropdown(null)}
-                      className="text-xs text-[#8DA0C0] hover:text-[#22D3EE] font-mono font-semibold flex items-center gap-1 transition-colors"
+                      className="text-xs text-slate-500 hover:text-[#0891B2] font-mono font-semibold flex items-center gap-1 transition-colors"
                     >
                       View All Services Overview →
                     </Link>
@@ -157,23 +164,23 @@ export default function Header() {
                   <div className="grid grid-cols-3 gap-5">
                     {serviceCategories.map((cat) => (
                       <div key={cat.title} className="space-y-2.5">
-                        <h5 className="font-mono text-[11px] tracking-widest text-[#22D3EE] uppercase font-bold">
+                        <h5 className="font-mono text-xs tracking-widest text-[#0891B2] uppercase font-bold">
                           {cat.title}
                         </h5>
-                        <ul className="space-y-1 text-xs">
+                        <ul className="space-y-1 text-sm">
                           {cat.items.map((item) => (
                             <li key={item.href}>
                               <Link
                                 href={item.href}
                                 onClick={() => setActiveDropdown(null)}
-                                className={`block p-1.5 rounded-md transition-colors ${
+                                className={`block p-2 rounded-md transition-colors ${
                                   pathname === item.href
-                                    ? "bg-[#22D3EE]/15 text-[#22D3EE] font-bold"
-                                    : "text-[#F3F8FF] hover:bg-white/5 hover:text-[#22D3EE]"
+                                    ? "bg-cyan-50 text-[#0891B2] font-bold"
+                                    : "text-slate-700 hover:bg-slate-50 hover:text-[#0891B2]"
                                 }`}
                               >
-                                <span className="block font-medium">{item.name}</span>
-                                <span className="block text-[10px] text-[#8DA0C0] line-clamp-1">{item.desc}</span>
+                                <span className="block font-semibold">{item.name}</span>
+                                <span className="block text-xs text-slate-500 line-clamp-1">{item.desc}</span>
                               </Link>
                             </li>
                           ))}
@@ -189,7 +196,7 @@ export default function Header() {
           <Link
             href="/why-us"
             className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
-              pathname === "/why-us" ? "text-[#22D3EE] bg-white/5" : "text-[#8DA0C0] hover:text-white"
+              pathname === "/why-us" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
             }`}
           >
             Why Us
@@ -197,7 +204,7 @@ export default function Header() {
           <Link
             href="/testimonials"
             className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
-              pathname === "/testimonials" ? "text-[#22D3EE] bg-white/5" : "text-[#8DA0C0] hover:text-white"
+              pathname === "/testimonials" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
             }`}
           >
             Testimonials
@@ -205,7 +212,7 @@ export default function Header() {
           <Link
             href="/contact"
             className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
-              pathname === "/contact" ? "text-[#22D3EE] bg-white/5" : "text-[#8DA0C0] hover:text-white"
+              pathname === "/contact" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
             }`}
           >
             Contact
@@ -228,7 +235,7 @@ export default function Header() {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileNavOpen(!mobileNavOpen)}
-            className="lg:hidden p-2 sm:p-2.5 rounded-xl border border-white/10 bg-[#0F1B2E] text-white hover:border-[#22D3EE] transition-colors focus:outline-none"
+            className="lg:hidden p-2 sm:p-2.5 rounded-xl border border-slate-200 bg-slate-100 text-slate-800 hover:border-[#0891B2] transition-colors focus:outline-none"
             aria-label="Toggle Navigation Menu"
           >
             <svg className="w-5 h-5" viewBox="0 0 18 18" fill="none">
@@ -244,7 +251,7 @@ export default function Header() {
 
       {/* Mobile Overlay Drawer Navigation */}
       {mobileNavOpen && (
-        <div className="lg:hidden fixed top-[72px] sm:top-[78px] inset-x-0 bottom-0 bg-[#070E1B] border-t border-white/10 px-4 sm:px-6 py-6 overflow-y-auto z-[100] animate-in fade-in duration-150">
+        <div className="lg:hidden fixed top-[72px] sm:top-[78px] inset-x-0 bottom-0 bg-white border-t border-slate-200 px-4 sm:px-6 py-6 overflow-y-auto z-[100] animate-in fade-in duration-150 text-slate-800">
           <div className="space-y-3 max-w-md mx-auto pb-12">
             
             {/* Featured SMS Compliances CTA in Mobile Drawer */}
@@ -264,7 +271,7 @@ export default function Header() {
               href="/"
               onClick={closeMobileMenu}
               className={`block py-3 px-4 rounded-xl text-base font-semibold transition-colors ${
-                pathname === "/" ? "bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/30" : "text-white hover:bg-white/5"
+                pathname === "/" ? "bg-cyan-50 text-[#0891B2] border border-cyan-200" : "text-slate-800 hover:bg-slate-100"
               }`}
             >
               Home
@@ -274,26 +281,26 @@ export default function Header() {
               href="/about"
               onClick={closeMobileMenu}
               className={`block py-3 px-4 rounded-xl text-base font-semibold transition-colors ${
-                pathname === "/about" ? "bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/30" : "text-white hover:bg-white/5"
+                pathname === "/about" ? "bg-cyan-50 text-[#0891B2] border border-cyan-200" : "text-slate-800 hover:bg-slate-100"
               }`}
             >
               About Us
             </Link>
 
             {/* Expandable Services Accordion Section */}
-            <div className="border border-white/10 rounded-xl overflow-hidden bg-[#0F1B2E]">
+            <div className="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
               <button
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className="w-full py-3.5 px-4 flex items-center justify-between text-base font-semibold text-white hover:bg-white/5 transition-colors"
+                className="w-full py-3.5 px-4 flex items-center justify-between text-base font-semibold text-slate-800 hover:bg-slate-100 transition-colors"
               >
                 <div className="flex items-center gap-2">
                   <span>Services & Products</span>
-                  <span className="text-[10px] font-mono font-bold bg-[#22D3EE]/20 text-[#22D3EE] px-2 py-0.5 rounded-full border border-[#22D3EE]/30">
+                  <span className="text-xs font-mono font-bold bg-cyan-100 text-[#0891B2] px-2 py-0.5 rounded-full border border-cyan-200">
                     17 Services
                   </span>
                 </div>
                 <svg
-                  className={`w-4 h-4 text-[#22D3EE] transition-transform duration-200 ${
+                  className={`w-4 h-4 text-[#0891B2] transition-transform duration-200 ${
                     mobileServicesOpen ? "rotate-180" : ""
                   }`}
                   viewBox="0 0 10 6"
@@ -305,18 +312,18 @@ export default function Header() {
 
               {/* Collapsible Accordion Drawer */}
               {mobileServicesOpen && (
-                <div className="p-4 border-t border-white/10 bg-[#0A1220]/80 space-y-5 animate-in slide-in-from-top-2 duration-150">
+                <div className="p-4 border-t border-slate-200 bg-white space-y-5 animate-in slide-in-from-top-2 duration-150">
                   <Link
                     href="/services"
                     onClick={closeMobileMenu}
-                    className="block p-3 rounded-lg bg-[#22D3EE]/10 border border-[#22D3EE]/30 text-[#22D3EE] text-sm font-bold text-center hover:bg-[#22D3EE]/20 transition-colors"
+                    className="block p-3 rounded-lg bg-cyan-50 border border-cyan-200 text-[#0891B2] text-sm font-bold text-center hover:bg-cyan-100 transition-colors"
                   >
                     View All Services Hub →
                   </Link>
 
                   {serviceCategories.map((cat) => (
                     <div key={cat.title} className="space-y-2">
-                      <div className="font-mono text-xs font-bold text-[#22D3EE] uppercase tracking-wider px-1">
+                      <div className="font-mono text-xs font-bold text-[#0891B2] uppercase tracking-wider px-1">
                         {cat.title}
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
@@ -327,12 +334,12 @@ export default function Header() {
                             onClick={closeMobileMenu}
                             className={`p-2.5 rounded-lg border text-xs flex flex-col justify-between transition-colors ${
                               pathname === item.href
-                                ? "bg-[#22D3EE]/20 border-[#22D3EE] text-[#22D3EE] font-bold"
-                                : "bg-white/5 border-white/5 text-[#F3F8FF] hover:border-[#22D3EE]/40 hover:bg-white/10"
+                                ? "bg-cyan-100 border-[#0891B2] text-[#0891B2] font-bold"
+                                : "bg-slate-50 border-slate-200 text-slate-800 hover:border-[#0891B2]/40 hover:bg-slate-100"
                             }`}
                           >
-                            <span className="font-semibold text-white">{item.name}</span>
-                            <span className="text-[10px] text-[#8DA0C0] mt-0.5 line-clamp-1">{item.desc}</span>
+                            <span className="font-semibold text-slate-900">{item.name}</span>
+                            <span className="text-xs text-slate-500 mt-0.5 line-clamp-1">{item.desc}</span>
                           </Link>
                         ))}
                       </div>
@@ -346,7 +353,7 @@ export default function Header() {
               href="/awards"
               onClick={closeMobileMenu}
               className={`block py-3 px-4 rounded-xl text-base font-semibold transition-colors ${
-                pathname === "/awards" ? "bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/30" : "text-white hover:bg-white/5"
+                pathname === "/awards" ? "bg-cyan-50 text-[#0891B2] border border-cyan-200" : "text-slate-800 hover:bg-slate-100"
               }`}
             >
               Awards
@@ -356,7 +363,7 @@ export default function Header() {
               href="/why-us"
               onClick={closeMobileMenu}
               className={`block py-3 px-4 rounded-xl text-base font-semibold transition-colors ${
-                pathname === "/why-us" ? "bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/30" : "text-white hover:bg-white/5"
+                pathname === "/why-us" ? "bg-cyan-50 text-[#0891B2] border border-cyan-200" : "text-slate-800 hover:bg-slate-100"
               }`}
             >
               Why Us
@@ -366,7 +373,7 @@ export default function Header() {
               href="/testimonials"
               onClick={closeMobileMenu}
               className={`block py-3 px-4 rounded-xl text-base font-semibold transition-colors ${
-                pathname === "/testimonials" ? "bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/30" : "text-white hover:bg-white/5"
+                pathname === "/testimonials" ? "bg-cyan-50 text-[#0891B2] border border-cyan-200" : "text-slate-800 hover:bg-slate-100"
               }`}
             >
               Testimonials
@@ -376,7 +383,7 @@ export default function Header() {
               href="/sms-compliances"
               onClick={closeMobileMenu}
               className={`block py-3 px-4 rounded-xl text-base font-semibold transition-colors ${
-                pathname === "/sms-compliances" ? "bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/30" : "text-white hover:bg-white/5"
+                pathname === "/sms-compliances" ? "bg-cyan-50 text-[#0891B2] border border-cyan-200" : "text-slate-800 hover:bg-slate-100"
               }`}
             >
               SMS Compliances
@@ -386,7 +393,7 @@ export default function Header() {
               href="/contact"
               onClick={closeMobileMenu}
               className={`block py-3 px-4 rounded-xl text-base font-semibold transition-colors ${
-                pathname === "/contact" ? "bg-[#22D3EE]/10 text-[#22D3EE] border border-[#22D3EE]/30" : "text-white hover:bg-white/5"
+                pathname === "/contact" ? "bg-cyan-50 text-[#0891B2] border border-cyan-200" : "text-slate-800 hover:bg-slate-100"
               }`}
             >
               Contact Us

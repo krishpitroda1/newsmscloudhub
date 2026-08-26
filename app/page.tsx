@@ -4,7 +4,6 @@ import StatsProof from "@/components/StatsProof";
 import ServicesChannels from "@/components/ServicesChannels";
 import DirectRouteComparison from "@/components/DirectRouteComparison";
 import RoleSolutions from "@/components/RoleSolutions";
-import CompetitorEdge from "@/components/CompetitorEdge";
 import TrustReliability from "@/components/TrustReliability";
 import Testimonials from "@/components/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
@@ -20,7 +19,6 @@ export default function Home() {
         <ServicesChannels />
         <DirectRouteComparison />
         <RoleSolutions />
-        <CompetitorEdge />
         <TrustReliability />
         <Testimonials />
         <ContactCTA />

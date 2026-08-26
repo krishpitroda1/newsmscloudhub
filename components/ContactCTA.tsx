@@ -46,9 +46,10 @@ export default function ContactCTA() {
                     />
                     <circle cx="7.5" cy="6" r="1.4" stroke="currentColor" strokeWidth="1.2" />
                   </svg>
-                  <span>
-                    <strong>Head Office:</strong> B-614, World Trade Tower, Off S G Highway, Makarba, Ahmedabad – 380051, Gujarat, India
-                  </span>
+                  <div className="space-y-1">
+                    <p><strong>USA Office:</strong> 30 N Gould St Ste R, Sheridan, WY 82801, USA</p>
+                    <p><strong>India Head Office:</strong> B-614, World Trade Tower, Off S G Highway, Makarba, Ahmedabad – 380051, Gujarat, India</p>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-3 text-sm">

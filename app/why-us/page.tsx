@@ -69,7 +69,7 @@ const advantages = [
   {
     icon: "🤖",
     title: "AI-Powered Route Optimisation",
-    body: "Our routing engine continuously monitors per-network DLR rates, delivery times, and error codes across all 495+ operator connections. It automatically shifts traffic away from degraded routes in real time — something no legacy aggregator architecture can match at this speed.",
+    body: "Our routing engine continuously monitors per-network DLR rates, delivery times, and error codes across all 300+ operator connections. It automatically shifts traffic away from degraded routes in real time — something no legacy aggregator architecture can match at this speed.",
   },
   {
     icon: "🛡️",

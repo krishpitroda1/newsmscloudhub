@@ -13,7 +13,7 @@ export default function Hero() {
             <div className="inline-flex max-w-full">
               <span className="eyebrow-pill max-w-full flex-wrap sm:flex-nowrap">
                 <span className="dot shrink-0" />
-                <span className="truncate sm:whitespace-normal">Global A2P Messaging Network — 185+ Countries</span>
+                <span className="truncate sm:whitespace-normal">Global A2P Messaging Network across 150+ Countries</span>
               </span>
             </div>
 
@@ -27,8 +27,8 @@ export default function Hero() {
 
             <p className="text-base sm:text-lg lg:text-xl text-[#8DA0C0] max-w-[50ch] leading-relaxed">
               SMSCloudHub links enterprises, carriers, and mobile operators over direct,
-              AI-routed connections — SMS, WhatsApp, Voice, and CPaaS — engineered for
-              carrier-grade reliability worldwide.
+              AI routed connections for SMS, WhatsApp, Voice, and CPaaS, engineered for
+              carrier grade reliability worldwide.
             </p>
 
             <div className="flex flex-col xs:flex-row items-stretch xs:items-center gap-3.5 pt-2">
@@ -49,7 +49,7 @@ export default function Hero() {
               <span>
                 Powering delivery for{" "}
                 <strong className="font-mono text-white text-sm sm:text-base font-bold">
-                  495+
+                  300+
                 </strong>{" "}
                 telcos, carriers & enterprises worldwide
               </span>

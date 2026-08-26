@@ -27,7 +27,7 @@ const timelineData: TimelineItem[] = [
     category: "foundation",
     title: "Where it all began",
     description:
-      "SMSCloud Hub is born in Ahmedabad with one goal: make business messaging more **reliable, accessible and globally connected**. The journey starts in A2P SMS, built on quality and long-term relationships.",
+      "SMSCloud Hub is born with one goal: make business messaging more **reliable, accessible and globally connected**. The journey starts in A2P SMS, built on quality and long-term relationships.",
     align: "left",
   },
   {
@@ -61,7 +61,7 @@ const timelineData: TimelineItem[] = [
     category: "award",
     title: "Three high-distinction recognitions",
     description:
-      "A defining early moment — **Best Enterprise SMS Provider**, **Unstoppable Warriors / Best Cloud Solution**, and **Leading Male Telco Professional** for Ashish Bavishi. Proof that a young Ahmedabad company could compete globally.",
+      "A defining early moment — **Best Enterprise SMS Provider**, **Unstoppable Warriors / Best Cloud Solution**, and **Leading Male Telco Professional** for Ashish Bavishi. Proof that a young enterprise provider could compete globally.",
     align: "right",
   },
   // 2024
@@ -151,7 +151,7 @@ const timelineData: TimelineItem[] = [
     category: "foundation",
     title: "A global messaging ecosystem",
     description:
-      "From a young messaging venture to a global technology company — connectivity across **185+ countries**, with **1,000+ enterprises and carriers** onboard.",
+      "From a young messaging venture to a global technology company — connectivity across **150+ countries**, with **1,000+ enterprises and carriers** onboard.",
     align: "right",
   },
   // 2026
@@ -185,7 +185,7 @@ const timelineData: TimelineItem[] = [
     category: "event",
     title: "We return to Madrid",
     description:
-      "SMSCloud Hub participates in **Wholesale World Congress 2026** — continuing a journey that began in Ahmedabad in May 2022. This time, as a growing global communication technology partner.",
+      "SMSCloud Hub participates in **Wholesale World Congress 2026** — continuing a journey that began in May 2022. This time, as a growing global communication technology partner.",
     isFinale: true,
     align: "left",
   },
@@ -218,8 +218,8 @@ export default function JourneyTimeline() {
     (item) => activeFilter === "all" || item.category === activeFilter
   );
 
-  // Group items by year for year markers
-  const years = Array.from(new Set(filteredItems.map((item) => item.year))).sort();
+  // Group items by year for year markers (latest year first)
+  const years = Array.from(new Set(filteredItems.map((item) => item.year))).sort((a, b) => b.localeCompare(a));
 
   // Scroll spine progress computation
   useEffect(() => {
@@ -287,7 +287,7 @@ export default function JourneyTimeline() {
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
-            From a vision in Ahmedabad <br />
+            From foundational excellence <br />
             <span className="text-[#22D3EE] text-cyan-glow">
               to a global messaging ecosystem
             </span>
@@ -311,7 +311,7 @@ export default function JourneyTimeline() {
             </div>
             <div className="p-4 text-center md:border-l md:border-white/10">
               <div className="font-mono text-3xl sm:text-4xl font-extrabold text-[#22D3EE]">
-                185+
+                150+
               </div>
               <div className="font-mono text-[11px] uppercase tracking-wider text-[#8DA0C0] mt-1">
                 Countries Connected
@@ -518,7 +518,7 @@ export default function JourneyTimeline() {
             <span className="text-[#22D3EE]">A global journey.</span>
           </h2>
           <p className="text-sm sm:text-base text-[#8DA0C0] font-mono uppercase tracking-wide max-w-xl mx-auto leading-relaxed mb-8">
-            From Ahmedabad to Madrid — from SMS to CPaaS — from a startup to a
+            From early foundations to Madrid — from SMS to CPaaS — from a startup to a
             global messaging ecosystem. And the journey has only just begun.
           </p>
           <Link

@@ -6,7 +6,7 @@ export default function StatsProof() {
       label: "Accuracy Rate · Real-time DLR",
     },
     {
-      value: "495",
+      value: "300",
       unit: "+",
       label: "Carriers & Enterprises Connected",
     },
@@ -16,7 +16,7 @@ export default function StatsProof() {
       label: "Verified Client Satisfaction",
     },
     {
-      value: "185",
+      value: "150",
       unit: "+",
       label: "Countries Live Direct Termination",
     },

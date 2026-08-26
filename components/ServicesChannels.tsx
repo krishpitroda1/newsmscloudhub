@@ -55,7 +55,7 @@ export default function ServicesChannels() {
       href: "/services/voice-otp",
       description:
         "Tier-1 VoIP termination, SIP trunking, and voice pin generation backed by our high-capacity carrier network for agent operations.",
-      statValue: "185+",
+      statValue: "150+",
       statLabel: "Countries voice terminated",
       tag: "Tier-1 VoIP",
     },
@@ -135,8 +135,8 @@ export default function ServicesChannels() {
             One platform, every channel that reaches your customer.
           </h2>
           <p className="text-[#8DA0C0] text-lg mt-4 leading-relaxed">
-            From transactional OTPs to full conversational commerce — route messages
-            through the channels your audience prefers, over connections engineered end-to-end.
+            From transactional OTPs to full conversational commerce, route messages
+            through the channels your audience prefers over connections engineered end-to-end.
           </p>
         </div>
 

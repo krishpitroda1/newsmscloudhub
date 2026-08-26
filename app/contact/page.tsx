@@ -16,9 +16,17 @@ const channels = ["A2P SMS", "WhatsApp Business", "Voice OTP", "CPaaS API", "SMS
 
 const offices = [
   {
+    city: "Sheridan, WY",
+    country: "USA 🇺🇸",
+    type: "USA Office",
+    address: "30 N Gould St Ste R, Sheridan, WY 82801, USA",
+    phone: "(+91) 99244 94266",
+    email: "info@smscloudhub.com",
+  },
+  {
     city: "Ahmedabad",
     country: "India 🇮🇳",
-    type: "Head Office",
+    type: "India Head Office",
     address: "B-614, World Trade Tower, Off SG Highway, Makarba, Ahmedabad – 380051, Gujarat",
     phone: "(+91) 99244 94266",
     email: "info@smscloudhub.com",

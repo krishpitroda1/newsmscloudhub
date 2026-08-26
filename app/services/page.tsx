@@ -14,7 +14,7 @@ const services = [
     icon: "💬",
     category: "Enterprise",
     title: "A2P SMS & OTP Delivery",
-    desc: "Transactional and promotional SMS delivered over direct SS7 interconnects to 185+ countries. Sub-2-second latency SLA on Tier-1 routes. Supports long codes, short codes, and alphanumeric sender IDs. DLR receipts in real time via webhook or SMPP.",
+    desc: "Transactional and promotional SMS delivered over direct SS7 interconnects to 150+ countries. Sub-2-second latency SLA on Tier-1 routes. Supports long codes, short codes, and alphanumeric sender IDs. DLR receipts in real time via webhook or SMPP.",
     specs: ["SMPP v3.4 & HTTP REST API", "TLS 1.3 encrypted transport", "98.87% average DLR accuracy", "Throughput: up to 10,000 TPS per account"],
     href: "/services/a2p-sms",
   },

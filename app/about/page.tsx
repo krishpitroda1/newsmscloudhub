@@ -7,7 +7,7 @@ import JourneyTimeline from "@/components/JourneyTimeline";
 export const metadata: Metadata = {
   title: "About SMSCloudHub — Direct-Route Messaging Infrastructure",
   description:
-    "Learn how SMSCloudHub built a carrier-grade, direct-route messaging network connecting 495+ telcos across 193 countries with zero intermediaries.",
+    "Learn how SMSCloudHub built a carrier-grade, direct-route messaging network connecting 300+ telcos across 150+ countries with zero intermediaries.",
 };
 
 const values = [
@@ -68,8 +68,8 @@ export default function AboutPage() {
             </div>
             <div className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-8 space-y-6">
               {[
-                { label: "Direct telco connections", value: "495+" },
-                { label: "Countries covered", value: "185+" },
+                { label: "Direct telco connections", value: "300+" },
+                { label: "Countries covered", value: "150+" },
                 { label: "DLR accuracy", value: "98.87%" },
                 { label: "Uptime SLA", value: "99.95%" },
               ].map((s) => (
@@ -105,14 +105,19 @@ export default function AboutPage() {
 
         {/* ─── Office ─── */}
         <section className="py-20 px-6 border-t border-white/5 bg-[#0F1B2E]">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Headquartered in India. Connected Globally.</h2>
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">Headquartered in USA & India. Connected Globally.</h2>
             <p className="text-[#8DA0C0] mb-10">
-              Our engineering and operations teams are based in Ahmedabad, Gujarat, with commercial presence across the Middle East, Southeast Asia, and Europe.
+              Our presence spans the USA, India, Middle East, Southeast Asia, and Europe.
             </p>
-            <div className="inline-flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <div className="grid sm:grid-cols-3 gap-6 items-stretch justify-center">
               <div className="bg-[#0A1220] border border-white/10 rounded-xl px-6 py-4 text-left">
-                <p className="text-xs text-[#22D3EE] font-mono uppercase tracking-widest mb-1">Head Office</p>
+                <p className="text-xs text-[#22D3EE] font-mono uppercase tracking-widest mb-1">USA Office</p>
+                <p className="font-semibold">SMSCloudHub USA</p>
+                <p className="text-[#8DA0C0] text-sm">30 N Gould St Ste R, Sheridan, WY 82801, USA</p>
+              </div>
+              <div className="bg-[#0A1220] border border-white/10 rounded-xl px-6 py-4 text-left">
+                <p className="text-xs text-[#22D3EE] font-mono uppercase tracking-widest mb-1">India Head Office</p>
                 <p className="font-semibold">B-614, World Trade Tower</p>
                 <p className="text-[#8DA0C0] text-sm">Off SG Highway, Makarba, Ahmedabad – 380051, Gujarat, India</p>
               </div>

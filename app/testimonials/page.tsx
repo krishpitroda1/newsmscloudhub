@@ -158,18 +158,6 @@ export default function TestimonialsPage() {
           </div>
         </section>
 
-        {/* ─── CTA ─── */}
-        <section className="py-20 px-6 border-t border-white/5 text-center">
-          <h2 className="text-3xl font-bold mb-4">Join 495+ operators who chose the direct route</h2>
-          <p className="text-[#8DA0C0] mb-8">Let's run a proof-of-concept on your traffic. No commitment, full visibility.</p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#22D3EE] text-[#04141A] font-bold rounded-full hover:bg-white transition-colors"
-          >
-            Start Your PoC →
-          </Link>
-        </section>
-
       </main>
       <Footer />
     </>
