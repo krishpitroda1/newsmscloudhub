@@ -3,10 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
   const [isPaused, setIsPaused] = useState(false);
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
 
   const testimonials = [
     {
@@ -75,37 +73,39 @@ export default function Testimonials() {
     },
   ];
 
-  // Auto-play interval
+  // Double array for seamless infinite scrolling
+  const infiniteTestimonials = [...testimonials, ...testimonials];
+
   useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isPaused, testimonials.length]);
+    const el = scrollRef.current;
+    if (!el) return;
+
+    let animationFrameId: number;
+
+    const scroll = () => {
+      if (!isPaused && el) {
+        el.scrollLeft += 0.8;
+        if (el.scrollLeft >= el.scrollWidth / 2) {
+          el.scrollLeft -= el.scrollWidth / 2;
+        }
+      }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isPaused]);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -380, behavior: "smooth" });
+    }
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStartX.current - touchEndX.current > 50) {
-      handleNext();
-    }
-    if (touchStartX.current - touchEndX.current < -50) {
-      handlePrev();
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 380, behavior: "smooth" });
     }
   };
 
@@ -127,8 +127,8 @@ export default function Testimonials() {
           <div className="flex items-center gap-3">
             <button
               onClick={handlePrev}
-              className="w-11 h-11 rounded-full border border-white/15 bg-[#0F1B2E] text-white flex items-center justify-center hover:border-[#22D3EE] hover:text-[#22D3EE] hover:bg-[#22D3EE]/10 transition-all shadow-md active:scale-95"
-              aria-label="Previous Testimonial Slide"
+              className="w-11 h-11 rounded-full border border-white/15 bg-[#0F1B2E] text-white flex items-center justify-center hover:border-[#22D3EE] hover:text-[#22D3EE] hover:bg-[#22D3EE]/10 transition-all shadow-md active:scale-95 cursor-pointer"
+              aria-label="Previous Testimonials"
             >
               <svg className="w-5 h-5" viewBox="0 0 14 14" fill="none">
                 <path
@@ -142,8 +142,8 @@ export default function Testimonials() {
             </button>
             <button
               onClick={handleNext}
-              className="w-11 h-11 rounded-full border border-white/15 bg-[#0F1B2E] text-white flex items-center justify-center hover:border-[#22D3EE] hover:text-[#22D3EE] hover:bg-[#22D3EE]/10 transition-all shadow-md active:scale-95"
-              aria-label="Next Testimonial Slide"
+              className="w-11 h-11 rounded-full border border-white/15 bg-[#0F1B2E] text-white flex items-center justify-center hover:border-[#22D3EE] hover:text-[#22D3EE] hover:bg-[#22D3EE]/10 transition-all shadow-md active:scale-95 cursor-pointer"
+              aria-label="Next Testimonials"
             >
               <svg className="w-5 h-5" viewBox="0 0 14 14" fill="none">
                 <path
@@ -158,74 +158,47 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Carousel Container */}
+        {/* Continuous Infinite Loop Carousel */}
         <div
-          className="relative overflow-hidden"
+          ref={scrollRef}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
+          className="flex gap-6 overflow-x-auto pb-6 scrollbar-none select-none cursor-grab active:cursor-grabbing"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          <div
-            className="flex transition-transform duration-500 ease-out"
-            style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
-            }}
-          >
-            {testimonials.map((item, idx) => (
-              <div
-                key={idx}
-                className="w-full shrink-0 px-1 sm:px-2"
-              >
-                <div className="bg-gradient-to-br from-[#0F1B2E] to-[#0A1220] border border-white/10 hover:border-[#22D3EE]/50 rounded-3xl p-8 sm:p-10 shadow-2xl relative flex flex-col justify-between min-h-[300px] transition-all">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="font-mono text-xs text-[#22D3EE] bg-[#22D3EE]/10 border border-[#22D3EE]/30 px-3 py-1 rounded-full font-bold uppercase tracking-wider">
-                        {item.category}
-                      </span>
-                      <span className="font-mono text-xs text-[#8DA0C0]">
-                        0{idx + 1} / 0{testimonials.length}
-                      </span>
-                    </div>
-
-                    <p className="text-base sm:text-xl text-[#F3F8FF] leading-relaxed italic font-normal pt-2">
-                      &ldquo;{item.quote}&rdquo;
-                    </p>
+          {infiniteTestimonials.map((item, idx) => (
+            <div
+              key={idx}
+              className="w-[320px] sm:w-[380px] shrink-0"
+            >
+              <div className="bg-gradient-to-br from-[#0F1B2E] to-[#0A1220] border border-white/10 hover:border-[#22D3EE]/50 rounded-3xl p-7 sm:p-8 shadow-2xl relative flex flex-col justify-between h-full min-h-[290px] transition-all">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs text-[#22D3EE] bg-[#22D3EE]/10 border border-[#22D3EE]/30 px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+                      {item.category}
+                    </span>
                   </div>
 
-                  <div className="flex items-center gap-4 pt-6 mt-6 border-t border-white/10">
-                    <div className="w-12 h-12 rounded-2xl bg-[#22D3EE] text-[#04141A] font-mono font-extrabold text-sm flex items-center justify-center shrink-0 shadow-lg">
-                      {item.initials}
-                    </div>
-                    <div>
-                      <h4 className="text-base font-bold text-white leading-snug">
-                        {item.author}
-                      </h4>
-                      <p className="text-xs sm:text-sm text-[#8DA0C0]">
-                        {item.company}
-                      </p>
-                    </div>
+                  <p className="text-sm sm:text-base text-[#F3F8FF] leading-relaxed italic font-normal pt-1">
+                    &ldquo;{item.quote}&rdquo;
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3.5 pt-5 mt-5 border-t border-white/10">
+                  <div className="w-11 h-11 rounded-2xl bg-[#22D3EE] text-[#04141A] font-mono font-extrabold text-xs flex items-center justify-center shrink-0 shadow-lg">
+                    {item.initials}
+                  </div>
+                  <div>
+                    <h4 className="text-sm sm:text-base font-bold text-white leading-snug">
+                      {item.author}
+                    </h4>
+                    <p className="text-xs text-[#8DA0C0]">
+                      {item.company}
+                    </p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Carousel Pagination Dots */}
-        <div className="flex items-center justify-center gap-2 mt-8">
-          {testimonials.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentIndex(idx)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                currentIndex === idx
-                  ? "w-8 bg-[#22D3EE] shadow-[0_0_10px_#22D3EE]"
-                  : "w-2.5 bg-white/20 hover:bg-white/40"
-              }`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
+            </div>
           ))}
         </div>
       </div>
