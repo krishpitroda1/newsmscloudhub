@@ -32,29 +32,6 @@ const offices = [
   },
 ];
 
-const faqs = [
-  {
-    q: "How quickly can I go live?",
-    a: "Most customers go live within 24–48 hours of signing. Our onboarding team handles SS7 provisioning, API key issuance, and end-to-end test validation.",
-  },
-  {
-    q: "Do you offer a trial or PoC?",
-    a: "Yes. We offer a sandbox environment and a paid proof-of-concept at favourable test rates so you can validate delivery quality against your current provider before committing.",
-  },
-  {
-    q: "What is your minimum monthly commitment?",
-    a: "There is no minimum for API customers. Operator and carrier interconnects are contracted on a bilateral basis. Speak to our sales team for pricing.",
-  },
-  {
-    q: "Do you support SMPP and HTTP APIs simultaneously?",
-    a: "Yes. Our platform supports SMPP v3.4, HTTP REST, and HTTPS delivery via a single unified account. Both protocols can be active at the same time.",
-  },
-  {
-    q: "How do you handle DND and local compliance?",
-    a: "We integrate with national DND registries (including India's TRAI NDNC), support TCPA-aware routing for North America, and apply GDPR-compliant data retention policies globally.",
-  },
-];
-
 export default function ContactPage() {
   const [form, setForm] = useState({
     name: "",
@@ -221,21 +198,6 @@ export default function ContactPage() {
                 <p className="text-2xl font-bold">≤ 4 business hours</p>
                 <p className="text-[#8DA0C0] text-sm">For enterprise, operator, and carrier inquiries. NOC support is 24/7.</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── FAQ ─── */}
-        <section className="py-20 px-6 border-t border-white/5 bg-[#0F1B2E]">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-10">Frequently asked questions</h2>
-            <div className="space-y-4">
-              {faqs.map((faq) => (
-                <div key={faq.q} className="border border-white/10 rounded-xl p-5">
-                  <h3 className="font-semibold mb-2">{faq.q}</h3>
-                  <p className="text-[#8DA0C0] text-sm leading-relaxed">{faq.a}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
