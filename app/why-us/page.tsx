@@ -11,52 +11,59 @@ export const metadata: Metadata = {
 
 const comparisonRows = [
   {
-    feature: "Routing architecture",
-    smsch: "0Hop direct SS7 peering",
-    others: "Multi-hop via 2–4 aggregators",
-    win: true,
+    feature: "Global Reach",
+    smsch: "195+ countries",
+    others: "Varies by provider",
   },
   {
-    feature: "Average delivery latency",
-    smsch: "< 2 seconds (Tier-1 routes)",
-    others: "5–15 seconds (varies by hop count)",
-    win: true,
+    feature: "Platform Capacity",
+    smsch: "Up to 1,000 TPS burstable capacity",
+    others: "Varies by provider",
   },
   {
-    feature: "DLR accuracy",
-    smsch: "98.87% confirmed receipts",
-    others: "85–94% (intermediary drop-off)",
-    win: true,
+    feature: "Route Selection",
+    smsch: "AI-based Route Selection & Testing",
+    others: "Varies by provider",
   },
   {
-    feature: "Grey route protection",
-    smsch: "ML-powered SS7 firewall, real-time",
-    others: "Manual blacklists, delayed remediation",
-    win: true,
+    feature: "Routing",
+    smsch: "LCR & QBR-based routing with fallback",
+    others: "Varies by provider",
   },
   {
-    feature: "Pricing transparency",
-    smsch: "Per-route itemised billing, no hidden margins",
-    others: "Blended rates, margin stacking per hop",
-    win: true,
+    feature: "Uptime",
+    smsch: "99.95% uptime, backed by SLA",
+    others: "Varies by provider",
   },
   {
-    feature: "Go-live time",
-    smsch: "< 48 hours from contract sign",
-    others: "2–6 weeks provisioning lead time",
-    win: true,
+    feature: "Route Quality",
+    smsch: "Global routes with AI-based testing",
+    others: "Varies by provider",
   },
   {
-    feature: "Uptime SLA",
-    smsch: "99.95% with SLA credits",
-    others: "99.0–99.5%, limited credit mechanism",
-    win: true,
+    feature: "Cloud Platform",
+    smsch: "Cloud-based, no CAPEX",
+    others: "Varies by provider",
   },
   {
-    feature: "Dedicated account manager",
-    smsch: "Included for all tiers",
-    others: "Enterprise tier only (>$50k/month)",
-    win: true,
+    feature: "SMS Termination",
+    smsch: "Global A2P SMS delivery",
+    others: "Varies by provider",
+  },
+  {
+    feature: "Coverage",
+    smsch: "157+ countries listed on the website",
+    others: "Varies by provider",
+  },
+  {
+    feature: "Security",
+    smsch: "Advanced encryption",
+    others: "Varies by provider",
+  },
+  {
+    feature: "Scalability",
+    smsch: "Scalable messaging platform",
+    others: "Varies by provider",
   },
 ];
 
@@ -144,8 +151,12 @@ export default function WhyUsPage() {
         {/* ─── Comparison Table ─── */}
         <section className="py-20 px-6 border-t border-white/5 bg-[#0F1B2E]">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-3">SMSCloudHub vs. the rest</h2>
-            <p className="text-center text-[#8DA0C0] mb-10 text-sm">Based on published specifications and independent industry benchmarks.</p>
+            <h2 className="text-3xl font-bold text-center mb-3">
+              SMSCloud Hub — Built for Global Messaging
+            </h2>
+            <p className="text-center text-[#22D3EE] font-mono text-sm font-semibold mb-10 tracking-wide uppercase">
+              Smart Routing • Global Reach • Scalable Infrastructure
+            </p>
             <div className="overflow-x-auto rounded-2xl border border-white/10">
               <table className="w-full text-sm">
                 <thead>
