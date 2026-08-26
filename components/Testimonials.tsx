@@ -8,38 +8,59 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "We have been working with SMSCloud Hub for more than a year now and the cooperation with their commercial team has been extremely successful — they understand our needs and provide the optimal solution quickly.",
+        "SMSCloud Hub has been our trusted partner for wholesale SMS services for a year now. We're happy to have their flawless customer support and be sure that our messaging campaigns run smoothly, making them the obvious choice for the Best Wholesale SMS Provider award.",
+      author: "Sertac Vardar",
+      company: "Lexico Telecom",
+      initials: "SV",
+    },
+    {
+      quote:
+        "SMSCloud Hub's marketing strategy is a breath of fresh air in today's digital landscape. Their emphasis on organic growth and genuine interactions reflects their dedication to building lasting relationships with their audience. It's evident that they understand the importance of authenticity in marketing, and it's paying off remarkably well for them.",
+      author: "One Technologies",
+      company: "One Technologies",
+      initials: "OT",
+    },
+    {
+      quote:
+        "SMSCloud Hub is a young and vibrant organization, led by one of the most knowledgeable and experienced leaders in the industry, Mr. Ashish Bavishi. In addition to his deep industry insight, he is also one of the most humble and down-to-earth senior professionals I have had the pleasure of meeting. His leadership has instilled the same values and ideology across the entire team.",
+      author: "NexG Enterprise",
+      company: "NexG Platforms",
+      initials: "NE",
+    },
+    {
+      quote:
+        "We've been particularly impressed by SMSCloud Hub's endeavors to give back to the community and effect positive change in society. Their initiatives supporting charitable endeavors, advocating diversity and inclusion, and striving for environmental sustainability highlight their dedication to social responsibility.",
+      author: "Anish Thakore",
+      company: "Buckbox",
+      initials: "AT",
+    },
+    {
+      quote:
+        "I am extremely satisfied with the high quality and satisfactory results provided by SMSCloud Hub. Their overall support has been exceptional, meeting all the requirements outlined in the Service Level Agreement (SLA). The team has consistently delivered excellent service, going above and beyond to ensure our needs are met.",
+      author: "Abrar Tariq",
+      company: "Telintel",
+      initials: "AT",
+    },
+    {
+      quote:
+        "We Tubelight Communication working with SMS Cloud Hub for a long time now, the routes, service and support have been constant and we see working with them successfully in the future as well.",
+      author: "Praveen Singh",
+      company: "Tubelight Communication",
+      initials: "PS",
+    },
+    {
+      quote:
+        "I've been using SMSCloud hub for my bulk messaging needs for a while now and I can honestly say that it's the best provider out there. Their pricing is very competitive, their customer service is top-notch, and they are always willing to help out in any way they can. Plus, their software is reliable and easy to use.",
+      author: "Ahsan Shaheen",
+      company: "Pathfinder Technologies",
+      initials: "AS",
+    },
+    {
+      quote:
+        "We have been working with SMSCloud Hub since more than a year now and the cooperation with their Commercial Team has been extremely successful. They immediately understand our needs and provide in a short time the optimal solution to our requests both in terms of service quality and costs.",
       author: "Antonio Catanzariti",
       company: "Imerald (FZE)",
       initials: "AC",
-    },
-    {
-      quote:
-        "Choosing SMSCloud Hub as our aggregator was the best decision we made for our business. Their platform seamlessly connects us with multiple telecom operators, simplifying our messaging operations.",
-      author: "David Miller",
-      company: "NexGen Telecom Solutions",
-      initials: "DM",
-    },
-    {
-      quote:
-        "The months we spent working with the SMSCloud organization were a great asset to our company. Even though they are a newer firm in the SMS industry, we have a solid working relationship and the business keeps expanding.",
-      author: "Maryana Nasr",
-      company: "Callync",
-      initials: "MN",
-    },
-    {
-      quote:
-        "SMSCloud Hub provides one of the best school platforms we've seen, with 24/7 support in the Mozambican market, allowing our growth in the school software segment.",
-      author: "Hugo Rebeiro",
-      company: "Click Mobile",
-      initials: "HR",
-    },
-    {
-      quote:
-        "We have been working with SMSCloud Hub for a long time now — the routes, service and support have been constant, and we see this continuing successfully into the future.",
-      author: "Vikram Sharma",
-      company: "Apex Communications",
-      initials: "AS",
     },
   ];
 
