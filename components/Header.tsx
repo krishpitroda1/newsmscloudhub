@@ -7,36 +7,42 @@ import { usePathname } from "next/navigation";
 
 const serviceCategories = [
   {
-    title: "Enterprise",
+    title: "Enterprise Messaging",
     badge: "Enterprise",
     items: [
-      { name: "WhatsApp Business", href: "/services/whatsapp-business", desc: "Verified BSP API & Chatbots" },
       { name: "A2P SMS & OTP", href: "/services/a2p-sms", desc: "Sub-2s latency global routes" },
+      { name: "WhatsApp Business", href: "/services/whatsapp-business", desc: "Verified BSP API & Chatbots" },
       { name: "WordPress Plugin", href: "/services/wordpress-plugin", desc: "Automated WordPress SMS & OTP" },
-      { name: "Digital Marketing", href: "/services/digital-marketing", desc: "Digital Transformation & campaigns" },
-      { name: "Voice & Voice OTP", href: "/services/voice-otp", desc: "TTS & SIP termination" },
       { name: "CPaaS REST APIs", href: "/services/cpaas-api", desc: "Unified developer REST API" },
-      { name: "VN / TFN / DID", href: "/services/virtual-did", desc: "Virtual phone numbers & DIDs" },
       { name: "RCS Messaging", href: "/services/rcs", desc: "Rich interactive messaging" },
+    ],
+  },
+  {
+    title: "Business & Voice",
+    badge: "Voice & Business",
+    items: [
+      { name: "Voice & Voice OTP", href: "/services/voice-otp", desc: "TTS & SIP termination" },
+      { name: "Digital Marketing", href: "/services/digital-marketing", desc: "Digital Transformation & campaigns" },
+      { name: "VN / TFN / DID", href: "/services/virtual-did", desc: "Virtual phone numbers & DIDs" },
       { name: "2-Way SMS", href: "/services/2way-sms", desc: "Inbound & outbound 2-way" },
       { name: "Missed Call", href: "/services/missed-call", desc: "Instant missed-call alerts" },
     ],
   },
   {
-    title: "Carrier",
+    title: "Carrier & Interconnect",
     badge: "Carrier",
     items: [
       { name: "A2P SMS Hubbing", href: "/services/a2p-hubbing", desc: "Wholesale SMS traffic" },
       { name: "SIP Trunk Voice", href: "/services/sip-trunk-voice", desc: "Global voice termination" },
       { name: "Number Lookup", href: "/services/number-lookup", desc: "Network validation API" },
+      { name: "0Hop Connectivity", href: "/services/0hop-connectivity", desc: "Direct SS7 & SMPP peering" },
     ],
   },
   {
-    title: "MNO & MVNO",
+    title: "MNO & Security",
     badge: "MNO & MVNO",
     items: [
       { name: "SMSC Firewall", href: "/services/smsc-firewall", desc: "Grey route & fraud protection" },
-      { name: "0Hop Connectivity", href: "/services/0hop-connectivity", desc: "Direct SS7 & SMPP peering" },
       { name: "Managed Services", href: "/services/managed-services", desc: "Turnkey messaging ops" },
       { name: "Carrier Grade Platform", href: "/services/cpaas-platform", desc: "High-throughput node" },
       { name: "HLR Lookup", href: "/services/hlr", desc: "Real-time subscriber check" },
@@ -148,7 +154,7 @@ export default function Header() {
               <>
                 {/* Hover bridge */}
                 <div className="absolute top-full left-0 w-full h-3" />
-                <div className="absolute top-[calc(100%+8px)] -left-20 w-[840px] max-w-[calc(100vw-32px)] bg-white border border-slate-200 rounded-2xl p-6 shadow-2xl z-50 space-y-4">
+                <div className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[1040px] max-w-[calc(100vw-32px)] bg-white border border-slate-200 rounded-2xl p-6 shadow-2xl z-50 space-y-4 font-sans">
                   <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                     <span className="font-mono text-xs text-[#0891B2] uppercase tracking-widest font-bold">
                       Full Product & Service Suite
@@ -162,7 +168,7 @@ export default function Header() {
                     </Link>
                   </div>
                   
-                  <div className="grid grid-cols-3 gap-5">
+                  <div className="grid grid-cols-4 gap-6">
                     {serviceCategories.map((cat) => (
                       <div key={cat.title} className="space-y-2.5">
                         <h5 className="font-mono text-xs tracking-widest text-[#0891B2] uppercase font-bold">
