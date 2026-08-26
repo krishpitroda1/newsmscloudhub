@@ -16,11 +16,10 @@ const channels = ["A2P SMS", "WhatsApp Business", "Voice OTP", "CPaaS API", "SMS
 
 const offices = [
   {
-    city: "Sheridan, WY",
+    city: "USA",
     country: "USA 🇺🇸",
     type: "USA Office",
     address: "30 N Gould St Ste R, Sheridan, WY 82801, USA",
-    phone: "(+91) 99244 94266",
     email: "info@smscloudhub.com",
   },
   {
@@ -205,9 +204,11 @@ export default function ContactPage() {
                   </div>
                   <p className="text-[#8DA0C0] text-sm leading-relaxed">{o.address}</p>
                   <div className="space-y-1.5 pt-1">
-                    <a href={`tel:${o.phone}`} className="flex items-center gap-2 text-sm text-[#F3F8FF] hover:text-[#22D3EE] transition-colors">
-                      <span>📞</span> {o.phone}
-                    </a>
+                    {o.phone && (
+                      <a href={`tel:${o.phone}`} className="flex items-center gap-2 text-sm text-[#F3F8FF] hover:text-[#22D3EE] transition-colors">
+                        <span>📞</span> {o.phone}
+                      </a>
+                    )}
                     <a href={`mailto:${o.email}`} className="flex items-center gap-2 text-sm text-[#F3F8FF] hover:text-[#22D3EE] transition-colors">
                       <span>✉️</span> {o.email}
                     </a>
