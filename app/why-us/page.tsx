@@ -116,29 +116,29 @@ export default function WhyUsPage() {
       <main className="bg-[#0A1220] text-[#F3F8FF]">
 
         {/* ─── Hero ─── */}
-        <section className="relative overflow-hidden pt-28 pb-20 px-6">
+        <section className="relative overflow-hidden pt-16 sm:pt-28 pb-12 sm:pb-20 px-4 sm:px-6">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(34,211,238,0.08),transparent)]" />
           <div className="max-w-3xl mx-auto text-center relative">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-xs font-mono tracking-widest uppercase mb-6">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-[11px] sm:text-xs font-mono tracking-widest uppercase mb-4 sm:mb-6">
               • Why SMSCloudHub
             </span>
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 sm:mb-6">
               The route matters.<br />
               <span className="text-[#22D3EE]">Ours is shorter.</span>
             </h1>
-            <p className="text-lg text-[#8DA0C0] max-w-2xl mx-auto leading-relaxed">
-              The global A2P messaging market is full of aggregators stacking hops between your API call and your customer's handset. We built SMSCloudHub specifically to eliminate every one of them.
+            <p className="text-base sm:text-lg text-[#8DA0C0] max-w-2xl mx-auto leading-relaxed">
+              The global A2P messaging market is full of aggregators stacking hops between your API call and your customer&apos;s handset. We built SMSCloudHub specifically to eliminate every one of them.
             </p>
           </div>
         </section>
 
         {/* ─── Advantages Grid ─── */}
-        <section className="py-20 px-6 border-t border-white/5">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 border-t border-white/5">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Six reasons operators and enterprises switch to us</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Six reasons operators and enterprises switch to us</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {advantages.map((a) => (
-                <div key={a.title} className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-6 hover:border-[#22D3EE]/40 transition-colors">
+                <div key={a.title} className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-4 sm:p-6 hover:border-[#22D3EE]/40 transition-colors">
                   <div className="text-3xl mb-3">{a.icon}</div>
                   <h3 className="font-bold text-lg mb-2">{a.title}</h3>
                   <p className="text-[#8DA0C0] text-sm leading-relaxed">{a.body}</p>
@@ -149,14 +149,18 @@ export default function WhyUsPage() {
         </section>
 
         {/* ─── Comparison Table ─── */}
-        <section className="py-20 px-6 border-t border-white/5 bg-[#0F1B2E]">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 border-t border-white/5 bg-[#0F1B2E]">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-3">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-3">
               SMSCloud Hub — Built for Global Messaging
             </h2>
-            <p className="text-center text-[#22D3EE] font-mono text-sm font-semibold mb-10 tracking-wide uppercase">
+            <p className="text-center text-[#22D3EE] font-mono text-xs sm:text-sm font-semibold mb-6 sm:mb-10 tracking-wide uppercase">
               Smart Routing • Global Reach • Scalable Infrastructure
             </p>
+            {/* Mobile Scroll Indicator */}
+            <div className="md:hidden text-xs text-[#8DA0C0] font-mono mb-2 flex items-center justify-between px-1">
+              <span className="text-[#22D3EE]">← Swipe to scroll comparison table →</span>
+            </div>
             <div className="overflow-x-auto rounded-2xl border border-white/10">
               <table className="w-full text-sm">
                 <thead>

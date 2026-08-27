@@ -110,15 +110,15 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-24 bg-[#0A1220] border-t border-white/10 relative overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-6">
-        <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
+    <section id="testimonials" className="py-12 sm:py-20 lg:py-24 bg-[#0A1220] border-t border-white/10 relative overflow-hidden">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="flex flex-wrap items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-12">
           <div>
             <span className="eyebrow mb-2 inline-flex items-center gap-2">
               <span className="w-2 h-2 rounded bg-[#22D3EE] animate-ping" />
               Client Testimonials
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
               What industry leaders say about SMSCloudHub
             </h2>
           </div>
@@ -127,10 +127,10 @@ export default function Testimonials() {
           <div className="flex items-center gap-3">
             <button
               onClick={handlePrev}
-              className="w-11 h-11 rounded-full border border-white/15 bg-[#0F1B2E] text-white flex items-center justify-center hover:border-[#22D3EE] hover:text-[#22D3EE] hover:bg-[#22D3EE]/10 transition-all shadow-md active:scale-95 cursor-pointer"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-white/15 bg-[#0F1B2E] text-white flex items-center justify-center hover:border-[#22D3EE] hover:text-[#22D3EE] hover:bg-[#22D3EE]/10 transition-all shadow-md active:scale-95 cursor-pointer"
               aria-label="Previous Testimonials"
             >
-              <svg className="w-5 h-5" viewBox="0 0 14 14" fill="none">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 14 14" fill="none">
                 <path
                   d="M9 2L3 7l6 5"
                   stroke="currentColor"
@@ -142,10 +142,10 @@ export default function Testimonials() {
             </button>
             <button
               onClick={handleNext}
-              className="w-11 h-11 rounded-full border border-white/15 bg-[#0F1B2E] text-white flex items-center justify-center hover:border-[#22D3EE] hover:text-[#22D3EE] hover:bg-[#22D3EE]/10 transition-all shadow-md active:scale-95 cursor-pointer"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-white/15 bg-[#0F1B2E] text-white flex items-center justify-center hover:border-[#22D3EE] hover:text-[#22D3EE] hover:bg-[#22D3EE]/10 transition-all shadow-md active:scale-95 cursor-pointer"
               aria-label="Next Testimonials"
             >
-              <svg className="w-5 h-5" viewBox="0 0 14 14" fill="none">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 14 14" fill="none">
                 <path
                   d="M5 2l6 5-6 5"
                   stroke="currentColor"
@@ -163,36 +163,36 @@ export default function Testimonials() {
           ref={scrollRef}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="flex gap-6 overflow-x-auto pb-6 scrollbar-none select-none cursor-grab active:cursor-grabbing"
+          className="flex gap-4 sm:gap-6 overflow-x-auto pb-6 scrollbar-none select-none cursor-grab active:cursor-grabbing"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {infiniteTestimonials.map((item, idx) => (
             <div
               key={idx}
-              className="w-[320px] sm:w-[380px] shrink-0"
+              className="w-[280px] sm:w-[380px] shrink-0"
             >
-              <div className="bg-gradient-to-br from-[#0F1B2E] to-[#0A1220] border border-white/10 hover:border-[#22D3EE]/50 rounded-3xl p-7 sm:p-8 shadow-2xl relative flex flex-col justify-between h-full min-h-[290px] transition-all">
-                <div className="space-y-4">
+              <div className="bg-gradient-to-br from-[#0F1B2E] to-[#0A1220] border border-white/10 hover:border-[#22D3EE]/50 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl relative flex flex-col justify-between h-full min-h-[280px] sm:min-h-[290px] transition-all">
+                <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs text-[#22D3EE] bg-[#22D3EE]/10 border border-[#22D3EE]/30 px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+                    <span className="font-mono text-[10px] sm:text-xs text-[#22D3EE] bg-[#22D3EE]/10 border border-[#22D3EE]/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full font-bold uppercase tracking-wider">
                       {item.category}
                     </span>
                   </div>
 
-                  <p className="text-sm sm:text-base text-[#F3F8FF] leading-relaxed italic font-normal pt-1">
+                  <p className="text-xs sm:text-base text-[#F3F8FF] leading-relaxed italic font-normal pt-1">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="flex items-center gap-3.5 pt-5 mt-5 border-t border-white/10">
-                  <div className="w-11 h-11 rounded-2xl bg-[#22D3EE] text-[#04141A] font-mono font-extrabold text-xs flex items-center justify-center shrink-0 shadow-lg">
+                <div className="flex items-center gap-3 pt-4 sm:pt-5 mt-4 sm:mt-5 border-t border-white/10">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#22D3EE] text-[#04141A] font-mono font-extrabold text-xs flex items-center justify-center shrink-0 shadow-lg">
                     {item.initials}
                   </div>
                   <div>
-                    <h4 className="text-sm sm:text-base font-bold text-white leading-snug">
+                    <h4 className="text-xs sm:text-base font-bold text-white leading-snug">
                       {item.author}
                     </h4>
-                    <p className="text-xs text-[#8DA0C0]">
+                    <p className="text-[11px] sm:text-xs text-[#8DA0C0]">
                       {item.company}
                     </p>
                   </div>

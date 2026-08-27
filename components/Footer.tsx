@@ -22,8 +22,8 @@ export default function Footer() {
     <footer className="bg-white text-slate-700 border-t border-slate-200 pt-16 pb-8 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#0891B2]" />
 
-      <div className="max-w-[1240px] mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr] gap-10 pb-12">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr] gap-8 sm:gap-10 pb-12">
           {/* Brand Info */}
           <div className="space-y-4">
             <Link href="/" onClick={handleScrollTop} className="inline-block cursor-pointer">

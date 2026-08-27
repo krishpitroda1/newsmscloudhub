@@ -33,8 +33,8 @@ export default function TrustReliability() {
   ];
 
   return (
-    <section id="reliability" className="py-24 bg-[#0A1220] border-t border-white/10 relative">
-      <div className="max-w-[1240px] mx-auto px-6">
+    <section id="reliability" className="py-12 sm:py-20 lg:py-24 bg-[#0A1220] border-t border-white/10 relative">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="trace-rule">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
@@ -51,23 +51,23 @@ export default function TrustReliability() {
           <span className="tr-line" />
         </div>
 
-        <div className="max-w-[680px] mb-14">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+        <div className="max-w-[680px] mb-8 sm:mb-14">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
             Carrier grade by design, not by exception.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
           {pillars.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-6 flex flex-col space-y-4 hover:border-[#22D3EE]/60 transition-all"
+              className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-4 sm:p-6 flex flex-col space-y-3 sm:space-y-4 hover:border-[#22D3EE]/60 transition-all"
             >
               <div className="w-10 h-10 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-[#22D3EE]">
                 {item.icon}
               </div>
-              <h3 className="text-lg font-bold text-white pt-2">{item.title}</h3>
-              <p className="text-sm text-[#8DA0C0] leading-relaxed">
+              <h3 className="text-base sm:text-lg font-bold text-white pt-1 sm:pt-2">{item.title}</h3>
+              <p className="text-xs sm:text-sm text-[#8DA0C0] leading-relaxed">
                 {item.description}
               </p>
             </div>

@@ -3,17 +3,17 @@ import CircuitCanvas from "./CircuitCanvas";
 
 export default function Hero() {
   return (
-    <section className="relative pt-12 lg:pt-16 pb-12 overflow-hidden bg-hero-pattern">
+    <section className="relative pt-8 sm:pt-12 lg:pt-16 pb-8 sm:pb-12 overflow-hidden bg-hero-pattern">
       <div className="absolute inset-0 pointer-events-none hero-grid-pattern opacity-30" />
 
-      <div className="max-w-[1240px] mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-16 items-center">
           {/* Left Column: Headline & Call To Action */}
-          <div className="space-y-6 text-left">
+          <div className="space-y-5 sm:space-y-6 text-left">
             <div className="inline-flex max-w-full">
               <span className="eyebrow-pill max-w-full flex-wrap sm:flex-nowrap">
                 <span className="dot shrink-0" />
-                <span className="truncate sm:whitespace-normal">Global A2P Messaging Network across 150+ Countries</span>
+                <span className="break-words sm:whitespace-normal">Global A2P Messaging Network across 150+ Countries</span>
               </span>
             </div>
 
@@ -31,15 +31,15 @@ export default function Hero() {
               carrier grade reliability worldwide.
             </p>
 
-            <div className="flex flex-col xs:flex-row items-stretch xs:items-center gap-3.5 pt-2">
-              <Link href="/contact" className="btn btn-primary text-sm sm:text-base group text-center justify-center">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+              <Link href="/contact" className="btn btn-primary text-sm sm:text-base group text-center justify-center w-full sm:w-auto">
                 Get Your Route
                 <span className="inline-block transition-transform group-hover:translate-x-1">
                   →
                 </span>
               </Link>
 
-              <Link href="/services" className="btn btn-ghost text-sm sm:text-base text-center justify-center">
+              <Link href="/services" className="btn btn-ghost text-sm sm:text-base text-center justify-center w-full sm:w-auto">
                 See the Network
               </Link>
             </div>

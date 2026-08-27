@@ -37,6 +37,14 @@ export default function ComplianceTable() {
         />
       </div>
 
+      {/* Mobile Horizontal Scroll Indicator */}
+      <div className="md:hidden text-xs text-[#8DA0C0] font-mono mb-3 flex items-center justify-between px-1">
+        <span className="flex items-center gap-1 text-[#22D3EE]">
+          <span>←</span> Swipe to scroll details <span>→</span>
+        </span>
+        <span className="text-slate-400">{filteredData.length} countries</span>
+      </div>
+
       {/* Data Table */}
       <div className="bg-[#0F1B2E] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
         <div className="overflow-x-auto">

@@ -93,13 +93,13 @@ export default function AwardsPage() {
       <Header />
       <main className="bg-[#0A1220] text-[#F3F8FF] min-h-screen">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-6 text-center overflow-hidden">
+        <section className="relative pt-16 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 text-center overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(34,211,238,0.1),transparent)]" />
           <div className="max-w-4xl mx-auto relative z-10">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 sm:mb-6">
               Industry <span className="text-[#22D3EE]">Recognition</span>
             </h1>
-            <p className="text-xl text-[#8DA0C0] leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-[#8DA0C0] leading-relaxed max-w-2xl mx-auto">
               Our commitment to delivering secure, scalable, and Carrier Grade Messaging platforms has earned SMSCloud Hub prestigious awards across the globe.
             </p>
           </div>

@@ -59,28 +59,28 @@ export default function ContactPage() {
       <main className="bg-[#0A1220] text-[#F3F8FF]">
 
         {/* ─── Hero ─── */}
-        <section className="relative overflow-hidden pt-28 pb-16 px-6">
+        <section className="relative overflow-hidden pt-16 sm:pt-24 pb-10 sm:pb-16 px-4 sm:px-6">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(34,211,238,0.08),transparent)]" />
           <div className="max-w-3xl mx-auto text-center relative">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-xs font-mono tracking-widest uppercase mb-6">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-[11px] sm:text-xs font-mono tracking-widest uppercase mb-4 sm:mb-6">
               • Contact Sales
             </span>
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
-              Let's build your<br />
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 sm:mb-6">
+              Let&apos;s build your<br />
               <span className="text-[#22D3EE]">direct route.</span>
             </h1>
-            <p className="text-lg text-[#8DA0C0] max-w-xl mx-auto">
+            <p className="text-base sm:text-lg text-[#8DA0C0] max-w-xl mx-auto leading-relaxed">
               Tell us about your traffic. Our team will respond within 4 business hours with a tailored routing plan and pricing.
             </p>
           </div>
         </section>
 
         {/* ─── Form + Office ─── */}
-        <section className="py-16 px-6 border-t border-white/5">
-          <div className="max-w-5xl mx-auto grid lg:grid-cols-[1fr_340px] gap-12 items-start">
+        <section className="py-10 sm:py-16 px-4 sm:px-6 border-t border-white/5">
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-[1fr_340px] gap-8 lg:gap-12 items-start">
 
             {/* Lead Form */}
-            <div className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-8">
+            <div className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-4 sm:p-8">
               {submitted ? (
                 <div className="text-center py-16">
                   <div className="text-5xl mb-4">✅</div>

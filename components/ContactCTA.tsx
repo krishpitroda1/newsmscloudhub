@@ -16,28 +16,28 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0A1220] border-t border-white/10 relative">
-      <div className="max-w-[1240px] mx-auto px-6">
-        <div className="bg-gradient-to-br from-[#0F2530] to-[#0A1220] border border-white/10 rounded-3xl p-8 lg:p-14 relative overflow-hidden shadow-2xl">
+    <section id="contact" className="py-12 sm:py-20 lg:py-24 bg-[#0A1220] border-t border-white/10 relative">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="bg-gradient-to-br from-[#0F2530] to-[#0A1220] border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-14 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#22D3EE]/10 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
             {/* Contact Information & Info */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <span className="eyebrow-pill">
                 <span className="dot" /> Fast-Track Route Setup
               </span>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
                 Ready to shorten your route to the customer?
               </h2>
 
-              <p className="text-[#8DA0C0] text-lg leading-relaxed">
+              <p className="text-[#8DA0C0] text-base sm:text-lg leading-relaxed">
                 Talk to our commercial team about A2P SMS, WhatsApp for Business, Voice, or CPaaS integration. Most enterprise accounts go live within 48 hours.
               </p>
 
-              <div className="space-y-4 pt-4 border-t border-white/10">
-                <div className="flex items-start gap-3 text-sm text-[#8DA0C0]">
+              <div className="space-y-3 sm:space-y-4 pt-4 border-t border-white/10">
+                <div className="flex items-start gap-3 text-xs sm:text-sm text-[#8DA0C0]">
                   <svg className="w-5 h-5 text-[#22D3EE] shrink-0 mt-0.5" viewBox="0 0 15 15" fill="none">
                     <path
                       d="M7.5 1.5c-2.5 0-4.5 2-4.5 4.5 0 3.4 4.5 7.5 4.5 7.5s4.5-4.1 4.5-7.5c0-2.5-2-4.5-4.5-4.5z"
@@ -52,7 +52,7 @@ export default function ContactCTA() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 text-sm">
+                <div className="flex items-center gap-3 text-xs sm:text-sm">
                   <svg className="w-5 h-5 text-[#22D3EE] shrink-0" viewBox="0 0 15 15" fill="none">
                     <path
                       d="M3 2.5h2.2l1 3-1.5 1a9 9 0 004.8 4.8l1-1.5 3 1V13c0 .6-.5 1-1 .9C7 13.4 1.6 8 1.1 2.5 1 2 1.5 1.5 2 1.5"
@@ -66,7 +66,7 @@ export default function ContactCTA() {
                   </a>
                 </div>
 
-                <div className="flex items-center gap-3 text-sm">
+                <div className="flex items-center gap-3 text-xs sm:text-sm">
                   <svg className="w-5 h-5 text-[#22D3EE] shrink-0" viewBox="0 0 15 15" fill="none">
                     <rect x="1.5" y="3" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
                     <path d="M2 4l5.5 4L13 4" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
@@ -79,7 +79,7 @@ export default function ContactCTA() {
             </div>
 
             {/* Form */}
-            <div className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-6 sm:p-8">
+            <div className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-4 sm:p-8">
               {submitted ? (
                 <div className="text-center py-10 space-y-4">
                   <div className="w-14 h-14 rounded-full bg-[#22D3EE]/20 text-[#22D3EE] mx-auto flex items-center justify-center text-2xl font-bold">

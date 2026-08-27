@@ -111,8 +111,8 @@ export default function ServicesChannels() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-[#0A1220] relative">
-      <div className="max-w-[1240px] mx-auto px-6">
+    <section id="services" className="py-12 sm:py-20 lg:py-24 bg-[#0A1220] relative">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="trace-rule">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -130,46 +130,46 @@ export default function ServicesChannels() {
           <span className="tr-line" />
         </div>
 
-        <div className="max-w-[680px] mb-14">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+        <div className="max-w-[680px] mb-8 sm:mb-14">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
             One platform, every channel that reaches your customer.
           </h2>
-          <p className="text-[#8DA0C0] text-lg mt-4 leading-relaxed">
+          <p className="text-[#8DA0C0] text-base sm:text-lg mt-3 sm:mt-4 leading-relaxed">
             From transactional OTPs to full conversational commerce, route messages
             through the channels your audience prefers over connections engineered end-to-end.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {channels.map((card, idx) => (
             <Link
               key={idx}
               href={card.href}
-              className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-[#22D3EE] hover:-translate-y-1 transition-all group shadow-lg"
+              className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-4 sm:p-6 flex flex-col justify-between hover:border-[#22D3EE] hover:-translate-y-1 transition-all group shadow-lg"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-11 h-11 rounded-xl bg-[#22D3EE] flex items-center justify-center text-[#04141A] font-bold group-hover:scale-105 transition-transform">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#22D3EE] flex items-center justify-center text-[#04141A] font-bold group-hover:scale-105 transition-transform">
                     {card.icon}
                   </div>
-                  <span className="font-mono text-[10px] tracking-wider uppercase bg-white/5 border border-white/10 text-[#8DA0C0] px-2.5 py-1 rounded-md">
+                  <span className="font-mono text-[10px] tracking-wider uppercase bg-white/5 border border-white/10 text-[#8DA0C0] px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md">
                     {card.tag}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white group-hover:text-[#22D3EE] transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#22D3EE] transition-colors">
                   {card.title}
                 </h3>
 
-                <p className="text-sm text-[#8DA0C0] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#8DA0C0] leading-relaxed">
                   {card.description}
                 </p>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-white/10 space-y-3">
+              <div className="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-white/10 space-y-3">
                 <div className="flex items-baseline gap-2 font-mono">
-                  <span className="text-2xl font-extrabold text-[#22D3EE]">
+                  <span className="text-xl sm:text-2xl font-extrabold text-[#22D3EE]">
                     {card.statValue}
                   </span>
                   <span className="text-xs text-[#8DA0C0] leading-snug">

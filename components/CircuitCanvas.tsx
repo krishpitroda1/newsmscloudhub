@@ -239,7 +239,7 @@ export default function CircuitCanvas() {
   }, []);
 
   return (
-    <div className="cloud-anim relative aspect-square w-full max-w-[460px] mx-auto flex items-center justify-center">
+    <div className="cloud-anim relative aspect-square w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[460px] mx-auto flex items-center justify-center">
       <canvas
         ref={canvasRef}
         id="cloudCanvas"

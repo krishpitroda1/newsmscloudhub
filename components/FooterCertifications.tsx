@@ -93,13 +93,13 @@ export default function FooterCertifications() {
       </div>
 
       {/* ─── Row 2: Find Us on Google & Total Visitors Counter ─── */}
-      <div className="flex flex-wrap items-center justify-between gap-4">
+      <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4">
         {/* Find Us on Google Pill Button */}
         <a
           href="https://www.google.com/search?q=smscloudhub"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FF7A00] via-[#FF9500] to-[#FFB300] text-white font-bold text-sm md:text-base shadow-lg shadow-orange-600/30 hover:shadow-orange-500/50 hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-5 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FF7A00] via-[#FF9500] to-[#FFB300] text-white font-bold text-sm md:text-base shadow-lg shadow-orange-600/30 hover:shadow-orange-500/50 hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
         >
           <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
             {/* Google G Logo SVG */}
@@ -114,7 +114,7 @@ export default function FooterCertifications() {
         </a>
 
         {/* Total Visitors Counter Pill */}
-        <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-[#0A162B] border border-blue-900/60 shadow-xl backdrop-blur-md select-none hover:border-cyan-500/40 transition-colors">
+        <div className="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 px-5 sm:px-6 py-2.5 rounded-full bg-[#0A162B] border border-blue-900/60 shadow-xl backdrop-blur-md select-none hover:border-cyan-500/40 transition-colors">
           <span className="text-gray-300 text-sm font-medium">Total Visitors :</span>
           <span className="text-white font-mono font-extrabold text-xl md:text-2xl tracking-wider text-cyan-300 drop-shadow-[0_0_10px_rgba(34,211,238,0.4)]">
             {visitorCount.toLocaleString()}
@@ -124,23 +124,23 @@ export default function FooterCertifications() {
 
       {/* ─── Row 3: MSME & DPIIT Government Registration Card ─── */}
       <div className="pt-1">
-        <div className="rounded-xl border border-blue-800/60 bg-[#071328]/95 p-4 md:p-5 shadow-2xl flex items-center gap-4 max-w-lg hover:border-cyan-400/50 transition-colors">
-          <div className="w-12 h-12 rounded-full bg-white border border-amber-500/40 flex flex-col items-center justify-center p-1 shrink-0 shadow-md">
+        <div className="rounded-xl border border-blue-800/60 bg-[#071328]/95 p-4 md:p-5 shadow-2xl flex items-center gap-3.5 sm:gap-4 w-full max-w-full sm:max-w-lg hover:border-cyan-400/50 transition-colors">
+          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-amber-500/40 flex flex-col items-center justify-center p-1 shrink-0 shadow-md">
             {/* National Emblem / Lion Capital SVG */}
-            <svg className="w-6 h-6 text-[#7B4019]" viewBox="0 0 24 24" fill="currentColor">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#7B4019]" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C9.24 2 7 4.24 7 7c0 1.6.76 3.03 1.95 3.96C6.54 12.06 5 14.83 5 18h2c0-2.76 2.24-5 5-5s5 2.24 5 5h2c0-3.17-1.54-5.94-3.95-7.04C16.24 10.03 17 8.6 17 7c0-2.76-2.24-5-5-5zm0 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/>
               <circle cx="12" cy="7" r="1.5" fill="#B8860B"/>
             </svg>
             <span className="font-extrabold text-[7px] text-[#002B49] tracking-tighter uppercase mt-0.5">MSME</span>
           </div>
-          <div className="space-y-0.5 text-left">
-            <div className="text-white font-bold text-sm md:text-base tracking-wide flex items-center gap-2">
+          <div className="space-y-0.5 text-left min-w-0">
+            <div className="text-white font-bold text-sm md:text-base tracking-wide flex items-center gap-2 truncate">
               <span>MSME Registered Company</span>
             </div>
-            <div className="text-cyan-400 font-mono text-xs font-semibold tracking-wider">
+            <div className="text-cyan-400 font-mono text-xs font-semibold tracking-wider truncate">
               UDYAM-GJ-01-0628463
             </div>
-            <div className="text-gray-400 text-xs font-medium">
+            <div className="text-gray-400 text-xs font-medium truncate">
               DPIIT: IN-0626-9489YW <span className="text-gray-600">|</span> Startup Founder
             </div>
           </div>

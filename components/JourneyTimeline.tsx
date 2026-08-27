@@ -459,16 +459,16 @@ export default function JourneyTimeline() {
                           }`}
                         />
 
-                        {/* Content Card Side */}
+        {/* Content Card Side */}
                         <div
-                          className={`w-full md:w-1/2 pl-12 md:pl-0 ${
+                          className={`w-full md:w-1/2 pl-9 md:pl-0 ${
                             isRight
-                              ? "md:ml-auto md:pl-12 text-left"
-                              : "md:mr-auto md:pr-12 md:text-right"
+                              ? "md:ml-auto md:pl-10 lg:pl-12 text-left"
+                              : "md:mr-auto md:pr-10 lg:pr-12 md:text-right"
                           }`}
                         >
                           <div
-                            className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.01] ${
+                            className={`p-4 sm:p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.01] ${
                               item.isFinale
                                 ? "bg-gradient-to-br from-[#1E293B] via-[#0F1B2E] to-[#1E1B4B] border-[#F43F5E]/50 shadow-[0_0_30px_rgba(244,63,94,0.15)]"
                                 : "bg-[#0F1B2E] border-white/10 hover:border-[#22D3EE]/50 hover:bg-[#13243A]/80 shadow-xl"

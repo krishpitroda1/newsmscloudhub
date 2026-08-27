@@ -90,29 +90,29 @@ export default function ServicesPage() {
       <main className="bg-[#0A1220] text-[#F3F8FF]">
 
         {/* ─── Hero ─── */}
-        <section className="relative overflow-hidden pt-28 pb-20 px-6">
+        <section className="relative overflow-hidden pt-16 sm:pt-28 pb-12 sm:pb-20 px-4 sm:px-6">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(34,211,238,0.08),transparent)]" />
           <div className="max-w-3xl mx-auto text-center relative">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-xs font-mono tracking-widest uppercase mb-6">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-[11px] sm:text-xs font-mono tracking-widest uppercase mb-4 sm:mb-6">
               • Product Suite
             </span>
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 sm:mb-6">
               Every channel.{" "}
               <span className="text-[#22D3EE]">One direct network.</span>
             </h1>
-            <p className="text-lg text-[#8DA0C0] max-w-2xl mx-auto leading-relaxed">
-              From transactional OTPs to enterprise WhatsApp campaigns — SMSCloudHub's product suite is built on owned infrastructure, not resold capacity. Choose the channels your customers use. Trust the routes we built.
+            <p className="text-base sm:text-lg text-[#8DA0C0] max-w-2xl mx-auto leading-relaxed">
+              From transactional OTPs to enterprise WhatsApp campaigns — SMSCloudHub&apos;s product suite is built on owned infrastructure, not resold capacity. Choose the channels your customers use. Trust the routes we built.
             </p>
           </div>
         </section>
 
         {/* ─── Services Grid ─── */}
-        <section className="py-20 px-6 border-t border-white/5">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 border-t border-white/5">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((svc) => (
               <div
                 key={svc.title}
-                className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-7 flex flex-col gap-4 hover:border-[#22D3EE]/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.06)] transition-all group"
+                className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-5 sm:p-7 flex flex-col gap-4 hover:border-[#22D3EE]/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.06)] transition-all group"
               >
                 <div className="flex items-start justify-between gap-2">
                   <span className="text-3xl">{svc.icon}</span>

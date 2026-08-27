@@ -40,18 +40,18 @@ export default function AboutPage() {
       <main className="bg-[#0A1220] text-[#F3F8FF]">
 
         {/* ─── Hero ─── */}
-        <section className="relative overflow-hidden pt-28 pb-20 px-6">
+        <section className="relative overflow-hidden pt-16 sm:pt-28 pb-12 sm:pb-20 px-4 sm:px-6">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(34,211,238,0.08),transparent)]" />
           <div className="max-w-3xl mx-auto text-center relative">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-xs font-mono tracking-widest uppercase mb-6">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-[11px] sm:text-xs font-mono tracking-widest uppercase mb-4 sm:mb-6">
               • Our Story
             </span>
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 sm:mb-6">
               Built for the{" "}
               <span className="text-[#22D3EE]">shortest path.</span>
               <br />Not the easiest one.
             </h1>
-            <p className="text-lg text-[#8DA0C0] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-[#8DA0C0] max-w-2xl mx-auto leading-relaxed">
               SMSCloudHub was founded with a single conviction: every message deserves a direct route. No multi-hop relays, no opaque aggregators, no compromises on delivery quality. We built our own carrier-grade network to prove it.
             </p>
           </div>

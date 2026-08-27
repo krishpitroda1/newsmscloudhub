@@ -90,29 +90,29 @@ export default function TestimonialsPage() {
       <main className="bg-[#0A1220] text-[#F3F8FF]">
 
         {/* ─── Hero ─── */}
-        <section className="relative overflow-hidden pt-28 pb-20 px-6">
+        <section className="relative overflow-hidden pt-16 sm:pt-28 pb-12 sm:pb-20 px-4 sm:px-6">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(34,211,238,0.08),transparent)]" />
           <div className="max-w-3xl mx-auto text-center relative">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-xs font-mono tracking-widest uppercase mb-6">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-[#22D3EE] text-[11px] sm:text-xs font-mono tracking-widest uppercase mb-4 sm:mb-6">
               • Client Voices
             </span>
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 sm:mb-6">
               Numbers tell half the story.<br />
               <span className="text-[#22D3EE]">Our clients tell the rest.</span>
             </h1>
-            <p className="text-lg text-[#8DA0C0] max-w-2xl mx-auto leading-relaxed">
-              From fintech OTPs to carrier interconnects — here's what the enterprises, operators, and developers who run on our network have to say.
+            <p className="text-base sm:text-lg text-[#8DA0C0] max-w-2xl mx-auto leading-relaxed">
+              From fintech OTPs to carrier interconnects — here&apos;s what the enterprises, operators, and developers who run on our network have to say.
             </p>
           </div>
         </section>
 
         {/* ─── NPS Stats ─── */}
-        <section className="py-14 px-6 border-t border-white/5 bg-[#0F1B2E]">
+        <section className="py-10 sm:py-14 px-4 sm:px-6 border-t border-white/5 bg-[#0F1B2E]">
           <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-6 text-center">
             {npsStats.map((n) => (
               <div key={n.label}>
-                <p className="text-5xl font-mono font-extrabold text-[#22D3EE] mb-1">{n.value}</p>
-                <p className="font-semibold mb-0.5">{n.label}</p>
+                <p className="text-4xl sm:text-5xl font-mono font-extrabold text-[#22D3EE] mb-1">{n.value}</p>
+                <p className="font-semibold mb-0.5 text-sm sm:text-base">{n.label}</p>
                 <p className="text-xs text-[#8DA0C0]">{n.sub}</p>
               </div>
             ))}
@@ -120,20 +120,20 @@ export default function TestimonialsPage() {
         </section>
 
         {/* ─── Testimonial Grid ─── */}
-        <section className="py-20 px-6 border-t border-white/5">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 border-t border-white/5">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-4 sm:gap-6">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-7 flex flex-col gap-4 hover:border-[#22D3EE]/30 transition-colors">
-                <div className="inline-block px-3 py-1 rounded-full bg-[#22D3EE]/10 text-[#22D3EE] text-xs font-mono font-bold w-fit">
+              <div key={t.name} className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-5 sm:p-7 flex flex-col gap-4 hover:border-[#22D3EE]/30 transition-colors">
+                <div className="inline-block px-3 py-1 rounded-full bg-[#22D3EE]/10 text-[#22D3EE] text-[11px] sm:text-xs font-mono font-bold w-fit">
                   {t.metric}
                 </div>
-                <p className="text-[#F3F8FF] text-sm leading-relaxed italic flex-1">"{t.quote}"</p>
+                <p className="text-[#F3F8FF] text-xs sm:text-sm leading-relaxed italic flex-1">&ldquo;{t.quote}&rdquo;</p>
                 <div className="flex items-center justify-between pt-4 border-t border-white/5">
                   <div>
-                    <p className="font-bold text-sm">{t.name}</p>
-                    <p className="text-[#8DA0C0] text-xs">{t.role}</p>
+                    <p className="font-bold text-xs sm:text-sm">{t.name}</p>
+                    <p className="text-[#8DA0C0] text-[11px] sm:text-xs">{t.role}</p>
                   </div>
-                  <span className="text-base">{t.region}</span>
+                  <span className="text-xs sm:text-sm text-[#8DA0C0]">{t.region}</span>
                 </div>
               </div>
             ))}
