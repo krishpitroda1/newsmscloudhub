@@ -5,14 +5,38 @@ import { useState, FormEvent } from "react";
 export default function ContactCTA() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    channel: "A2P SMS & OTP Routes",
+    volume: "",
+    message: "Requested via quick route & quote form",
+  });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(data.error || "Failed to submit. Please try again.");
+      }
+    } catch {
+      setErrorMsg("Network error. Please try again.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 800);
+    }
   };
 
   return (
@@ -96,6 +120,12 @@ export default function ContactCTA() {
                     Request Route & Quote
                   </h3>
 
+                  {errorMsg && (
+                    <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold">
+                      {errorMsg}
+                    </div>
+                  )}
+
                   <div>
                     <label className="block text-xs font-mono text-[#8DA0C0] uppercase mb-1">
                       Full Name
@@ -104,6 +134,8 @@ export default function ContactCTA() {
                       type="text"
                       required
                       placeholder="Jane Doe"
+                      value={form.name}
+                      onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
                       className="w-full bg-[#0A1220] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#22D3EE]"
                     />
                   </div>
@@ -116,6 +148,8 @@ export default function ContactCTA() {
                       type="email"
                       required
                       placeholder="jane@company.com"
+                      value={form.email}
+                      onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
                       className="w-full bg-[#0A1220] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#22D3EE]"
                     />
                   </div>
@@ -124,12 +158,16 @@ export default function ContactCTA() {
                     <label className="block text-xs font-mono text-[#8DA0C0] uppercase mb-1">
                       Primary Service Needed
                     </label>
-                    <select className="w-full bg-[#0A1220] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#22D3EE]">
-                      <option value="sms">A2P SMS & OTP Routes</option>
-                      <option value="whatsapp">WhatsApp Business API</option>
-                      <option value="voice">Voice Termination & Cloud Contact Center</option>
-                      <option value="cpaas">Programmable CPaaS API</option>
-                      <option value="firewall">SMSC Firewall & MNO Monetization</option>
+                    <select
+                      value={form.channel}
+                      onChange={(e) => setForm((prev) => ({ ...prev, channel: e.target.value }))}
+                      className="w-full bg-[#0A1220] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#22D3EE]"
+                    >
+                      <option value="A2P SMS & OTP Routes">A2P SMS & OTP Routes</option>
+                      <option value="WhatsApp Business API">WhatsApp Business API</option>
+                      <option value="Voice Termination">Voice Termination & Cloud Contact Center</option>
+                      <option value="Programmable CPaaS API">Programmable CPaaS API</option>
+                      <option value="SMSC Firewall">SMSC Firewall & MNO Monetization</option>
                     </select>
                   </div>
 
@@ -140,6 +178,8 @@ export default function ContactCTA() {
                     <input
                       type="text"
                       placeholder="e.g. 500,000 messages / month"
+                      value={form.volume}
+                      onChange={(e) => setForm((prev) => ({ ...prev, volume: e.target.value }))}
                       className="w-full bg-[#0A1220] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#22D3EE]"
                     />
                   </div>

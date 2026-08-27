@@ -43,14 +43,36 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(data.error || "Failed to send message. Please try again.");
+      }
+    } catch {
+      setErrorMsg("Network error. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -90,6 +112,12 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <h2 className="text-xl font-bold mb-6">Request a Demo or Pricing</h2>
+
+                  {errorMsg && (
+                    <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-sm font-semibold">
+                      {errorMsg}
+                    </div>
+                  )}
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     {[
@@ -162,9 +190,10 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 bg-[#22D3EE] text-[#04141A] font-bold rounded-xl hover:bg-white transition-colors text-sm"
+                    disabled={loading}
+                    className="w-full py-3.5 bg-[#22D3EE] text-[#04141A] font-bold rounded-xl hover:bg-white transition-colors text-sm disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Request →
+                    {loading ? "Sending Message..." : "Send Request →"}
                   </button>
                   <p className="text-center text-[#8DA0C0] text-xs">We respond within 4 business hours. No spam, ever.</p>
                 </form>
