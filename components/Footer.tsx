@@ -159,6 +159,9 @@ export default function Footer() {
                 <Link href="/why-us" className="hover:text-slate-900 transition-colors">Why Us</Link>
               </li>
               <li>
+                <Link href="/careers" className="hover:text-slate-900 transition-colors">Careers</Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-slate-900 transition-colors">Contact Sales</Link>
               </li>
             </ul>

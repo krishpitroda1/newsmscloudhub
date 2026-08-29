@@ -218,6 +218,14 @@ export default function Header() {
               Testimonials
             </Link>
             <Link
+              href="/careers"
+              className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
+                pathname === "/careers" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
+              }`}
+            >
+              Careers
+            </Link>
+            <Link
               href="/contact"
               className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
                 pathname === "/contact" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
@@ -408,6 +416,16 @@ export default function Header() {
                 }`}
               >
                 Testimonials
+              </Link>
+
+              <Link
+                href="/careers"
+                onClick={closeMobileMenu}
+                className={`block py-3 px-4 rounded-xl text-base font-semibold transition-colors ${
+                  pathname === "/careers" ? "bg-cyan-50 text-[#0891B2] border border-cyan-200" : "text-slate-800 hover:bg-slate-100"
+                }`}
+              >
+                Careers
               </Link>
 
               <Link

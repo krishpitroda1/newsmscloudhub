@@ -1,0 +1,123 @@
+[
+  {
+    "id": "job_1",
+    "title": "Senior SMPP & Telecom Protocol Engineer",
+    "department": "Engineering",
+    "location": "Dubai, UAE / Remote",
+    "type": "Full-Time",
+    "experience": "5+ Years",
+    "salary": "$90,000 - $130,000 / yr",
+    "status": "Closed",
+    "postedAt": "2026-08-20T10:00:00.000Z",
+    "description": "We are seeking a seasoned SMPP & Telecom Protocol Engineer to architect, optimize, and scale our core SMSC firewall and SS7/SMPP routing engine handling hundreds of millions of transactions daily.",
+    "responsibilities": [
+      "Architect and scale high-throughput SMPP 3.4 v5 nodes and SS7/SIGTRAN protocol stacks.",
+      "Optimize low-latency message queuing, throughput, and failover across multi-region cloud nodes.",
+      "Collaborate with MNO carriers to integrate direct SS7/SMPP routes and troubleshoot traffic anomalies.",
+      "Develop automated monitoring, grey-route detection, and anti-spam firewall rules."
+    ],
+    "requirements": [
+      "5+ years experience in CPaaS, SMS gateway architecture, or telecom protocol engineering.",
+      "Deep expertise in SMPP, SS7, SIGTRAN, HTTP/REST, and TCP IP socket communications.",
+      "Proficiency in C/C++, Rust, Go, or high-performance Node.js / Java.",
+      "Familiarity with carrier interconnection, HLR/MNP lookups, and telecom compliance."
+    ],
+    "benefits": [
+      "Competitive global USD salary with performance bonuses.",
+      "Flexible hybrid/remote working environment with home office stipend.",
+      "Comprehensive health insurance and annual team retreats.",
+      "Work with cutting-edge carrier-grade infrastructure powering global tier-1 brands."
+    ],
+    "updatedAt": "2026-08-29T16:31:41.641Z"
+  },
+  {
+    "id": "job_2",
+    "title": "Enterprise CPaaS Account Executive",
+    "department": "Sales & Business",
+    "location": "New York, USA / Remote",
+    "type": "Full-Time",
+    "experience": "3+ Years",
+    "salary": "$80,000 - $120,000 + Uncapped OTE",
+    "status": "Active",
+    "postedAt": "2026-08-22T14:30:00.000Z",
+    "description": "Drive enterprise revenue growth by acquiring and scaling high-volume enterprise accounts across Banking, E-Commerce, Fintech, and OTT messaging segments.",
+    "responsibilities": [
+      "Lead end-to-end sales cycles targeting enterprise CTOs, Product Managers, and CPaaS procurement leads.",
+      "Structure multi-million SMS, WhatsApp BSP, and Voice OTP enterprise volume agreements.",
+      "Partner with technical pre-sales to deliver custom API solutions and route optimization demos.",
+      "Consistently exceed quarterly revenue targets and expand strategic key accounts."
+    ],
+    "requirements": [
+      "Proven track record (3+ years) in B2B SaaS, CPaaS, Telecom, or API-first technology sales.",
+      "Strong understanding of enterprise messaging (A2P SMS, WhatsApp Business API, RCS, Voice).",
+      "Demonstrated ability to close 6-figure enterprise deals with multi-year commitment terms.",
+      "Exceptional communication, presentation, and negotiation skills."
+    ],
+    "benefits": [
+      "High base salary with uncapped commission structure.",
+      "Global client portfolio across North America, Europe, and Asia-Pacific.",
+      "Stock option plan / equity upside for top performers.",
+      "Annual sales summit & luxury incentive trips."
+    ]
+  },
+  {
+    "id": "job_3",
+    "title": "DevOps & Cloud Infrastructure Architect",
+    "department": "Engineering",
+    "location": "Remote (Global)",
+    "type": "Full-Time",
+    "experience": "4+ Years",
+    "salary": "$85,000 - $115,000 / yr",
+    "status": "Active",
+    "postedAt": "2026-08-25T09:15:00.000Z",
+    "description": "Design, deploy, and maintain zero-downtime, multi-region Kubernetes clusters and cloud infrastructure powering SMSCloudHub's 99.999% SLA messaging backbone.",
+    "responsibilities": [
+      "Manage infrastructure-as-code (Terraform/Ansible) across AWS, GCP, and bare-metal edge telecom data centers.",
+      "Maintain multi-region Kubernetes clusters with auto-scaling and sub-second disaster recovery.",
+      "Implement real-time Prometheus/Grafana monitoring, alerting, and log analytics pipelines.",
+      "Ensure ISO 27001, SOC 2, and GDPR security compliance across all production networks."
+    ],
+    "requirements": [
+      "4+ years of hands-on DevOps/SRE experience supporting high-concurrency systems.",
+      "Strong expertise in Docker, Kubernetes, Terraform, Linux kernel tuning, and CI/CD pipelines.",
+      "Experience with high-throughput database clusters (Redis, PostgreSQL, ClickHouse/Kafka).",
+      "Solid understanding of network security, DDoS mitigation, and SSL/TLS encryption."
+    ],
+    "benefits": [
+      "100% remote flexibility with choice of timezone alignment.",
+      "Annual budget for certifications (AWS, CKA, Security+).",
+      "Premium hardware setup (MacBook Pro M3 Max / high-end Linux workstation).",
+      "Generous paid time off and wellness allowances."
+    ]
+  },
+  {
+    "id": "job_4",
+    "title": "Global Customer Support & Operations Specialist",
+    "department": "Customer Operations",
+    "location": "Mumbai, India / Hybrid",
+    "type": "Full-Time",
+    "experience": "2+ Years",
+    "salary": "Competitive Local Package",
+    "status": "Active",
+    "postedAt": "2026-08-26T11:00:00.000Z",
+    "description": "Provide 24/7 technical support, route monitoring, and customer success assistance to SMSCloudHub enterprise clients and global wholesale partners.",
+    "responsibilities": [
+      "Monitor global SMS delivery rates, latency metrics, and carrier route stability in real-time.",
+      "Investigate client technical tickets, SMPP error codes (e.g. UNDELIV, EXPIRED), and API integration issues.",
+      "Work closely with carrier routing teams to re-route traffic dynamically when bottlenecking occurs.",
+      "Onboard new enterprise clients onto CPaaS portals and REST API endpoints."
+    ],
+    "requirements": [
+      "2+ years experience in technical support, telecom operations, or CPaaS customer success.",
+      "Understanding of HTTP REST APIs, JSON, Postman, and basic SMPP / SMS delivery reports.",
+      "Excellent written and verbal English communication skills.",
+      "Ability to work in rotational shifts for 24/7 global coverage."
+    ],
+    "benefits": [
+      "Attractive night shift & weekend allowances.",
+      "Rapid internal growth path to Technical Operations or Pre-Sales.",
+      "Health insurance for employee and immediate family.",
+      "Collaborative, friendly workplace culture."
+    ]
+  }
+]
