@@ -28,7 +28,7 @@
       "Comprehensive health insurance and annual team retreats.",
       "Work with cutting-edge carrier-grade infrastructure powering global tier-1 brands."
     ],
-    "updatedAt": "2026-08-29T16:31:41.641Z"
+    "updatedAt": "2026-09-04T04:52:30.506Z"
   },
   {
     "id": "job_2",
@@ -68,7 +68,7 @@
     "type": "Full-Time",
     "experience": "4+ Years",
     "salary": "$85,000 - $115,000 / yr",
-    "status": "Active",
+    "status": "Closed",
     "postedAt": "2026-08-25T09:15:00.000Z",
     "description": "Design, deploy, and maintain zero-downtime, multi-region Kubernetes clusters and cloud infrastructure powering SMSCloudHub's 99.999% SLA messaging backbone.",
     "responsibilities": [
@@ -88,7 +88,8 @@
       "Annual budget for certifications (AWS, CKA, Security+).",
       "Premium hardware setup (MacBook Pro M3 Max / high-end Linux workstation).",
       "Generous paid time off and wellness allowances."
-    ]
+    ],
+    "updatedAt": "2026-09-04T04:52:14.549Z"
   },
   {
     "id": "job_4",

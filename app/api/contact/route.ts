@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     }
 
     const timestamp = new Date().toISOString();
-    const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || "info@smscloudhub.com";
+    const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || "krishpitroda09@gmail.com";
     const smtpHost = process.env.SMTP_HOST;
     const smtpPort = Number(process.env.SMTP_PORT) || 587;
     const smtpUser = process.env.SMTP_USER;
@@ -104,28 +104,60 @@ export async function POST(req: Request) {
       console.error("Local backup submission save error:", saveErr);
     }
 
-    // 2. Send Email if SMTP details exist in environment
+    // 2. Send Email via SMTP if credentials are explicitly configured in environment
+    let emailSent = false;
     if (smtpHost && smtpUser && smtpPass) {
-      const transporter = nodemailer.createTransport({
-        host: smtpHost,
-        port: smtpPort,
-        secure: smtpPort === 465,
-        auth: {
-          user: smtpUser,
-          pass: smtpPass,
-        },
-      });
+      try {
+        const transporter = nodemailer.createTransport({
+          host: smtpHost,
+          port: smtpPort,
+          secure: smtpPort === 465,
+          auth: {
+            user: smtpUser,
+            pass: smtpPass,
+          },
+        });
 
-      await transporter.sendMail({
-        from: `"${name} via SMSCloudHub Contact" <${smtpUser}>`,
-        to: receiverEmail,
-        replyTo: email,
-        subject: emailSubject,
-        html: emailHtml,
-      });
+        await transporter.sendMail({
+          from: `"${name} via SMSCloudHub Contact" <${smtpUser}>`,
+          to: receiverEmail,
+          replyTo: email,
+          subject: emailSubject,
+          html: emailHtml,
+        });
+        emailSent = true;
+      } catch (smtpErr) {
+        console.error("Nodemailer SMTP dispatch error:", smtpErr);
+      }
     }
 
-    // 3. Optional Webhook dispatch (e.g. Slack / Telegram / Discord / Zapier)
+    // 3. Automated Free Fallback Relay: If SMTP details are not configured, send via FormSubmit API directly to target email
+    if (!emailSent) {
+      try {
+        await fetch(`https://formsubmit.co/ajax/${receiverEmail}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify({
+            _subject: emailSubject,
+            _replyto: email,
+            Name: name,
+            Email: email,
+            Company: company || "N/A",
+            Phone: phone || "N/A",
+            Volume: volume || "Not specified",
+            Channel: channel || "Not specified",
+            Message: message,
+          }),
+        });
+      } catch (fallbackErr) {
+        console.error("Free FormSubmit relay fallback error:", fallbackErr);
+      }
+    }
+
+    // 4. Optional Webhook dispatch (e.g. Slack / Telegram / Discord / Zapier)
     if (process.env.CONTACT_WEBHOOK_URL) {
       try {
         await fetch(process.env.CONTACT_WEBHOOK_URL, {

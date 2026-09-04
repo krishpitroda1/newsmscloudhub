@@ -196,6 +196,7 @@ export async function POST(req: Request) {
     `;
 
     // 3. Dispatch Email via Nodemailer if SMTP configured
+    let emailSent = false;
     if (smtpHost && smtpUser && smtpPass) {
       try {
         const transporter = nodemailer.createTransport({
@@ -215,9 +216,38 @@ export async function POST(req: Request) {
           subject: emailSubject,
           html: emailHtml,
         });
+        emailSent = true;
       } catch (mailError) {
         console.error("Nodemailer dispatch error for job application:", mailError);
-        // Continue and return success since local application backup succeeded
+      }
+    }
+
+    // 4. Free FormSubmit relay fallback if SMTP details are missing
+    if (!emailSent) {
+      try {
+        await fetch(`https://formsubmit.co/ajax/${receiverEmail}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify({
+            _subject: emailSubject,
+            _replyto: email,
+            "Job Title": jobTitle,
+            "Applicant Name": fullName,
+            "Applicant Email": email,
+            Phone: phone || "N/A",
+            Experience: experienceYears || "N/A",
+            "Expected Salary": expectedSalary || "N/A",
+            LinkedIn: linkedin || "N/A",
+            Portfolio: portfolio || "N/A",
+            Resume: resumeLink || "N/A",
+            "Cover Note": coverLetter || "",
+          }),
+        });
+      } catch (fallbackErr) {
+        console.error("Free FormSubmit relay fallback error for careers:", fallbackErr);
       }
     }
 
