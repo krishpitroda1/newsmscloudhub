@@ -97,7 +97,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.youtube.com/@smscloudhub"
+                href="https://www.youtube.com/@smscloudhub9093"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg border border-slate-200 bg-slate-50 flex items-center justify-center text-slate-600 hover:text-red-600 hover:border-red-500 transition-colors"
