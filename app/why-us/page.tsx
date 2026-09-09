@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const comparisonRows = [
   {
     feature: "Global Reach",
-    smsch: "195+ countries",
+    smsch: "185+ countries",
     others: "Varies by provider",
   },
   {

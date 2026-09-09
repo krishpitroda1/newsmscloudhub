@@ -78,7 +78,7 @@ const verticals = [
 ];
 
 const npsStats = [
-  { value: "72", label: "Net Promoter Score", sub: "Industry average: 38" },
+  // { value: "72", label: "Net Promoter Score", sub: "Industry average: 38" },
   { value: "95.84%", label: "Client satisfaction", sub: "From post-onboarding survey" },
   { value: "93%", label: "Renewal rate", sub: "Year-on-year contract renewals" },
 ];

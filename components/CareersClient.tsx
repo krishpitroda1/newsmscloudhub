@@ -173,7 +173,7 @@ export default function CareersClient({ initialJobs }: CareersClientProps) {
             <div className="text-xs text-slate-400 font-medium mt-1">Platform SLA Uptime</div>
           </div>
           <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 backdrop-blur-md">
-            <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono">200M+</div>
+            <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono">1M+</div>
             <div className="text-xs text-slate-400 font-medium mt-1">Daily Message Volume</div>
           </div>
           <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 backdrop-blur-md">
@@ -293,11 +293,10 @@ export default function CareersClient({ initialJobs }: CareersClientProps) {
               <button
                 key={dept}
                 onClick={() => setSelectedDept(dept)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${
-                  selectedDept === dept
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${selectedDept === dept
                     ? "bg-[#0891B2] text-white shadow-md"
                     : "bg-slate-950 text-slate-400 hover:text-white hover:bg-slate-800"
-                }`}
+                  }`}
               >
                 {dept}
               </button>

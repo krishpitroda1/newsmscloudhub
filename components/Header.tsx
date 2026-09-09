@@ -11,30 +11,33 @@ const serviceCategories = [
     badge: "Enterprise",
     items: [
       { name: "A2P SMS & OTP", href: "/services/a2p-sms", desc: "Sub-2s latency global routes" },
+     { name: "Digital Marketing", href: "/services/digital-marketing", desc: "Digital Transformation & campaigns" },
+  //     
       { name: "WhatsApp Business", href: "/services/whatsapp-business", desc: "Verified BSP API & Chatbots" },
-      { name: "WordPress Plugin", href: "/services/wordpress-plugin", desc: "Automated WordPress SMS & OTP" },
-      { name: "CPaaS REST APIs", href: "/services/cpaas-api", desc: "Unified developer REST API" },
+      // { name: "WordPress Plugin", href: "/services/wordpress-plugin", desc: "Automated WordPress SMS & OTP" },
+      { name: "CPaaS", href: "/services/cpaas-api", desc: "Unified developer REST API" },
       { name: "RCS Messaging", href: "/services/rcs", desc: "Rich interactive messaging" },
     ],
   },
-  {
-    title: "Business & Voice",
-    badge: "Voice & Business",
-    items: [
-      { name: "Voice & Voice OTP", href: "/services/voice-otp", desc: "TTS & SIP termination" },
-      { name: "Digital Marketing", href: "/services/digital-marketing", desc: "Digital Transformation & campaigns" },
-      { name: "VN / TFN / DID", href: "/services/virtual-did", desc: "Virtual phone numbers & DIDs" },
-      { name: "2-Way SMS", href: "/services/2way-sms", desc: "Inbound & outbound 2-way" },
-      { name: "Missed Call", href: "/services/missed-call", desc: "Instant missed-call alerts" },
-    ],
-  },
+  // {
+  //   title: "Business & Voice",
+  //   badge: "Voice & Business",
+  //   items: [
+  //     { name: "VN / TFN / DID", href: "/services/virtual-did", desc: "Virtual phone numbers & DIDs" },
+  //     { name: "2-Way SMS", href: "/services/2way-sms", desc: "Inbound & outbound 2-way" },
+  //     { name: "Missed Call", href: "/services/missed-call", desc: "Instant missed-call alerts" },
+  //   ],
+  // },
   {
     title: "Carrier & Interconnect",
     badge: "Carrier",
     items: [
       { name: "A2P SMS Hubbing", href: "/services/a2p-hubbing", desc: "Wholesale SMS traffic" },
-      { name: "SIP Trunk Voice", href: "/services/sip-trunk-voice", desc: "Global voice termination" },
-      { name: "Number Lookup", href: "/services/number-lookup", desc: "Network validation API" },
+         { name: "Voice & Voice OTP", href: "/services/voice-otp", desc: "TTS & SIP termination" },
+  //  
+      {
+         name: "SIP Trunk Voice", href: "/services/sip-trunk-voice", desc: "Global voice termination" },
+      // { name: "Number Lookup", href: "/services/number-lookup", desc: "Network validation API" },
       { name: "0Hop Connectivity", href: "/services/0hop-connectivity", desc: "Direct SS7 & SMPP peering" },
     ],
   },
@@ -44,8 +47,8 @@ const serviceCategories = [
     items: [
       { name: "SMSC Firewall", href: "/services/smsc-firewall", desc: "Grey route & fraud protection" },
       { name: "Managed Services", href: "/services/managed-services", desc: "Turnkey messaging ops" },
-      { name: "Carrier Grade Platform", href: "/services/cpaas-platform", desc: "High-throughput node" },
-      { name: "HLR Lookup", href: "/services/hlr", desc: "Real-time subscriber check" },
+      // { name: "Carrier Grade Platform", href: "/services/cpaas-platform", desc: "High-throughput node" },
+      // { name: "HLR Lookup", href: "/services/hlr", desc: "Real-time subscriber check" },
       { name: "VAS Solutions", href: "/services/vas-solutions", desc: "Value-added telecom tech" },
     ],
   },
