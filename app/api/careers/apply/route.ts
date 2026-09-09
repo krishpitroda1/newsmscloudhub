@@ -4,35 +4,77 @@ import fs from "fs";
 import path from "path";
 
 const appsFilePath = path.join(process.cwd(), "data", "job_applications.json");
+const tmpAppsFilePath = path.join("/tmp", "job_applications.json");
 
-// Helper to read applications
+let memoryAppsStore: any[] | null = null;
+
+// Helper to read applications from memory, /tmp, or cwd
 function readApplicationsFromFile() {
+  if (memoryAppsStore !== null) {
+    return memoryAppsStore;
+  }
+
   try {
     if (fs.existsSync(appsFilePath)) {
       const fileData = fs.readFileSync(appsFilePath, "utf-8");
-      return JSON.parse(fileData);
+      const parsed = JSON.parse(fileData);
+      if (Array.isArray(parsed)) {
+        memoryAppsStore = parsed;
+        return parsed;
+      }
     }
   } catch (error) {
-    console.error("Error reading job_applications.json:", error);
+    console.warn("Could not read job_applications.json from process.cwd():", error);
   }
-  return [];
+
+  try {
+    if (fs.existsSync(tmpAppsFilePath)) {
+      const fileData = fs.readFileSync(tmpAppsFilePath, "utf-8");
+      const parsed = JSON.parse(fileData);
+      if (Array.isArray(parsed)) {
+        memoryAppsStore = parsed;
+        return parsed;
+      }
+    }
+  } catch (error) {
+    console.warn("Could not read job_applications.json from /tmp:", error);
+  }
+
+  memoryAppsStore = [];
+  return memoryAppsStore;
 }
 
-// Helper to write application
+// Helper to save application to disk / tmp / memory
 function saveApplicationToFile(appData: any) {
+  const apps = readApplicationsFromFile();
+  apps.unshift(appData);
+  memoryAppsStore = apps;
+
+  let saved = false;
   try {
     const dir = path.dirname(appsFilePath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-    const apps = readApplicationsFromFile();
-    apps.unshift(appData);
     fs.writeFileSync(appsFilePath, JSON.stringify(apps, null, 2), "utf-8");
-    return apps;
+    saved = true;
   } catch (error) {
-    console.error("Error saving job application:", error);
-    return [];
+    console.warn("Could not write job_applications.json to process.cwd() (expected on serverless):", error);
   }
+
+  if (!saved) {
+    try {
+      const tmpDir = path.dirname(tmpAppsFilePath);
+      if (!fs.existsSync(tmpDir)) {
+        fs.mkdirSync(tmpDir, { recursive: true });
+      }
+      fs.writeFileSync(tmpAppsFilePath, JSON.stringify(apps, null, 2), "utf-8");
+    } catch (tmpErr) {
+      console.warn("Could not write job_applications.json to /tmp:", tmpErr);
+    }
+  }
+
+  return apps;
 }
 
 // GET /api/careers/apply (For Admin to view received applications)

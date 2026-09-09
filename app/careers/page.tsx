@@ -11,18 +11,24 @@ export const metadata: Metadata = {
     "Explore career opportunities at SMSCloudHub. Architect carrier-grade SMPP gateways, WhatsApp BSP solutions, and AI firewall infrastructure with our global remote & hybrid team.",
 };
 
+import defaultJobs from "@/data/jobs.json";
+
 function getInitialJobs(): Job[] {
   try {
     const filePath = path.join(process.cwd(), "data", "jobs.json");
     if (fs.existsSync(filePath)) {
       const data = fs.readFileSync(filePath, "utf-8");
       const parsed = JSON.parse(data);
-      return parsed.filter((j: any) => j.status === "Active" || !j.status);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed.filter((j: any) => j.status === "Active" || !j.status);
+      }
     }
   } catch (err) {
     console.error("Failed to read initial jobs in page.tsx:", err);
   }
-  return [];
+  // Fallback to statically bundled defaultJobs for Vercel deployment
+  const fallback = Array.isArray(defaultJobs) ? defaultJobs : [];
+  return (fallback as Job[]).filter((j: any) => j.status === "Active" || !j.status);
 }
 
 export default function CareersPage() {

@@ -1,35 +1,82 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import defaultJobs from "@/data/jobs.json";
 
 const jobsFilePath = path.join(process.cwd(), "data", "jobs.json");
+const tmpJobsFilePath = path.join("/tmp", "jobs.json");
 
-// Helper to read jobs from disk
+let memoryJobsStore: any[] | null = null;
+
+// Helper to read jobs from disk or memory fallback
 function readJobsFromFile() {
+  if (memoryJobsStore && memoryJobsStore.length > 0) {
+    return memoryJobsStore;
+  }
+
   try {
     if (fs.existsSync(jobsFilePath)) {
       const data = fs.readFileSync(jobsFilePath, "utf-8");
-      return JSON.parse(data);
+      const parsed = JSON.parse(data);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        memoryJobsStore = parsed;
+        return parsed;
+      }
     }
   } catch (error) {
-    console.error("Error reading jobs.json:", error);
+    console.error("Error reading jobs.json from process.cwd():", error);
   }
-  return [];
+
+  try {
+    if (fs.existsSync(tmpJobsFilePath)) {
+      const data = fs.readFileSync(tmpJobsFilePath, "utf-8");
+      const parsed = JSON.parse(data);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        memoryJobsStore = parsed;
+        return parsed;
+      }
+    }
+  } catch (error) {
+    console.error("Error reading jobs.json from /tmp:", error);
+  }
+
+  // Statically imported fallback for Vercel deployment
+  const fallback = Array.isArray(defaultJobs) ? defaultJobs : [];
+  memoryJobsStore = [...fallback];
+  return memoryJobsStore;
 }
 
-// Helper to write jobs to disk
+// Helper to write jobs to disk / memory fallback
 function writeJobsToFile(jobs: any[]) {
+  memoryJobsStore = jobs;
+  let saved = false;
+
   try {
     const dir = path.dirname(jobsFilePath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
     fs.writeFileSync(jobsFilePath, JSON.stringify(jobs, null, 2), "utf-8");
-    return true;
+    saved = true;
   } catch (error) {
-    console.error("Error writing jobs.json:", error);
-    return false;
+    // Read-only filesystem on Vercel deployment
+    console.warn("Could not write jobs.json to process.cwd() (expected on serverless):", error);
   }
+
+  if (!saved) {
+    try {
+      const tmpDir = path.dirname(tmpJobsFilePath);
+      if (!fs.existsSync(tmpDir)) {
+        fs.mkdirSync(tmpDir, { recursive: true });
+      }
+      fs.writeFileSync(tmpJobsFilePath, JSON.stringify(jobs, null, 2), "utf-8");
+      saved = true;
+    } catch (tmpErr) {
+      console.warn("Could not write jobs.json to /tmp:", tmpErr);
+    }
+  }
+
+  return true;
 }
 
 // GET /api/careers/jobs
