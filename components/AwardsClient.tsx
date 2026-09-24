@@ -23,7 +23,7 @@ export const awards2026: AwardItem[] = [
     awardedBy: "4th Antonio Meucci Global Telco Awards 2026",
     subtitle: "Conferred on SMSCLOUD HUB for winning 1st place in the Category BEST ASIAN PROVIDER and 3rd place in 'EXEMPLARY' CORPORATE SOCIAL RESPONSIBILITY at the 4th Antonio Meucci Global Telco Awards '26",
     year: "2026",
-    image: "/awards/meucci-awards-2026.jpg",
+    image: "/awards/meucci-awards-2026.png",
     hasImage: true,
     badge: "1st Place & High Distinction 2026",
     colSpan: "md:col-span-2",

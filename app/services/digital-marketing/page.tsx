@@ -52,6 +52,8 @@ export default function DigitalMarketingPage() {
                   "Omnichannel campaign strategy across SMS, WhatsApp, Email, & Social",
                   "Automated customer journey mapping & personalized messaging",
                   "Audience segmentation, targeting, & behavioral analytics",
+                  "SEO,GEO,AEO Services",
+                  "Social media marketing",
                   "Performance marketing, conversion tracking, & ROI optimization",
                   "Brand strategy & digital transformation consulting",
                   "Real-time analytics dashboard & campaign reporting",

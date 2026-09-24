@@ -3,6 +3,8 @@ import nodemailer from "nodemailer";
 import fs from "fs";
 import path from "path";
 
+export const dynamic = "force-static";
+
 const appsFilePath = path.join(process.cwd(), "data", "job_applications.json");
 const tmpAppsFilePath = path.join("/tmp", "job_applications.json");
 

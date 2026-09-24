@@ -3,6 +3,8 @@ import fs from "fs";
 import path from "path";
 import defaultJobs from "@/data/jobs.json";
 
+export const dynamic = "force-static";
+
 const jobsFilePath = path.join(process.cwd(), "data", "jobs.json");
 const tmpJobsFilePath = path.join("/tmp", "jobs.json");
 
