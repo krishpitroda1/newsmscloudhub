@@ -108,7 +108,7 @@ export default function AdminJobsClient() {
       description: "",
       responsibilities: "Architect low-latency SMPP routes.\nOptimize backend microservices.\nEnsure 99.999% SLA uptime.",
       requirements: "3+ years in software / telecom engineering.\nProficiency in REST APIs & databases.\nStrong troubleshooting skills.",
-      benefits: "Competitive USD salary package.\nFlexible remote / hybrid work.\nHealth insurance & performance bonus.",
+      benefits: "Competitive  salary package.\nFlexible remote / hybrid work.\nHealth insurance & performance bonus.",
     });
     setShowJobFormModal(true);
   };
@@ -368,7 +368,7 @@ export default function AdminJobsClient() {
                       <h3 className="text-xl font-bold text-white">{job.title}</h3>
                       <p className="text-xs text-slate-400 line-clamp-2">{job.description}</p>
                       <div className="text-xs text-cyan-400 font-mono">
-                        📍 {job.location} | 💼 {job.type} | 💰 {job.salary}
+                        📍 {job.location} | 💼 {job.type} | ⌛ {job.experience} | 💰 {job.salary}
                       </div>
                     </div>
 
@@ -536,7 +536,7 @@ export default function AdminJobsClient() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 <div>
                   <label className="block text-xs font-bold text-slate-300 mb-1">Location *</label>
                   <input
@@ -556,6 +556,18 @@ export default function AdminJobsClient() {
                     placeholder="Full-Time, Contract..."
                     value={formData.type}
                     onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                    className="w-full px-3.5 py-2 rounded-lg bg-slate-950 border border-slate-800 text-xs text-white focus:border-[#0891B2] focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-300 mb-1">Experience Required *</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. 1+ Years, 3+ Years..."
+                    value={formData.experience}
+                    onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
                     className="w-full px-3.5 py-2 rounded-lg bg-slate-950 border border-slate-800 text-xs text-white focus:border-[#0891B2] focus:outline-none"
                   />
                 </div>

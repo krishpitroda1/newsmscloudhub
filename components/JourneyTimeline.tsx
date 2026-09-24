@@ -38,7 +38,7 @@ const timelineData: TimelineItem[] = [
     category: "foundation",
     title: "Building the foundation",
     description:
-      "We begin developing dependable carrier routes and strengthening technical capabilities — laying the groundwork for a global wholesale messaging business.",
+      "We begin developing dependable carrier routes and strengthening technical capabilities laying the groundwork for a global wholesale messaging business.",
     align: "right",
   },
   // 2023
@@ -84,7 +84,7 @@ const timelineData: TimelineItem[] = [
     category: "award",
     title: "Recognition for excellence & responsibility",
     description:
-      "**Most Valuable Telecom Solution Provider** (Corporate Connect) and **Best CSR Company in Telecom** — growth measured in innovation and responsibility, not just business.",
+      "**Most Valuable Telecom Solution Provider** (Corporate Connect) and **Best CSR Company in Telecom** growth measured in innovation and responsibility, not just business.",
     align: "right",
   },
   {
@@ -95,7 +95,7 @@ const timelineData: TimelineItem[] = [
     category: "event",
     title: "Connecting with the global telecom community",
     description:
-      "SMSCloud Hub joins the ecosystem around the **Antonio Meucci Global Telco Awards** at Hotel Meliá Castilla — meeting carriers, aggregators and industry leaders.",
+      "SMSCloud Hub joins the ecosystem around the **Antonio Meucci Global Telco Awards** at Hotel Meliá Castilla  meeting carriers, aggregators and industry leaders.",
     align: "left",
   },
   {
@@ -151,7 +151,7 @@ const timelineData: TimelineItem[] = [
     category: "foundation",
     title: "A global messaging ecosystem",
     description:
-      "From a young messaging venture to a global technology company — connectivity across **150+ countries**, with **1,000+ enterprises and carriers** onboard.",
+      "From a young messaging venture to a global technology company — connectivity across **185+ countries**, with **1,000+ enterprises and carriers** onboard.",
     align: "right",
   },
   // 2026
@@ -172,10 +172,21 @@ const timelineData: TimelineItem[] = [
     date: "2026",
     tag: "Award",
     category: "award",
-    title: "International recognition continues",
+    title: "Best Asian Provider & CSR Award",
     description:
-      "Nominations at the Antonio Meucci Global Telco Awards for **Best Enterprise Messaging Platform, Best CPaaS & OTT Implementation, Best Asian Provider** and **Exemplary Corporate Responsibility**.",
+      "SMSCloud Hub wins **1st Place Excellence Award for Best Asian Provider** and **High Distinction Award for Exemplary CSR** at the 4th Antonio Meucci Global Telco Awards 2026.",
     align: "right",
+  },
+  {
+    id: "m-2026-iso",
+    year: "2026",
+    date: "July 2026",
+    tag: "ISO Certified",
+    category: "award",
+    title: "ISO 9001:2015 Quality Management Certified",
+    description:
+      "Independently assessed and certified compliant for **ISO 9001:2015 Quality Management System** (Cert No. **3050260702155Q**) across A2P SMS, CPaaS, and Managed Services.",
+    align: "left",
   },
   {
     id: "m-2026-3",
@@ -183,11 +194,11 @@ const timelineData: TimelineItem[] = [
     date: "16–18 Sept 2026 · Madrid",
     tag: "WWC26",
     category: "event",
-    title: "We return to Madrid",
+    title: "We return to Madrid for WWC 2026",
     description:
-      "SMSCloud Hub participates in **Wholesale World Congress 2026** — continuing a journey that began in May 2022. This time, as a growing global communication technology partner.",
+      "SMSCloud Hub participates in **Wholesale World Congress 2026** — continuing a journey that began in May 2022. This time, as an ISO-certified global communication technology partner.",
     isFinale: true,
-    align: "left",
+    align: "right",
   },
 ];
 
@@ -311,7 +322,7 @@ export default function JourneyTimeline() {
             </div>
             <div className="p-4 text-center md:border-l md:border-white/10">
               <div className="font-mono text-3xl sm:text-4xl font-extrabold text-[#22D3EE]">
-                150+
+                185+
               </div>
               <div className="font-mono text-[11px] uppercase tracking-wider text-[#8DA0C0] mt-1">
                 Countries Connected
@@ -339,43 +350,39 @@ export default function JourneyTimeline() {
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-10">
             <button
               onClick={() => setActiveFilter("all")}
-              className={`px-4 py-2 rounded-full text-xs font-mono font-semibold transition-all ${
-                activeFilter === "all"
+              className={`px-4 py-2 rounded-full text-xs font-mono font-semibold transition-all ${activeFilter === "all"
                   ? "bg-[#22D3EE] text-[#04141A] shadow-[0_0_15px_rgba(34,211,238,0.4)]"
                   : "bg-white/5 text-[#8DA0C0] hover:text-white border border-white/10"
-              }`}
+                }`}
             >
               All Milestones ({timelineData.length})
             </button>
             <button
               onClick={() => setActiveFilter("foundation")}
-              className={`px-4 py-2 rounded-full text-xs font-mono font-semibold flex items-center gap-2 transition-all ${
-                activeFilter === "foundation"
+              className={`px-4 py-2 rounded-full text-xs font-mono font-semibold flex items-center gap-2 transition-all ${activeFilter === "foundation"
                   ? "bg-[#22D3EE]/20 text-[#22D3EE] border border-[#22D3EE]"
                   : "bg-white/5 text-[#8DA0C0] hover:text-white border border-white/10"
-              }`}
+                }`}
             >
               <span className="w-2 h-2 rounded-full bg-[#22D3EE]" />
               Company Milestone
             </button>
             <button
               onClick={() => setActiveFilter("award")}
-              className={`px-4 py-2 rounded-full text-xs font-mono font-semibold flex items-center gap-2 transition-all ${
-                activeFilter === "award"
+              className={`px-4 py-2 rounded-full text-xs font-mono font-semibold flex items-center gap-2 transition-all ${activeFilter === "award"
                   ? "bg-[#F59E0B]/20 text-[#F59E0B] border border-[#F59E0B]"
                   : "bg-white/5 text-[#8DA0C0] hover:text-white border border-white/10"
-              }`}
+                }`}
             >
               <span className="w-2 h-2 rounded-full bg-[#F59E0B]" />
               Award &amp; Recognition
             </button>
             <button
               onClick={() => setActiveFilter("event")}
-              className={`px-4 py-2 rounded-full text-xs font-mono font-semibold flex items-center gap-2 transition-all ${
-                activeFilter === "event"
+              className={`px-4 py-2 rounded-full text-xs font-mono font-semibold flex items-center gap-2 transition-all ${activeFilter === "event"
                   ? "bg-[#10B981]/20 text-[#10B981] border border-[#10B981]"
                   : "bg-white/5 text-[#8DA0C0] hover:text-white border border-white/10"
-              }`}
+                }`}
             >
               <span className="w-2 h-2 rounded-full bg-[#10B981]" />
               Global Event Participation
@@ -409,7 +416,8 @@ export default function JourneyTimeline() {
                 <div className="space-y-8">
                   {yearItems.map((item) => {
                     const isVisible = visibleItems[item.id];
-                    const isRight = item.align === "right";
+                    const globalIndex = filteredItems.findIndex((i) => i.id === item.id);
+                    const isRight = globalIndex % 2 !== 0;
 
                     // Tag Badge Styling
                     let tagBadge = "bg-[#22D3EE]/15 text-[#22D3EE] border-[#22D3EE]/30";
@@ -439,46 +447,40 @@ export default function JourneyTimeline() {
                         ref={(el) => {
                           nodeRefs.current[item.id] = el;
                         }}
-                        className={`relative flex flex-col md:flex-row items-center w-full min-h-[140px] transition-all duration-700 ease-out ${
-                          isVisible
+                        className={`relative flex flex-col md:flex-row items-center w-full min-h-[140px] transition-all duration-700 ease-out ${isVisible
                             ? "opacity-100 translate-y-0"
                             : "opacity-0 translate-y-8"
-                        }`}
+                          }`}
                       >
                         {/* Center Dot Node */}
                         <div
-                          className={`absolute left-[20px] md:left-1/2 top-7 -translate-x-1/2 w-4 h-4 rounded-full border-2 z-20 transition-transform duration-300 ${dotColor} ${
-                            isVisible ? `scale-125 ${dotGlow}` : ""
-                          } ${item.isFinale ? "w-6 h-6 animate-pulse" : ""}`}
+                          className={`absolute left-[20px] md:left-1/2 top-7 -translate-x-1/2 w-4 h-4 rounded-full border-2 z-20 transition-transform duration-300 ${dotColor} ${isVisible ? `scale-125 ${dotGlow}` : ""
+                            } ${item.isFinale ? "w-6 h-6 animate-pulse" : ""}`}
                         />
 
                         {/* Horizontal Connector Line */}
                         <div
-                          className={`hidden md:block absolute top-[34px] w-9 h-[2px] bg-white/20 z-10 ${
-                            isRight ? "left-1/2" : "right-1/2"
-                          }`}
+                          className={`hidden md:block absolute top-[34px] w-9 h-[2px] bg-white/20 z-10 ${isRight ? "left-1/2" : "right-1/2"
+                            }`}
                         />
 
-        {/* Content Card Side */}
+                        {/* Content Card Side */}
                         <div
-                          className={`w-full md:w-1/2 pl-9 md:pl-0 ${
-                            isRight
+                          className={`w-full md:w-1/2 pl-9 md:pl-0 ${isRight
                               ? "md:ml-auto md:pl-10 lg:pl-12 text-left"
                               : "md:mr-auto md:pr-10 lg:pr-12 md:text-right"
-                          }`}
+                            }`}
                         >
                           <div
-                            className={`p-4 sm:p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.01] ${
-                              item.isFinale
+                            className={`p-4 sm:p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.01] ${item.isFinale
                                 ? "bg-gradient-to-br from-[#1E293B] via-[#0F1B2E] to-[#1E1B4B] border-[#F43F5E]/50 shadow-[0_0_30px_rgba(244,63,94,0.15)]"
                                 : "bg-[#0F1B2E] border-white/10 hover:border-[#22D3EE]/50 hover:bg-[#13243A]/80 shadow-xl"
-                            }`}
+                              }`}
                           >
                             {/* Card Date & Tag */}
                             <div
-                              className={`flex items-center gap-3 mb-3 text-xs font-mono uppercase tracking-wider ${
-                                isRight ? "justify-start" : "md:justify-end justify-start"
-                              }`}
+                              className={`flex items-center gap-3 mb-3 text-xs font-mono uppercase tracking-wider ${isRight ? "justify-start" : "md:justify-end justify-start"
+                                }`}
                             >
                               <span className="text-[#8DA0C0] font-medium">
                                 {item.date}
@@ -518,7 +520,7 @@ export default function JourneyTimeline() {
             <span className="text-[#22D3EE]">A global journey.</span>
           </h2>
           <p className="text-sm sm:text-base text-[#8DA0C0] font-mono uppercase tracking-wide max-w-xl mx-auto leading-relaxed mb-8">
-            From early foundations to Madrid — from SMS to CPaaS — from a startup to a
+            From early foundations to Madrid from SMS to CPaaS from a startup to a
             global messaging ecosystem. And the journey has only just begun.
           </p>
           <Link

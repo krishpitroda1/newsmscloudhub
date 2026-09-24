@@ -78,9 +78,10 @@ const verticals = [
 ];
 
 const npsStats = [
-  // { value: "72", label: "Net Promoter Score", sub: "Industry average: 38" },
-  { value: "95.84%", label: "Client satisfaction", sub: "From post-onboarding survey" },
-  { value: "93%", label: "Renewal rate", sub: "Year-on-year contract renewals" },
+  { value: "185+", label: "Countries Covered", sub: "" },
+  { value: "98.87%", label: "DLR Accuracy", sub: "" },
+  { value: "95.84%", label: "Client satisfaction", sub: "" },
+  { value: "525+", label: "Satisfied Partners & Clients", sub: "" },
 ];
 
 export default function TestimonialsPage() {
@@ -101,18 +102,18 @@ export default function TestimonialsPage() {
               <span className="text-[#22D3EE]">Our clients tell the rest.</span>
             </h1>
             <p className="text-base sm:text-lg text-[#8DA0C0] max-w-2xl mx-auto leading-relaxed">
-              From fintech OTPs to carrier interconnects — here&apos;s what the enterprises, operators, and developers who run on our network have to say.
+              From fintech OTPs to carrier interconnects here&apos;s what the enterprises, operators, and developers who run on our network have to say.
             </p>
           </div>
         </section>
 
         {/* ─── NPS Stats ─── */}
         <section className="py-10 sm:py-14 px-4 sm:px-6 border-t border-white/5 bg-[#0F1B2E]">
-          <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-6 text-center">
+          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
             {npsStats.map((n) => (
-              <div key={n.label}>
-                <p className="text-4xl sm:text-5xl font-mono font-extrabold text-[#22D3EE] mb-1">{n.value}</p>
-                <p className="font-semibold mb-0.5 text-sm sm:text-base">{n.label}</p>
+              <div key={n.label} className="p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-[#22D3EE]/30 transition-colors">
+                <p className="text-3xl sm:text-4xl lg:text-5xl font-mono font-extrabold text-[#22D3EE] mb-1">{n.value}</p>
+                <p className="font-semibold mb-0.5 text-sm sm:text-base text-white">{n.label}</p>
                 <p className="text-xs text-[#8DA0C0]">{n.sub}</p>
               </div>
             ))}

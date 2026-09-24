@@ -52,7 +52,7 @@ const comparisonRows = [
   },
   {
     feature: "Coverage",
-    smsch: "157+ countries listed on the website",
+    smsch: "185+ countries",
     others: "Varies by provider",
   },
   {
@@ -71,41 +71,41 @@ const advantages = [
   {
     icon: "🔗",
     title: "Zero Intermediary Hops",
-    body: "Most aggregators — including large players like Monty Mobile and GMS — route through 2 to 4 intermediary networks before your message reaches the recipient's SMSC. Each hop adds latency, failure risk, and margin. SMSCloudHub eliminates every hop with owned SS7 direct connections.",
+    body: "Most aggregators including large players like Monty Mobile and GMS route through 2 to 4 intermediary networks before your message reaches the recipient's SMSC. Each hop adds latency, failure risk, and margin. SMSCloudHub eliminates every hop with owned SS7 direct connections.",
   },
   {
     icon: "🤖",
     title: "AI-Powered Route Optimisation",
-    body: "Our routing engine continuously monitors per-network DLR rates, delivery times, and error codes across all 300+ operator connections. It automatically shifts traffic away from degraded routes in real time — something no legacy aggregator architecture can match at this speed.",
+    body: "Our routing engine continuously monitors per-network DLR rates, delivery times, and error codes across all 525+ operator connections. It automatically shifts traffic away from degraded routes in real time something no legacy aggregator architecture can match at this speed.",
   },
   {
     icon: "🛡️",
     title: "Carrier-Grade SMSC Firewall",
-    body: "Unlike Qoolize and Macropyre who rely on upstream firewall services, SMSCloudHub operates its own SMSC-layer inspection engine. Every inbound message is validated against ML anomaly models, sender reputation databases, and operator-specific allowlists before it touches your network.",
+    body: "Unlike Qoolize and Macropyre who rely on upstream firewall services, SMSCloudHub operates its own SMSC layer inspection engine. Every inbound message is validated against ML anomaly models, sender reputation databases, and operator specific allowlists before it touches your network.",
   },
   {
     icon: "📊",
     title: "Real-Time Delivery Intelligence",
-    body: "Our dashboard surfaces per-country, per-operator delivery rates, latency percentiles, and error distributions — live, not in daily CSV exports. You get the same visibility our NOC team uses, 24/7.",
+    body: "Our dashboard surfaces per-country, per-operator delivery rates, latency percentiles, and error distributions live, not in daily CSV exports. You get the same visibility our NOC team uses, 24/7.",
   },
   {
     icon: "🌍",
-    title: "193-Country Owned Network",
-    body: "Sama Telecom and other regional specialists cover 40–80 countries with leased capacity. SMSCloudHub's 193-country footprint is built on direct interconnects and bilateral peering agreements — not resold routes with unknown quality guarantees.",
+    title: "185+ Country Owned Network",
+    body: "Sama Telecom and other regional specialists cover 40-80 countries with leased capacity. SMSCloudHub's 193 country footprint is built on direct interconnects and bilateral peering agreements not resold routes with unknown quality guarantees.",
   },
   {
     icon: "⚖️",
     title: "Compliance Built In",
-    body: "ISO 27001 information security management, GDPR-compliant data handling, TCPA-aware routing for North America, and DND registry integration for India. Legal and compliance teams at your enterprise won't need to audit our processes — we've already done it for you.",
+    body: "ISO Cerified Company information security management, GDPR compliant data handling, TCPA aware routing for North America, and DND registry integration for India. Legal and compliance teams at your enterprise won't need to audit our processes we've already done it for you.",
   },
 ];
 
 const slaItems = [
   { label: "Platform availability", value: "99.95%" },
-  { label: "Tier-1 delivery latency", value: "< 2s" },
+  // { label: "Tier-1 delivery latency", value: "< 2s" },
   { label: "DLR receipt accuracy", value: "98.87%" },
-  { label: "Credit-back on breach", value: "10× pro-rata" },
-  { label: "Incident response SLA", value: "< 15 min" },
+  // { label: "Credit-back on breach", value: "10× pro-rata" },
+  // { label: "Incident response SLA", value: "< 15 min" },
   { label: "NOC coverage", value: "24/7/365" },
 ];
 

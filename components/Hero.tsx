@@ -7,13 +7,13 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none hero-grid-pattern opacity-30" />
 
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-16 items-center">
+        <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-6 md:gap-8 lg:gap-16 items-center">
           {/* Left Column: Headline & Call To Action */}
           <div className="space-y-5 sm:space-y-6 text-left">
             <div className="inline-flex max-w-full">
               <span className="eyebrow-pill max-w-full flex-wrap sm:flex-nowrap">
                 <span className="dot shrink-0" />
-                <span className="break-words sm:whitespace-normal">Global A2P Messaging Network across 150+ Countries</span>
+                <span className="break-words sm:whitespace-normal">Global A2P Messaging Network across 185+ Countries</span>
               </span>
             </div>
 
@@ -49,7 +49,7 @@ export default function Hero() {
               <span>
                 Powering delivery for{" "}
                 <strong className="font-mono text-white text-sm sm:text-base font-bold">
-                  300+
+                  525+
                 </strong>{" "}
                 telcos, carriers & enterprises worldwide
               </span>

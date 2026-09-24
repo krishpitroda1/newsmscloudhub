@@ -45,7 +45,7 @@ export default function ContactCTA() {
         <div className="bg-gradient-to-br from-[#0F2530] to-[#0A1220] border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-14 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#22D3EE]/10 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center relative z-10">
             {/* Contact Information & Info */}
             <div className="space-y-4 sm:space-y-6">
               <span className="eyebrow-pill">

@@ -16,6 +16,33 @@ export interface AwardItem {
   category?: "award" | "media";
 }
 
+export const awards2026: AwardItem[] = [
+  {
+    id: "meucci-awards-2026",
+    title: "Best Asian Provider & CSR Distinction",
+    awardedBy: "4th Antonio Meucci Global Telco Awards 2026",
+    subtitle: "Conferred on SMSCLOUD HUB for winning 1st place in the Category BEST ASIAN PROVIDER and 3rd place in 'EXEMPLARY' CORPORATE SOCIAL RESPONSIBILITY at the 4th Antonio Meucci Global Telco Awards '26",
+    year: "2026",
+    image: "/awards/meucci-awards-2026.jpg",
+    hasImage: true,
+    badge: "1st Place & High Distinction 2026",
+    colSpan: "md:col-span-2",
+    category: "award",
+  },
+  {
+    id: "iso-9001-2015-cert",
+    title: "ISO 9001:2015 Quality Management System Certification",
+    awardedBy: "QRO Certification (EGAC & IAF Accredited)",
+    subtitle: "Independently assessed and certified compliant for Provision of A2P SMS Services, Communications Platform as a Service (CPaaS), Managed Services, and Technology Solutions. Certificate No: 3050260702155Q (Valid thru July 2029).",
+    year: "2026",
+    image: "/awards/iso-9001-2015-certificate.jpg",
+    hasImage: true,
+    badge: "ISO 9001:2015 Certified",
+    colSpan: "md:col-span-2",
+    category: "award",
+  },
+];
+
 export const awards2025: AwardItem[] = [
   {
     id: "silicon-india-2025",
@@ -63,7 +90,7 @@ export const awards2025: AwardItem[] = [
     year: "2025",
     image: "/awards/meucci-awards-2025.png",
     hasImage: true,
-    badge: "1st Place Excellence Award",
+    badge: "Excellence Award",
     colSpan: "md:col-span-1",
     category: "award",
   },
@@ -321,7 +348,7 @@ export default function AwardsClient() {
                 : "bg-[#0F1B2E] text-[#8DA0C0] hover:text-white border border-white/10"
             }`}
           >
-            All Recognitions ({awards2025.length + awards2024.length + awards2023.length})
+            All Recognitions ({awards2026.length + awards2025.length + awards2024.length + awards2023.length})
           </button>
           <button
             onClick={() => setActiveFilter("media")}
@@ -347,6 +374,25 @@ export default function AwardsClient() {
           </button>
         </div>
       </div>
+
+      {/* 2026 Section */}
+      {(activeFilter === "all" || awards2026.some((a) => a.category === activeFilter)) && (
+        <section className="py-12 px-6 bg-[#0B1526]/80 border-b border-white/5">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-8 flex items-center gap-4 text-white">
+              <span className="text-[#22D3EE] font-mono">2026</span> Global Telco & Compliance Recognitions
+              <div className="h-px bg-gradient-to-r from-white/15 to-transparent flex-1" />
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {awards2026
+                .filter((a) => activeFilter === "all" || a.category === activeFilter)
+                .map((award) => (
+                  <AwardCard key={award.id} award={award} onOpen={openLightbox} />
+                ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 2025 Section */}
       {(activeFilter === "all" || awards2025.some((a) => a.category === activeFilter)) && (

@@ -103,11 +103,11 @@ export default function Header() {
           </Link>
 
           {/* Primary Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 shrink-0">
             <Link
               href="/"
               onClick={handleHomeClick}
-              className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
+              className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap ${
                 pathname === "/" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
               }`}
             >
@@ -115,7 +115,7 @@ export default function Header() {
             </Link>
             <Link
               href="/about"
-              className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
+              className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap ${
                 pathname === "/about" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
               }`}
             >
@@ -123,22 +123,23 @@ export default function Header() {
             </Link>
             <Link
               href="/awards"
-              className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
+              className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap ${
                 pathname === "/awards" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
               }`}
             >
               Awards
             </Link>
 
-            {/* Services Desktop Dropdown */}
+            {/* Services Desktop Dropdown (Hover Only - Non-Clickable) */}
             <div
               className="relative"
               onMouseEnter={() => setActiveDropdown("services")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <Link
-                href="/services"
-                className={`px-3 py-2 rounded-full text-sm font-semibold flex items-center gap-1.5 transition-colors ${
+              <button
+                type="button"
+                onClick={(e) => e.preventDefault()}
+                className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full text-xs xl:text-sm font-semibold flex items-center gap-1 transition-colors whitespace-nowrap cursor-pointer ${
                   isServicePage ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
                 }`}
               >
@@ -152,27 +153,23 @@ export default function Header() {
                 >
                   <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
-              </Link>
+              </button>
 
               {activeDropdown === "services" && (
                 <>
                   {/* Hover bridge */}
                   <div className="absolute top-full left-0 w-full h-3" />
-                  <div className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[1040px] max-w-[calc(100vw-32px)] bg-white border border-slate-200 rounded-2xl p-6 shadow-2xl z-50 space-y-4 font-sans">
+                  <div className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[880px] max-w-[calc(100vw-32px)] bg-white border border-slate-200 rounded-2xl p-6 shadow-2xl z-50 space-y-4 font-sans">
                     <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                       <span className="font-mono text-xs text-[#0891B2] uppercase tracking-widest font-bold">
                         Full Product & Service Suite
                       </span>
-                      <Link
-                        href="/services"
-                        onClick={() => setActiveDropdown(null)}
-                        className="text-xs text-slate-500 hover:text-[#0891B2] font-mono font-semibold flex items-center gap-1 transition-colors"
-                      >
-                        View All Services Overview →
-                      </Link>
+                      <span className="text-xs text-slate-400 font-mono font-medium">
+                        Select a service below to explore
+                      </span>
                     </div>
                     
-                    <div className="grid grid-cols-4 gap-6">
+                    <div className="grid grid-cols-3 gap-6">
                       {serviceCategories.map((cat) => (
                         <div key={cat.title} className="space-y-2.5">
                           <h5 className="font-mono text-xs tracking-widest text-[#0891B2] uppercase font-bold">
@@ -206,7 +203,7 @@ export default function Header() {
 
             <Link
               href="/why-us"
-              className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
+              className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap ${
                 pathname === "/why-us" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
               }`}
             >
@@ -214,7 +211,7 @@ export default function Header() {
             </Link>
             <Link
               href="/testimonials"
-              className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
+              className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap ${
                 pathname === "/testimonials" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
               }`}
             >
@@ -222,7 +219,7 @@ export default function Header() {
             </Link>
             <Link
               href="/careers"
-              className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
+              className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap ${
                 pathname === "/careers" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
               }`}
             >
@@ -230,7 +227,7 @@ export default function Header() {
             </Link>
             <Link
               href="/contact"
-              className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors ${
+              className={`px-2.5 py-1.5 xl:px-3 xl:py-2 rounded-full text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap ${
                 pathname === "/contact" ? "text-[#0891B2] bg-slate-100" : "text-slate-700 hover:text-[#0891B2]"
               }`}
             >
@@ -239,11 +236,11 @@ export default function Header() {
           </nav>
 
           {/* Header Right Action Buttons */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <Link
               href="/sms-compliances"
               onClick={closeMobileMenu}
-              className="!hidden lg:!inline-flex btn btn-primary group text-xs sm:text-sm px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg"
+              className="!hidden lg:!inline-flex btn btn-primary group text-xs sm:text-sm px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg whitespace-nowrap"
             >
               SMS COMPLIANCES
               <span className="inline-block transition-transform group-hover:translate-x-1">
@@ -294,7 +291,7 @@ export default function Header() {
 
           {/* Scrollable Mobile Drawer Content */}
           <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-6 bg-white">
-            <div className="space-y-3 max-w-md mx-auto pb-16">
+            <div className="space-y-3 max-w-md md:max-w-2xl mx-auto pb-16">
               
               {/* Featured SMS Compliances CTA */}
               <Link
@@ -337,9 +334,9 @@ export default function Header() {
                 >
                   <div className="flex items-center gap-2">
                     <span>Services & Products</span>
-                    <span className="text-xs font-mono font-bold bg-cyan-100 text-[#0891B2] px-2 py-0.5 rounded-full border border-cyan-200">
+                    {/* <span className="text-xs font-mono font-bold bg-cyan-100 text-[#0891B2] px-2 py-0.5 rounded-full border border-cyan-200">
                       17 Services
-                    </span>
+                    </span> */}
                   </div>
                   <svg
                     className={`w-4 h-4 text-[#0891B2] transition-transform duration-200 ${
@@ -355,14 +352,6 @@ export default function Header() {
                 {/* Collapsible Accordion Drawer */}
                 {mobileServicesOpen && (
                   <div className="p-4 border-t border-slate-200 bg-white space-y-5">
-                    <Link
-                      href="/services"
-                      onClick={closeMobileMenu}
-                      className="block p-3 rounded-lg bg-cyan-50 border border-cyan-200 text-[#0891B2] text-sm font-bold text-center hover:bg-cyan-100 transition-colors"
-                    >
-                      View All Services Hub →
-                    </Link>
-
                     {serviceCategories.map((cat) => (
                       <div key={cat.title} className="space-y-2">
                         <div className="font-mono text-xs font-bold text-[#0891B2] uppercase tracking-wider px-1">

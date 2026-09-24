@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, JetBrains_Mono } from "next/font/google";
+import { Manrope, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -8,9 +8,9 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
-  variable: "--font-jetbrains",
+  variable: "--font-roboto-mono",
   display: "swap",
 });
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SMSCloudHub — The Direct Route for Global Messaging",
     description:
-      "Carrier-grade messaging network connecting 300+ telcos across 150+ countries with 98.87% DLR accuracy.",
+      "Carrier-grade messaging network connecting 525+ telcos across 185+ countries with 98.87% DLR accuracy.",
     url: "https://www.smscloudhub.com",
     siteName: "SMSCloudHub",
     locale: "en_US",
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${jetbrainsMono.variable} scroll-smooth`}>
+    <html lang="en" className={`${manrope.variable} ${robotoMono.variable} scroll-smooth`}>
       <body className="bg-[#0A1220] text-[#F3F8FF] antialiased selection:bg-[#22D3EE] selection:text-[#04141A]">
         {children}
       </body>

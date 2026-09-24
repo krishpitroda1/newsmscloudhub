@@ -7,19 +7,19 @@ import JourneyTimeline from "@/components/JourneyTimeline";
 export const metadata: Metadata = {
   title: "About SMSCloudHub — Direct-Route Messaging Infrastructure",
   description:
-    "Learn how SMSCloudHub built a carrier-grade, direct-route messaging network connecting 300+ telcos across 150+ countries with zero intermediaries.",
+    "Learn how SMSCloudHub built a carrier-grade, direct-route messaging network connecting 525+ telcos across 185+ countries with zero intermediaries.",
 };
 
 const values = [
   {
     icon: "⚡",
     title: "Speed Without Compromise",
-    body: "Sub-2-second delivery on Tier-1 direct routes. Every millisecond matters when a bank OTP or a ride-share code has to reach a customer in the moment.",
+    body: "Sub-2-second delivery on Tier-1 direct routes. Every millisecond matters when a bank OTP or a ride share code has to reach a customer in the moment.",
   },
   {
     icon: "🔒",
     title: "Security by Design",
-    body: "SS7 intrusion detection, grey-route blocking, TLS 1.3 end-to-end encryption, and SMSC-level firewall policies — hardened from day one, not bolted on after.",
+    body: "SS7 intrusion detection, grey-route blocking, TLS 1.3 end-to-end encryption, and SMSC-level firewall policies hardened from day one, not bolted on after.",
   },
   {
     icon: "🌐",
@@ -68,8 +68,8 @@ export default function AboutPage() {
             </div>
             <div className="bg-[#0F1B2E] border border-white/10 rounded-2xl p-8 space-y-6">
               {[
-                { label: "Direct telco connections", value: "300+" },
-                { label: "Countries covered", value: "150+" },
+                { label: "Direct telco connections", value: "525+" },
+                { label: "Countries covered", value: "185+" },
                 { label: "DLR accuracy", value: "98.87%" },
                 { label: "Uptime SLA", value: "99.95%" },
               ].map((s) => (
@@ -99,6 +99,65 @@ export default function AboutPage() {
                   <p className="text-[#8DA0C0] text-sm leading-relaxed">{v.body}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ─── Quality & Compliance Certification Showcase ─── */}
+        <section className="py-20 px-6 border-t border-white/5 bg-[#071120]">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-[#0F1B2E] border border-[#22D3EE]/30 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-[#22D3EE]/5 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Certificate Image Preview */}
+                <div className="relative group bg-[#060D17] p-3 rounded-2xl border border-white/10 shadow-xl flex items-center justify-center">
+                  <img
+                    src="/awards/iso-9001-2015-certificate.jpg"
+                    alt="SMSCloudHub ISO 9001:2015 Quality Management System Certificate"
+                    className="w-full h-auto max-h-[420px] object-contain rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                  <div className="absolute top-5 right-5 bg-[#22D3EE] text-[#04141A] text-[10px] font-mono font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wider">
+                    Official Certificate
+                  </div>
+                </div>
+
+                {/* Certification Info */}
+                <div className="space-y-5 text-left">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#22D3EE] text-xs font-mono font-bold uppercase tracking-widest">
+                    <span>🛡️ Global Compliance & Quality</span>
+                  </div>
+
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                    ISO 9001:2015 Certified Quality Management System
+                  </h2>
+
+                  <p className="text-[#8DA0C0] text-sm sm:text-base leading-relaxed">
+                    SMSCLOUD HUB has been independently assessed by <strong className="text-white">QRO Certification</strong> and accredited by <strong className="text-white">EGAC & IAF</strong>, certifying our commitment to international quality management and operational excellence.
+                  </p>
+
+                  <div className="space-y-3 pt-2">
+                    <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 flex items-start gap-3 text-xs">
+                      <span className="text-[#22D3EE] text-base">📌</span>
+                      <div>
+                        <span className="text-white font-bold block">Scope of Certification:</span>
+                        <span className="text-[#8DA0C0]">Provision of A2P SMS Services, Communications Platform as a Service (CPaaS), Managed Services, and Technology Solutions.</span>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3 text-xs">
+                      <div className="p-3 rounded-xl bg-white/[0.03] border border-white/10">
+                        <span className="text-[#8DA0C0] block text-[10px] font-mono uppercase">Certificate No.</span>
+                        <span className="text-[#22D3EE] font-mono font-bold text-sm">3050260702155Q</span>
+                      </div>
+                      <div className="p-3 rounded-xl bg-white/[0.03] border border-white/10">
+                        <span className="text-[#8DA0C0] block text-[10px] font-mono uppercase">Validity</span>
+                        <span className="text-white font-semibold">Jul 2026 – Jul 2029</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -222,11 +222,11 @@ export default function ContactPage() {
                 </div>
               ))}
 
-              <div className="bg-[#0F1B2E] border border-[#22D3EE]/20 rounded-2xl p-6 space-y-2">
+              {/* <div className="bg-[#0F1B2E] border border-[#22D3EE]/20 rounded-2xl p-6 space-y-2">
                 <p className="text-xs font-mono text-[#22D3EE] uppercase tracking-widest">Response SLA</p>
                 <p className="text-2xl font-bold">≤ 4 business hours</p>
                 <p className="text-[#8DA0C0] text-sm">For enterprise, operator, and carrier inquiries. NOC support is 24/7.</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

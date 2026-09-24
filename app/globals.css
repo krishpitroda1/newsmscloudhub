@@ -15,11 +15,12 @@
 
     --font-display: "Manrope", system-ui, -apple-system, sans-serif;
     --font-body: "Manrope", system-ui, -apple-system, sans-serif;
-    --font-mono: "JetBrains Mono", monospace;
+    --font-mono: var(--font-roboto-mono), "Roboto Mono", monospace;
   }
 
   * {
     box-sizing: border-box;
+    font-variant-numeric: normal;
   }
 
   html {

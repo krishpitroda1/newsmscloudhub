@@ -104,7 +104,7 @@ export default function Footer() {
                 aria-label="YouTube"
               >
                 <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-                  <path d="M15.8 4.6a2 2 0 00-1.4-1.4C13.1 3 8 3 8 3s-5.1 0-6.4.2A2 2 0 00.2 4.6C0 5.9 0 8 0 8s0 2.1.2 3.4a2 2 0 001.4 1.4c1.3.3 6.4.3 6.4.3s5.1 0 6.4-.3a2 2 0 001.4-1.4C16 10.1 16 8 16 8s0-2.1-.2-3.4zM6.4 10.4V5.6L10.6 8l-4.2 2.4z"/>
+                  <path d="M15.8 4.6a2 2 0 00-1.4-1.4C13.1 3 8 3 8 3s-5.1 0-6.4.2A2 2 0 00.2 4.6C0 5.9 0 8 0 8s0 2.1.2 3.4a2 2 0 001.4 1.4c1.3.3 6.4.3 6.4.3s5.1 0 6.4-.3a2 2 0 001.4-1.4C16 10.1 16 8 16 8s0-2.1-.2-3.4zM6.4 10.4V5.6L10.6 8l-4.2 2.4z" />
                 </svg>
               </a>
             </div>
@@ -209,7 +209,7 @@ export default function Footer() {
           <div>© {new Date().getFullYear()} SMSCloud Hub. All Rights Reserved.</div>
           <div className="flex items-center gap-4">
             <span className="font-mono text-slate-600 font-medium hidden sm:inline">
-              150+ countries · 300+ telcos & enterprises · 98.87% DLR accuracy
+              185+ countries · 525+ telcos & enterprises · 98.87% DLR accuracy
             </span>
             <button
               onClick={forceScrollTop}

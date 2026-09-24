@@ -219,7 +219,7 @@ export default function CareersClient({ initialJobs }: CareersClientProps) {
             <div className="w-12 h-12 rounded-xl bg-cyan-950/60 border border-cyan-500/30 flex items-center justify-center text-[#22D3EE] text-2xl mb-4 group-hover:scale-110 transition-transform">
               💰
             </div>
-            <h3 className="text-lg font-bold text-white mb-2">Competitive USD Packages</h3>
+            <h3 className="text-lg font-bold text-white mb-2">Competitive Packages</h3>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
               Top-market salaries, performance bonuses, health coverage, home-office stipends, and growth incentives.
             </p>
@@ -556,6 +556,7 @@ export default function CareersClient({ initialJobs }: CareersClientProps) {
                       onChange={(e) => setAppForm({ ...appForm, experienceYears: e.target.value })}
                       className="w-full px-3.5 py-2 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-300 focus:border-[#0891B2] focus:outline-none"
                     >
+                      <option value="Fresher / 0-1 Years">Fresher / 0-1 Years</option>
                       <option value="1-2 Years">1-2 Years</option>
                       <option value="3-5 Years">3-5 Years</option>
                       <option value="5-8 Years">5-8 Years</option>

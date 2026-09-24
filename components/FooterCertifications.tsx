@@ -75,6 +75,19 @@ export default function FooterCertifications() {
           </div>
         </div>
 
+        {/* ISO 9001:2015 CERTIFIED Badge */}
+        <div className="inline-flex items-center h-8 rounded overflow-hidden border border-cyan-400/50 shadow-md hover:scale-[1.03] transition-transform select-none cursor-default">
+          <div className="bg-[#0891B2] px-2.5 h-full flex items-center justify-center font-extrabold text-white text-xs tracking-tighter">
+            <span>ISO</span>
+          </div>
+          <div className="bg-[#06182B] px-2.5 h-full flex items-center gap-1.5 font-bold text-[#22D3EE] text-xs font-mono">
+            <span>9001:2015</span>
+            <svg className="w-3.5 h-3.5 text-[#22D3EE] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="#22D3EE" strokeWidth="1" />
+            </svg>
+          </div>
+        </div>
+
         {/* ISI CERTIFIED (BIS / ISI Standard) Badge */}
         <div className="inline-flex items-center h-8 rounded overflow-hidden border border-red-600/50 shadow-md hover:scale-[1.03] transition-transform select-none cursor-default">
           <div className="bg-[#B71C1C] px-2 h-full flex items-center justify-center border-r border-red-800">

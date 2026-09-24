@@ -29,7 +29,7 @@ export default function DirectRouteComparison() {
         </div>
 
         <div className="bg-[#0F1B2E] border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-10 shadow-2xl">
-          <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-6 lg:gap-8 items-stretch">
+          <div className="grid md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 lg:gap-8 items-stretch">
             {/* Multi-Hop Aggregator Card */}
             <div className="border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 bg-white/[0.01] flex flex-col justify-between">
               <div>
